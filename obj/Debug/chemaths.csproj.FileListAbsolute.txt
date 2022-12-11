@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.MainWindow.resources
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.Properties.Resources.resources
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.csproj.GenerateResource.cache
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\chemaths.exe.config
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\chemaths.exe
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\chemaths.pdb
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.exe
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.pdb
