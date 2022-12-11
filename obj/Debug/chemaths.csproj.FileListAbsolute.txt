@@ -8,3 +8,4 @@ C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\chemaths.ex
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\chemaths.pdb
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.exe
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.pdb
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.SubjectMainWindow.resources
