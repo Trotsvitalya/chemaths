@@ -125,5 +125,14 @@
   <ItemGroup>
     <None Include="Properties\Images\close.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\flask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\flask %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
