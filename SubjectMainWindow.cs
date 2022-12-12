@@ -18,6 +18,7 @@ namespace chemaths
         public SubjectMainWindow()
         {
             InitializeComponent();
+            ACTIVE_BTN(subject_btn);
         }
         private void ACTIVE_BTN(object sender)
         {
@@ -52,15 +53,33 @@ namespace chemaths
                 current_form.Close();
             }
             ACTIVE_BTN(sender);
-            this.Visible = false;
             current_form = point_form;
             point_form.BringToFront();
             point_form.Show();
+            this.Hide();
         }
 
         private void help_btn_Click(object sender, EventArgs e)
         {
             OPEN_MENU_POINT(new HelpWindow(), sender);
+        }
+
+        private void info_btn_Click(object sender, EventArgs e)
+        {
+            OPEN_MENU_POINT(new InfoWindow(), sender);
+        }
+
+        private void main_btn_Click(object sender, EventArgs e)
+        {
+            INACTIVE_BTN();
+            MainWindow tmp = new MainWindow();
+            tmp.Show();
+            this.Hide();
+        }
+
+        private void close_btn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

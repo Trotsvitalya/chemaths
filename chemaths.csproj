@@ -72,6 +72,12 @@
     <Compile Include="SubjectMainWindow.Designer.cs">
       <DependentUpon>SubjectMainWindow.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoWindow.resx">
+      <DependentUpon>InfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\subjects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

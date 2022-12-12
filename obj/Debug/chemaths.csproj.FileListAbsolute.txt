@@ -9,3 +9,5 @@ C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\chemaths.pd
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.exe
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.pdb
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.SubjectMainWindow.resources
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.HelpWindow.resources
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.InfoWindow.resources

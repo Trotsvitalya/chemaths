@@ -18,20 +18,7 @@ namespace chemaths
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void ACTIVE_BTN(object sender)
-        {
-            if(sender != null && current_btn != (Button)sender)
-            {
-                INACTIVE_BTN();
-
-                current_btn = (Button)sender;
-                current_btn.BackColor = Color.FromArgb(31, 34, 53);
-                current_btn.ForeColor = Color.White;
-                side_panel.Height = current_btn.Height;
-                side_panel.Top = current_btn.Top;
-            }
+            INACTIVE_BTN();
         }
 
         private void INACTIVE_BTN()
@@ -52,11 +39,10 @@ namespace chemaths
             {
                 current_form.Close();
             }
-            ACTIVE_BTN(sender);
-            this.Visible = false;
             current_form = point_form;
             point_form.BringToFront();
             point_form.Show();
+            this.Hide();
         }
 
         private void help_btn_Click(object sender, EventArgs e)
@@ -74,19 +60,9 @@ namespace chemaths
             OPEN_MENU_POINT(new InfoWindow(), sender);
         }
 
-        private void help_btn_Leave(object sender, EventArgs e)
+        private void close_btn_Click(object sender, EventArgs e)
         {
-            help_btn.BackColor = Color.FromArgb(36, 41, 61);
-        }
-
-        private void subject_btn_Leave(object sender, EventArgs e)
-        {
-            subject_btn.BackColor = Color.FromArgb(36, 41, 61);
-        }
-
-        private void info_btn_Leave(object sender, EventArgs e)
-        {
-            info_btn.BackColor = Color.FromArgb(36, 41, 61);
+            Application.Exit();
         }
     }
 }
