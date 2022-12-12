@@ -29,37 +29,34 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubjectMainWindow));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.menu_panel = new System.Windows.Forms.Panel();
             this.side_panel = new System.Windows.Forms.Panel();
-            this.info_btn = new System.Windows.Forms.Button();
-            this.subject_btn = new System.Windows.Forms.Button();
-            this.help_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.close_btn = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.info_btn = new System.Windows.Forms.Button();
+            this.subject_btn = new System.Windows.Forms.Button();
+            this.help_btn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // menu_panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.panel1.Controls.Add(this.side_panel);
-            this.panel1.Controls.Add(this.info_btn);
-            this.panel1.Controls.Add(this.subject_btn);
-            this.panel1.Controls.Add(this.help_btn);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 577);
-            this.panel1.TabIndex = 2;
+            this.menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.menu_panel.Controls.Add(this.side_panel);
+            this.menu_panel.Controls.Add(this.info_btn);
+            this.menu_panel.Controls.Add(this.subject_btn);
+            this.menu_panel.Controls.Add(this.help_btn);
+            this.menu_panel.Controls.Add(this.panel2);
+            this.menu_panel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menu_panel.Location = new System.Drawing.Point(0, 0);
+            this.menu_panel.Name = "menu_panel";
+            this.menu_panel.Size = new System.Drawing.Size(186, 577);
+            this.menu_panel.TabIndex = 2;
             // 
             // side_panel
             // 
@@ -68,54 +65,6 @@ namespace chemaths
             this.side_panel.Name = "side_panel";
             this.side_panel.Size = new System.Drawing.Size(3, 100);
             this.side_panel.TabIndex = 5;
-            // 
-            // info_btn
-            // 
-            this.info_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.info_btn.FlatAppearance.BorderSize = 0;
-            this.info_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.info_btn.Image = ((System.Drawing.Image)(resources.GetObject("info_btn.Image")));
-            this.info_btn.Location = new System.Drawing.Point(0, 228);
-            this.info_btn.Name = "info_btn";
-            this.info_btn.Size = new System.Drawing.Size(186, 42);
-            this.info_btn.TabIndex = 4;
-            this.info_btn.Text = "Розробники";
-            this.info_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.info_btn.UseVisualStyleBackColor = true;
-            // 
-            // subject_btn
-            // 
-            this.subject_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subject_btn.FlatAppearance.BorderSize = 0;
-            this.subject_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.subject_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subject_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.subject_btn.Image = ((System.Drawing.Image)(resources.GetObject("subject_btn.Image")));
-            this.subject_btn.Location = new System.Drawing.Point(0, 186);
-            this.subject_btn.Name = "subject_btn";
-            this.subject_btn.Size = new System.Drawing.Size(186, 42);
-            this.subject_btn.TabIndex = 3;
-            this.subject_btn.Text = "Предмети";
-            this.subject_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.subject_btn.UseVisualStyleBackColor = true;
-            // 
-            // help_btn
-            // 
-            this.help_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.help_btn.FlatAppearance.BorderSize = 0;
-            this.help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.help_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.help_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.help_btn.Image = ((System.Drawing.Image)(resources.GetObject("help_btn.Image")));
-            this.help_btn.Location = new System.Drawing.Point(0, 144);
-            this.help_btn.Name = "help_btn";
-            this.help_btn.Size = new System.Drawing.Size(186, 42);
-            this.help_btn.TabIndex = 2;
-            this.help_btn.Text = "Допомога";
-            this.help_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.help_btn.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -150,16 +99,6 @@ namespace chemaths
             this.label1.TabIndex = 1;
             this.label1.Text = "Посібник";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(60, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -171,17 +110,64 @@ namespace chemaths
             this.label3.TabIndex = 3;
             this.label3.Text = "Предмети";
             // 
-            // close_btn
+            // info_btn
             // 
-            this.close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
-            this.close_btn.Location = new System.Drawing.Point(918, 6);
-            this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(27, 27);
-            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.close_btn.TabIndex = 4;
-            this.close_btn.TabStop = false;
-            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
+            this.info_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.info_btn.FlatAppearance.BorderSize = 0;
+            this.info_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.info_btn.Image = global::chemaths.Properties.Resources.dev;
+            this.info_btn.Location = new System.Drawing.Point(0, 228);
+            this.info_btn.Name = "info_btn";
+            this.info_btn.Size = new System.Drawing.Size(186, 42);
+            this.info_btn.TabIndex = 4;
+            this.info_btn.Text = "Розробники";
+            this.info_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.info_btn.UseVisualStyleBackColor = true;
+            // 
+            // subject_btn
+            // 
+            this.subject_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subject_btn.FlatAppearance.BorderSize = 0;
+            this.subject_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subject_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subject_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.subject_btn.Image = global::chemaths.Properties.Resources.subjects;
+            this.subject_btn.Location = new System.Drawing.Point(0, 186);
+            this.subject_btn.Name = "subject_btn";
+            this.subject_btn.Size = new System.Drawing.Size(186, 42);
+            this.subject_btn.TabIndex = 3;
+            this.subject_btn.Text = "Предмети";
+            this.subject_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.subject_btn.UseVisualStyleBackColor = true;
+            // 
+            // help_btn
+            // 
+            this.help_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.help_btn.FlatAppearance.BorderSize = 0;
+            this.help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.help_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.help_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.help_btn.Image = global::chemaths.Properties.Resources.help;
+            this.help_btn.Location = new System.Drawing.Point(0, 144);
+            this.help_btn.Name = "help_btn";
+            this.help_btn.Size = new System.Drawing.Size(186, 42);
+            this.help_btn.TabIndex = 2;
+            this.help_btn.Text = "Допомога";
+            this.help_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.help_btn.UseVisualStyleBackColor = true;
+            this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::chemaths.Properties.Resources.manual_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // SubjectMainWindow
             // 
@@ -189,17 +175,15 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.close_btn);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menu_panel);
             this.Controls.Add(this.label3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SubjectMainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel1.ResumeLayout(false);
+            this.menu_panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +191,7 @@ namespace chemaths
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel menu_panel;
         private System.Windows.Forms.Panel side_panel;
         private System.Windows.Forms.Button info_btn;
         private System.Windows.Forms.Button subject_btn;
@@ -217,6 +201,5 @@ namespace chemaths
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox close_btn;
     }
 }
