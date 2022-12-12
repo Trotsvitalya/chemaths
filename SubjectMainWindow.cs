@@ -13,7 +13,6 @@ namespace chemaths
     public partial class SubjectMainWindow : Form
     {
         private Button current_btn;
-        private Form current_form;
 
         public SubjectMainWindow()
         {
@@ -48,13 +47,6 @@ namespace chemaths
 
         private void OPEN_MENU_POINT(Form point_form, object sender)
         {
-            if (current_form != null)
-            {
-                current_form.Close();
-            }
-            ACTIVE_BTN(sender);
-            current_form = point_form;
-            point_form.BringToFront();
             point_form.Show();
             this.Hide();
         }
@@ -80,6 +72,16 @@ namespace chemaths
         private void close_btn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void chemistry_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void matn_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

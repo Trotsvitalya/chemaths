@@ -13,7 +13,6 @@ namespace chemaths
     public partial class InfoWindow : Form
     {
         private Button current_btn;
-        private Form current_form;
 
         public InfoWindow()
         {
@@ -47,13 +46,6 @@ namespace chemaths
 
         private void OPEN_MENU_POINT(Form point_form, object sender)
         {
-            if (current_form != null)
-            {
-                current_form.Close();
-            }
-            ACTIVE_BTN(sender);
-            current_form = point_form;
-            point_form.BringToFront();
             point_form.Show();
             this.Hide();
         }

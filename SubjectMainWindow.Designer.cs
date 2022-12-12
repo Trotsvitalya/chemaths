@@ -31,15 +31,17 @@ namespace chemaths
         {
             this.menu_panel = new System.Windows.Forms.Panel();
             this.side_panel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.info_btn = new System.Windows.Forms.Button();
             this.subject_btn = new System.Windows.Forms.Button();
             this.help_btn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.main_btn = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.close_btn = new System.Windows.Forms.PictureBox();
+            this.chemistry_btn = new System.Windows.Forms.Button();
+            this.matn_btn = new System.Windows.Forms.Button();
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
@@ -67,50 +69,6 @@ namespace chemaths
             this.side_panel.Name = "side_panel";
             this.side_panel.Size = new System.Drawing.Size(3, 100);
             this.side_panel.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.main_btn);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 144);
-            this.panel2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Хімія. Математика";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.label1.Location = new System.Drawing.Point(54, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Посібник";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(202, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 32);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Предмети";
             // 
             // info_btn
             // 
@@ -165,6 +123,39 @@ namespace chemaths
             this.help_btn.UseVisualStyleBackColor = true;
             this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.main_btn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(186, 144);
+            this.panel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(34, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Хімія. Математика";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.label1.Location = new System.Drawing.Point(54, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Посібник";
+            // 
             // main_btn
             // 
             this.main_btn.Image = global::chemaths.Properties.Resources.manual_icon;
@@ -175,6 +166,17 @@ namespace chemaths
             this.main_btn.TabIndex = 0;
             this.main_btn.TabStop = false;
             this.main_btn.Click += new System.EventHandler(this.main_btn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(202, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 37);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Предмети";
             // 
             // close_btn
             // 
@@ -187,12 +189,50 @@ namespace chemaths
             this.close_btn.TabStop = false;
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
+            // chemistry_btn
+            // 
+            this.chemistry_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.chemistry_btn.FlatAppearance.BorderSize = 0;
+            this.chemistry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chemistry_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chemistry_btn.ForeColor = System.Drawing.Color.White;
+            this.chemistry_btn.Image = global::chemaths.Properties.Resources.flask__1_;
+            this.chemistry_btn.Location = new System.Drawing.Point(250, 122);
+            this.chemistry_btn.Name = "chemistry_btn";
+            this.chemistry_btn.Size = new System.Drawing.Size(268, 355);
+            this.chemistry_btn.TabIndex = 10;
+            this.chemistry_btn.Text = "Хімія";
+            this.chemistry_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chemistry_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.chemistry_btn.UseVisualStyleBackColor = false;
+            this.chemistry_btn.Click += new System.EventHandler(this.chemistry_btn_Click);
+            // 
+            // matn_btn
+            // 
+            this.matn_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.matn_btn.FlatAppearance.BorderSize = 0;
+            this.matn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.matn_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.matn_btn.ForeColor = System.Drawing.Color.White;
+            this.matn_btn.Image = global::chemaths.Properties.Resources.math1;
+            this.matn_btn.Location = new System.Drawing.Point(601, 122);
+            this.matn_btn.Name = "matn_btn";
+            this.matn_btn.Size = new System.Drawing.Size(268, 355);
+            this.matn_btn.TabIndex = 11;
+            this.matn_btn.Text = "Математика";
+            this.matn_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.matn_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.matn_btn.UseVisualStyleBackColor = false;
+            this.matn_btn.Click += new System.EventHandler(this.matn_btn_Click);
+            // 
             // SubjectMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.matn_btn);
+            this.Controls.Add(this.chemistry_btn);
             this.Controls.Add(this.close_btn);
             this.Controls.Add(this.menu_panel);
             this.Controls.Add(this.label3);
@@ -222,5 +262,7 @@ namespace chemaths
         private System.Windows.Forms.PictureBox main_btn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox close_btn;
+        private System.Windows.Forms.Button chemistry_btn;
+        private System.Windows.Forms.Button matn_btn;
     }
 }
