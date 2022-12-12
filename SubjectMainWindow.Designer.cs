@@ -38,10 +38,12 @@ namespace chemaths
             this.info_btn = new System.Windows.Forms.Button();
             this.subject_btn = new System.Windows.Forms.Button();
             this.help_btn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.main_btn = new System.Windows.Forms.PictureBox();
+            this.close_btn = new System.Windows.Forms.PictureBox();
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // menu_panel
@@ -70,7 +72,7 @@ namespace chemaths
             // 
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.main_btn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -118,6 +120,7 @@ namespace chemaths
             this.info_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
             this.info_btn.Image = global::chemaths.Properties.Resources.dev;
+            this.info_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.info_btn.Location = new System.Drawing.Point(0, 228);
             this.info_btn.Name = "info_btn";
             this.info_btn.Size = new System.Drawing.Size(186, 42);
@@ -125,6 +128,7 @@ namespace chemaths
             this.info_btn.Text = "Розробники";
             this.info_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.info_btn.UseVisualStyleBackColor = true;
+            this.info_btn.Click += new System.EventHandler(this.info_btn_Click);
             // 
             // subject_btn
             // 
@@ -134,6 +138,7 @@ namespace chemaths
             this.subject_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subject_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
             this.subject_btn.Image = global::chemaths.Properties.Resources.subjects;
+            this.subject_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.subject_btn.Location = new System.Drawing.Point(0, 186);
             this.subject_btn.Name = "subject_btn";
             this.subject_btn.Size = new System.Drawing.Size(186, 42);
@@ -150,6 +155,7 @@ namespace chemaths
             this.help_btn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.help_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
             this.help_btn.Image = global::chemaths.Properties.Resources.help;
+            this.help_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.help_btn.Location = new System.Drawing.Point(0, 144);
             this.help_btn.Name = "help_btn";
             this.help_btn.Size = new System.Drawing.Size(186, 42);
@@ -159,15 +165,27 @@ namespace chemaths
             this.help_btn.UseVisualStyleBackColor = true;
             this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
             // 
-            // pictureBox1
+            // main_btn
             // 
-            this.pictureBox1.Image = global::chemaths.Properties.Resources.manual_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.main_btn.Image = global::chemaths.Properties.Resources.manual_icon;
+            this.main_btn.Location = new System.Drawing.Point(60, 22);
+            this.main_btn.Name = "main_btn";
+            this.main_btn.Size = new System.Drawing.Size(63, 63);
+            this.main_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.main_btn.TabIndex = 0;
+            this.main_btn.TabStop = false;
+            this.main_btn.Click += new System.EventHandler(this.main_btn_Click);
+            // 
+            // close_btn
+            // 
+            this.close_btn.Image = global::chemaths.Properties.Resources.close;
+            this.close_btn.Location = new System.Drawing.Point(914, 12);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(25, 25);
+            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close_btn.TabIndex = 8;
+            this.close_btn.TabStop = false;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // SubjectMainWindow
             // 
@@ -175,15 +193,17 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.close_btn);
             this.Controls.Add(this.menu_panel);
             this.Controls.Add(this.label3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SubjectMainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.menu_panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.main_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +219,8 @@ namespace chemaths
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox main_btn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox close_btn;
     }
 }
