@@ -84,13 +84,13 @@ namespace chemaths
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 122);
+            this.label2.Location = new System.Drawing.Point(67, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Хімія. Математика";
+            this.label2.Text = "Хімія";
             // 
             // label1
             // 
@@ -137,6 +137,7 @@ namespace chemaths
             // 
             // info_btn
             // 
+            this.info_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.info_btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.info_btn.FlatAppearance.BorderSize = 0;
             this.info_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,6 +156,7 @@ namespace chemaths
             // 
             // subject_btn
             // 
+            this.subject_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.subject_btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.subject_btn.FlatAppearance.BorderSize = 0;
             this.subject_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,13 +168,14 @@ namespace chemaths
             this.subject_btn.Name = "subject_btn";
             this.subject_btn.Size = new System.Drawing.Size(186, 42);
             this.subject_btn.TabIndex = 3;
-            this.subject_btn.Text = "Предмети";
+            this.subject_btn.Text = "Активність";
             this.subject_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.subject_btn.UseVisualStyleBackColor = true;
             this.subject_btn.Click += new System.EventHandler(this.subject_btn_Click);
             // 
             // help_btn
             // 
+            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.help_btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.help_btn.FlatAppearance.BorderSize = 0;
             this.help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -191,6 +194,7 @@ namespace chemaths
             // 
             // main_btn
             // 
+            this.main_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.main_btn.Image = global::chemaths.Properties.Resources.manual_icon;
             this.main_btn.Location = new System.Drawing.Point(60, 22);
             this.main_btn.Name = "main_btn";
