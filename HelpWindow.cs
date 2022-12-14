@@ -52,7 +52,7 @@ namespace chemaths
 
         private void subject_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new SubjectMainWindow(), sender);
+            OPEN_MENU_POINT(new ActiveMainWindow(), sender);
         }
 
         private void info_btn_Click(object sender, EventArgs e)
