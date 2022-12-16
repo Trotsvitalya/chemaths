@@ -63,6 +63,26 @@ namespace chemaths.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow {
+            get {
+                object obj = ResourceManager.GetObject("arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap biology__1_ {
+            get {
+                object obj = ResourceManager.GetObject("biology (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -76,6 +96,26 @@ namespace chemaths.Properties {
         internal static System.Drawing.Bitmap dev {
             get {
                 object obj = ResourceManager.GetObject("dev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap down_arrow {
+            get {
+                object obj = ResourceManager.GetObject("down-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap down_arrow1 {
+            get {
+                object obj = ResourceManager.GetObject("down-arrow1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +146,26 @@ namespace chemaths.Properties {
         internal static System.Drawing.Bitmap gif {
             get {
                 object obj = ResourceManager.GetObject("gif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gif1 {
+            get {
+                object obj = ResourceManager.GetObject("gif1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gif2 {
+            get {
+                object obj = ResourceManager.GetObject("gif2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +206,16 @@ namespace chemaths.Properties {
         internal static System.Drawing.Bitmap math1 {
             get {
                 object obj = ResourceManager.GetObject("math1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap puzzle {
+            get {
+                object obj = ResourceManager.GetObject("puzzle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
