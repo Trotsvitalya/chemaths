@@ -29,27 +29,28 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.active_panel = new System.Windows.Forms.Panel();
             this.input_box = new System.Windows.Forms.TextBox();
             this.output_box = new System.Windows.Forms.TextBox();
             this.calculate_btn = new System.Windows.Forms.PictureBox();
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.back_btn = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calculate_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // active_panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.panel1.Controls.Add(this.back_btn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(951, 49);
-            this.panel1.TabIndex = 10;
+            this.active_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.active_panel.Controls.Add(this.back_btn);
+            this.active_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.active_panel.Location = new System.Drawing.Point(0, 0);
+            this.active_panel.Name = "active_panel";
+            this.active_panel.Size = new System.Drawing.Size(951, 49);
+            this.active_panel.TabIndex = 10;
+            this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
             // 
             // input_box
             // 
@@ -124,12 +125,12 @@ namespace chemaths
             this.Controls.Add(this.output_box);
             this.Controls.Add(this.input_box);
             this.Controls.Add(this.close_btn);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.active_panel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalculatorWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel1.ResumeLayout(false);
+            this.active_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calculate_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
@@ -141,7 +142,7 @@ namespace chemaths
         #endregion
 
         private System.Windows.Forms.PictureBox close_btn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel active_panel;
         private System.Windows.Forms.PictureBox back_btn;
         private System.Windows.Forms.TextBox input_box;
         private System.Windows.Forms.TextBox output_box;

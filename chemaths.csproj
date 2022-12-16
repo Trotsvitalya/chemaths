@@ -52,6 +52,12 @@
     <Compile Include="CalculatorWindow.Designer.cs">
       <DependentUpon>CalculatorWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameWindow.Designer.cs">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <EmbeddedResource Include="CalculatorWindow.resx">
       <DependentUpon>CalculatorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpWindow.resx">
       <DependentUpon>HelpWindow.cs</DependentUpon>
