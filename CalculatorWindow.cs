@@ -26,6 +26,7 @@ namespace chemaths
         {
             ActiveMainWindow tmp = new ActiveMainWindow();
             tmp.Show();
+            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
             this.Hide();
         }
 
@@ -50,6 +51,13 @@ namespace chemaths
         private void calculate_btn_Click(object sender, EventArgs e)
         {
             output_box.Text = "result";
+        }
+
+        private void active_panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            active_panel.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            WndProc(ref m);
         }
     }
 }

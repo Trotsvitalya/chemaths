@@ -12,3 +12,4 @@ C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.He
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.InfoWindow.resources
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.ActiveMainWindow.resources
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.CalculatorWindow.resources
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.GameWindow.resources
