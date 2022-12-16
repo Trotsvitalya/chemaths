@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoWindow));
             this.menu_panel = new System.Windows.Forms.Panel();
             this.side_panel = new System.Windows.Forms.Panel();
             this.info_btn = new System.Windows.Forms.Button();
@@ -215,6 +216,7 @@ namespace chemaths
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.menu_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InfoWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.menu_panel.ResumeLayout(false);
