@@ -81,15 +81,20 @@ namespace chemaths
             this.input_box.Name = "input_box";
             this.input_box.Size = new System.Drawing.Size(611, 53);
             this.input_box.TabIndex = 11;
+            this.input_box.TabStop = false;
             this.input_box.Text = "Введіть рівняння";
+            this.input_box.Click += new System.EventHandler(this.input_box_Click);
+            this.input_box.Leave += new System.EventHandler(this.input_box_Leave);
             // 
             // output_box
             // 
+            this.output_box.Cursor = System.Windows.Forms.Cursors.No;
             this.output_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.output_box.Location = new System.Drawing.Point(170, 322);
             this.output_box.Multiline = true;
             this.output_box.Name = "output_box";
+            this.output_box.ReadOnly = true;
             this.output_box.Size = new System.Drawing.Size(611, 53);
             this.output_box.TabIndex = 12;
             // 
