@@ -186,6 +186,7 @@ namespace chemaths
             // 
             // close_btn
             // 
+            this.close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close_btn.Image = global::chemaths.Properties.Resources.close;
             this.close_btn.Location = new System.Drawing.Point(728, 12);
             this.close_btn.Name = "close_btn";
@@ -232,7 +233,7 @@ namespace chemaths
             this.Name = "MainWindow";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.menu_panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
