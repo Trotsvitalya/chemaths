@@ -31,29 +31,29 @@ namespace chemaths
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculatorWindow));
             this.active_panel = new System.Windows.Forms.Panel();
+            this.help_btn = new System.Windows.Forms.PictureBox();
+            this.back_btn = new System.Windows.Forms.PictureBox();
             this.input_box = new System.Windows.Forms.TextBox();
             this.output_box = new System.Windows.Forms.TextBox();
             this.help_panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.close_btn = new System.Windows.Forms.PictureBox();
-            this.help_btn = new System.Windows.Forms.PictureBox();
-            this.back_btn = new System.Windows.Forms.PictureBox();
-            this.help_close_btn = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.help_close_btn = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.close_btn = new System.Windows.Forms.PictureBox();
             this.calculate_btn = new System.Windows.Forms.PictureBox();
             this.active_panel.SuspendLayout();
-            this.help_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
+            this.help_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculate_btn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,30 @@ namespace chemaths
             this.active_panel.Size = new System.Drawing.Size(951, 49);
             this.active_panel.TabIndex = 10;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
+            // 
+            // help_btn
+            // 
+            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.help_btn.Image = global::chemaths.Properties.Resources.help;
+            this.help_btn.Location = new System.Drawing.Point(462, 12);
+            this.help_btn.Name = "help_btn";
+            this.help_btn.Size = new System.Drawing.Size(25, 25);
+            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.help_btn.TabIndex = 12;
+            this.help_btn.TabStop = false;
+            this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
+            // 
+            // back_btn
+            // 
+            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back_btn.Image = global::chemaths.Properties.Resources.arrow;
+            this.back_btn.Location = new System.Drawing.Point(12, 12);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(25, 25);
+            this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.back_btn.TabIndex = 11;
+            this.back_btn.TabStop = false;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // input_box
             // 
@@ -95,6 +119,7 @@ namespace chemaths
             this.output_box.ReadOnly = true;
             this.output_box.Size = new System.Drawing.Size(611, 53);
             this.output_box.TabIndex = 12;
+            this.output_box.TabStop = false;
             // 
             // help_panel
             // 
@@ -115,53 +140,65 @@ namespace chemaths
             this.help_panel.TabIndex = 13;
             this.help_panel.Visible = false;
             // 
-            // label1
+            // label9
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(168, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(615, 140);
-            this.label1.TabIndex = 0;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(901, 391);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 40);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "6";
             // 
-            // label2
+            // help_close_btn
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(130, 151);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 40);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "1\r\n";
+            this.help_close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.help_close_btn.Image = global::chemaths.Properties.Resources.help_close;
+            this.help_close_btn.Location = new System.Drawing.Point(887, 434);
+            this.help_close_btn.Name = "help_close_btn";
+            this.help_close_btn.Size = new System.Drawing.Size(61, 62);
+            this.help_close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.help_close_btn.TabIndex = 17;
+            this.help_close_btn.TabStop = false;
+            this.help_close_btn.Click += new System.EventHandler(this.help_close_btn_Click);
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(513, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(380, 56);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Натисніть на кнопку обчислення² та\r\nотримайте результат у другому полі³\r\n";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(907, 1);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 40);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "5";
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(391, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 40);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "2";
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(5, 1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 40);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(130, 274);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 40);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "3";
             // 
             // label5
             // 
@@ -177,41 +214,53 @@ namespace chemaths
     " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
     " кнопку закриття підказки⁶.";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(130, 274);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 40);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "3";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(402, 210);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 40);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "2";
             // 
-            // label7
+            // label3
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label7.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(5, 1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 40);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "4";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(513, 203);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(380, 56);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Натисніть на кнопку обчислення² та\r\nотримайте результат у другому полі³\r\n";
             // 
-            // label8
+            // label2
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(907, 1);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 40);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "5";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(130, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 40);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "1\r\n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(168, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(615, 140);
+            this.label1.TabIndex = 0;
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // close_btn
             // 
@@ -224,54 +273,6 @@ namespace chemaths
             this.close_btn.TabIndex = 9;
             this.close_btn.TabStop = false;
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
-            // 
-            // help_btn
-            // 
-            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.help_btn.Image = global::chemaths.Properties.Resources.help;
-            this.help_btn.Location = new System.Drawing.Point(462, 12);
-            this.help_btn.Name = "help_btn";
-            this.help_btn.Size = new System.Drawing.Size(25, 25);
-            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.help_btn.TabIndex = 12;
-            this.help_btn.TabStop = false;
-            this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
-            // 
-            // back_btn
-            // 
-            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back_btn.Image = global::chemaths.Properties.Resources.arrow;
-            this.back_btn.Location = new System.Drawing.Point(12, 12);
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(25, 25);
-            this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.back_btn.TabIndex = 11;
-            this.back_btn.TabStop = false;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
-            // 
-            // help_close_btn
-            // 
-            this.help_close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.help_close_btn.Image = global::chemaths.Properties.Resources.help_close;
-            this.help_close_btn.Location = new System.Drawing.Point(887, 434);
-            this.help_close_btn.Name = "help_close_btn";
-            this.help_close_btn.Size = new System.Drawing.Size(61, 62);
-            this.help_close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.help_close_btn.TabIndex = 17;
-            this.help_close_btn.TabStop = false;
-            this.help_close_btn.Click += new System.EventHandler(this.help_close_btn_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label9.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(901, 391);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 40);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "6";
             // 
             // calculate_btn
             // 
@@ -299,15 +300,16 @@ namespace chemaths
             this.Controls.Add(this.help_panel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalculatorWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.active_panel.ResumeLayout(false);
-            this.help_panel.ResumeLayout(false);
-            this.help_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
+            this.help_panel.ResumeLayout(false);
+            this.help_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculate_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

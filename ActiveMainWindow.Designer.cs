@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActiveMainWindow));
             this.menu_panel = new System.Windows.Forms.Panel();
             this.side_panel = new System.Windows.Forms.Panel();
             this.info_btn = new System.Windows.Forms.Button();
@@ -194,7 +195,7 @@ namespace chemaths
             this.game_btn.ForeColor = System.Drawing.Color.White;
             this.game_btn.Image = global::chemaths.Properties.Resources.puzzle;
             this.game_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.game_btn.Location = new System.Drawing.Point(586, 198);
+            this.game_btn.Location = new System.Drawing.Point(607, 198);
             this.game_btn.Name = "game_btn";
             this.game_btn.Size = new System.Drawing.Size(136, 185);
             this.game_btn.TabIndex = 10;
@@ -213,7 +214,7 @@ namespace chemaths
             this.coefficient_btn.ForeColor = System.Drawing.Color.White;
             this.coefficient_btn.Image = global::chemaths.Properties.Resources.biology__1_;
             this.coefficient_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.coefficient_btn.Location = new System.Drawing.Point(377, 198);
+            this.coefficient_btn.Location = new System.Drawing.Point(398, 198);
             this.coefficient_btn.Name = "coefficient_btn";
             this.coefficient_btn.Size = new System.Drawing.Size(136, 185);
             this.coefficient_btn.TabIndex = 9;
@@ -257,6 +258,7 @@ namespace chemaths
             this.Controls.Add(this.coefficient_btn);
             this.Controls.Add(this.menu_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ActiveMainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.menu_panel.ResumeLayout(false);

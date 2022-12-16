@@ -29,14 +29,15 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             this.active_panel = new System.Windows.Forms.Panel();
+            this.help_btn = new System.Windows.Forms.PictureBox();
             this.back_btn = new System.Windows.Forms.PictureBox();
             this.close_btn = new System.Windows.Forms.PictureBox();
-            this.help_btn = new System.Windows.Forms.PictureBox();
             this.active_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -51,6 +52,17 @@ namespace chemaths
             this.active_panel.Size = new System.Drawing.Size(951, 49);
             this.active_panel.TabIndex = 14;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
+            // 
+            // help_btn
+            // 
+            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.help_btn.Image = global::chemaths.Properties.Resources.help;
+            this.help_btn.Location = new System.Drawing.Point(462, 12);
+            this.help_btn.Name = "help_btn";
+            this.help_btn.Size = new System.Drawing.Size(25, 25);
+            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.help_btn.TabIndex = 14;
+            this.help_btn.TabStop = false;
             // 
             // back_btn
             // 
@@ -76,17 +88,6 @@ namespace chemaths
             this.close_btn.TabStop = false;
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
-            // help_btn
-            // 
-            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.help_btn.Image = global::chemaths.Properties.Resources.help;
-            this.help_btn.Location = new System.Drawing.Point(462, 12);
-            this.help_btn.Name = "help_btn";
-            this.help_btn.Size = new System.Drawing.Size(25, 25);
-            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.help_btn.TabIndex = 14;
-            this.help_btn.TabStop = false;
-            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,12 +96,13 @@ namespace chemaths
             this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.active_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.active_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             this.ResumeLayout(false);
 
         }

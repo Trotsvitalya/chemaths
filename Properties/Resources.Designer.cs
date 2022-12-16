@@ -121,6 +121,26 @@ namespace chemaths.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] ex {
+            get {
+                object obj = ResourceManager.GetObject("ex", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] ex1 {
+            get {
+                object obj = ResourceManager.GetObject("ex1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap flask {
@@ -137,6 +157,26 @@ namespace chemaths.Properties {
             get {
                 object obj = ResourceManager.GetObject("flask (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] Fregat {
+            get {
+                object obj = ResourceManager.GetObject("Fregat", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] Fregat1 {
+            get {
+                object obj = ResourceManager.GetObject("Fregat1", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
