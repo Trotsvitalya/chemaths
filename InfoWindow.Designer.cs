@@ -72,6 +72,7 @@ namespace chemaths
             // 
             // info_btn
             // 
+            this.info_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.info_btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.info_btn.FlatAppearance.BorderSize = 0;
             this.info_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -89,6 +90,7 @@ namespace chemaths
             // 
             // subject_btn
             // 
+            this.subject_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.subject_btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.subject_btn.FlatAppearance.BorderSize = 0;
             this.subject_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,6 +109,7 @@ namespace chemaths
             // 
             // help_btn
             // 
+            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.help_btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.help_btn.FlatAppearance.BorderSize = 0;
             this.help_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,6 +161,7 @@ namespace chemaths
             // 
             // main_btn
             // 
+            this.main_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.main_btn.Image = global::chemaths.Properties.Resources.manual_icon;
             this.main_btn.Location = new System.Drawing.Point(60, 22);
             this.main_btn.Name = "main_btn";
@@ -180,6 +184,7 @@ namespace chemaths
             // 
             // close_btn
             // 
+            this.close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close_btn.Image = global::chemaths.Properties.Resources.close;
             this.close_btn.Location = new System.Drawing.Point(728, 12);
             this.close_btn.Name = "close_btn";

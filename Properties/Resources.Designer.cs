@@ -183,6 +183,16 @@ namespace chemaths.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap help_close {
+            get {
+                object obj = ResourceManager.GetObject("help_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap manual_icon {
             get {
                 object obj = ResourceManager.GetObject("manual icon", resourceCulture);

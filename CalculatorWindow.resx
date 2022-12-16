@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Щоб скористатись калькулятором розстановки коефіцієнтів,
+введіть у перше поле¹ хімічне рівняння. Між реагентами та 
+символами операцій мають стояти пробіли.
+                                             Наприклад:
+                                         Cu + O2 =&gt; CuO
+</value>
+  </data>
 </root>
