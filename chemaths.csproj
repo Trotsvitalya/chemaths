@@ -143,5 +143,20 @@
   <ItemGroup>
     <None Include="Properties\Images\flask %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\main\gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\biology %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\puzzle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

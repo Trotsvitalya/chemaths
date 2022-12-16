@@ -46,5 +46,10 @@ namespace chemaths
                 input_box.ForeColor = Color.DimGray;
             }
         }
+
+        private void calculate_btn_Click(object sender, EventArgs e)
+        {
+            output_box.Text = "result";
+        }
     }
 }
