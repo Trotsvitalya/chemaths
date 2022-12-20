@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculatorWindow.Designer.cs">
+      <DependentUpon>CalculatorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameWindow.Designer.cs">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpWindow.Designer.cs">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoWindow.Designer.cs">
+      <DependentUpon>InfoWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,19 +78,46 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ActiveMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActiveMainWindow.Designer.cs">
+      <DependentUpon>ActiveMainWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CalculatorWindow.resx">
+      <DependentUpon>CalculatorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoWindow.resx">
+      <DependentUpon>InfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="ActiveMainWindow.resx">
+      <DependentUpon>ActiveMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Resources\ex.otf" />
+    <None Include="Properties\Resources\Fregat.otf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -75,6 +126,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\dev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\manual icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\subjects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\flask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\flask %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\main\gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\biology %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\puzzle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\help_close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
