@@ -42,6 +42,7 @@ namespace chemaths
             this.label3 = new System.Windows.Forms.Label();
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.active_panel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
@@ -207,12 +208,24 @@ namespace chemaths
             this.active_panel.TabIndex = 12;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(205, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(724, 210);
+            this.label4.TabIndex = 13;
+            this.label4.Text = resources.GetString("label4.Text");
+            // 
             // InfoWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.menu_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -227,6 +240,7 @@ namespace chemaths
             this.active_panel.ResumeLayout(false);
             this.active_panel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -244,5 +258,6 @@ namespace chemaths
         private System.Windows.Forms.PictureBox close_btn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel active_panel;
+        private System.Windows.Forms.Label label4;
     }
 }
