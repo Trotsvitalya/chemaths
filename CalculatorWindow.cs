@@ -75,7 +75,9 @@ namespace chemaths
 
         private void calculate_btn_Click_1(object sender, EventArgs e)
         {
-            output_box.Text = "result";
+            Balancer.eq = input_box.Text;
+            Balancer.runs();
+            output_box.Text = Balancer.final;
         }
     }
 }
