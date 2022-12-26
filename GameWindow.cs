@@ -36,5 +36,13 @@ namespace chemaths
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
+
+        private void start_btn_Click(object sender, EventArgs e)
+        {
+            LevelWindow tmp = new LevelWindow();
+            tmp.Show();
+            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
+        }
     }
 }

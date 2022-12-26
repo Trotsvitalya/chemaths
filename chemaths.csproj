@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Balancer.cs" />
     <Compile Include="CalculatorWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,12 +71,19 @@
     <Compile Include="InfoWindow.Designer.cs">
       <DependentUpon>InfoWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="LevelWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelWindow.Designer.cs">
+      <DependentUpon>LevelWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ActiveMainWindow.cs">
@@ -95,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoWindow.resx">
       <DependentUpon>InfoWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelWindow.resx">
+      <DependentUpon>LevelWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -171,6 +182,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\help_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\clipboard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
