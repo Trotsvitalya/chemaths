@@ -11,6 +11,7 @@ namespace chemaths
     {
         public static string eq;
         public static string final;
+        public static string cof;
         public static void runs()
         {
             //получаем список всех элементов и химических веществ
@@ -47,7 +48,7 @@ namespace chemaths
             coefficients = ReduceSet(coefficients); //сводит все числа к наименьшим значениям
 
             final = FillCoefficients(coefficients, eq); //добавляет коэффициенты к химическим веществам
-
+            cof = string.Join("", coefficients);
 
         }
         public static double[] ReduceSet(double[] dArr)
