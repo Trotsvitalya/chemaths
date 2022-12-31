@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelWindow));
             this.active_panel = new System.Windows.Forms.Panel();
             this.help_btn = new System.Windows.Forms.PictureBox();
             this.close_btn = new System.Windows.Forms.PictureBox();
@@ -158,19 +159,23 @@ namespace chemaths
             // 
             // pictureBox_confirm
             // 
+            this.pictureBox_confirm.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_confirm.Image")));
             this.pictureBox_confirm.Location = new System.Drawing.Point(12, 109);
             this.pictureBox_confirm.Name = "pictureBox_confirm";
             this.pictureBox_confirm.Size = new System.Drawing.Size(129, 32);
             this.pictureBox_confirm.TabIndex = 37;
             this.pictureBox_confirm.TabStop = false;
+            this.pictureBox_confirm.Click += new System.EventHandler(this.pictureBox_confirm_Click);
             // 
             // pictureBox_start
             // 
+            this.pictureBox_start.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_start.Image")));
             this.pictureBox_start.Location = new System.Drawing.Point(379, 505);
             this.pictureBox_start.Name = "pictureBox_start";
             this.pictureBox_start.Size = new System.Drawing.Size(192, 60);
             this.pictureBox_start.TabIndex = 36;
             this.pictureBox_start.TabStop = false;
+            this.pictureBox_start.Click += new System.EventHandler(this.pictureBox_start_Click);
             // 
             // label1
             // 
@@ -234,6 +239,7 @@ namespace chemaths
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LevelWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.LevelWindow_Load);
             this.active_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
