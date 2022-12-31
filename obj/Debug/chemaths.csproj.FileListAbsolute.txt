@@ -29,3 +29,20 @@ C:\Users\User\Desktop\uni\2 курс\курсач\chemistry\chemaths\obj\Debug\c
 C:\Users\User\Desktop\uni\2 курс\курсач\chemistry\chemaths\obj\Debug\chemaths.exe
 C:\Users\User\Desktop\uni\2 курс\курсач\chemistry\chemaths\obj\Debug\chemaths.pdb
 C:\Users\User\Desktop\uni\2 курс\курсач\chemistry\chemaths\obj\Debug\chemaths.LevelWindow.resources
+H:\copy_for_fails\chemaths\bin\Debug\chemaths.exe.config
+H:\copy_for_fails\chemaths\bin\Debug\chemaths.exe
+H:\copy_for_fails\chemaths\bin\Debug\chemaths.pdb
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.csproj.AssemblyReference.cache
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.csproj.SuggestedBindingRedirects.cache
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.CalculatorWindow.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.GameWindow.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.HelpWindow.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.InfoWindow.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.LevelWindow.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.MainWindow.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.Properties.Resources.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.ActiveMainWindow.resources
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.csproj.GenerateResource.cache
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.csproj.CoreCompileInputs.cache
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.exe
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.pdb
