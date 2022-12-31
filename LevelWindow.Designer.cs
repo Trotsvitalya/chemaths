@@ -30,15 +30,19 @@ namespace chemaths
         private void InitializeComponent()
         {
             this.active_panel = new System.Windows.Forms.Panel();
+            this.help_btn = new System.Windows.Forms.PictureBox();
+            this.close_btn = new System.Windows.Forms.PictureBox();
             this.output_box = new System.Windows.Forms.TextBox();
             this.input_box = new System.Windows.Forms.TextBox();
             this.check_btn = new System.Windows.Forms.PictureBox();
-            this.help_btn = new System.Windows.Forms.PictureBox();
-            this.close_btn = new System.Windows.Forms.PictureBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.active_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.check_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.check_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -52,6 +56,29 @@ namespace chemaths
             this.active_panel.Size = new System.Drawing.Size(951, 49);
             this.active_panel.TabIndex = 20;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
+            // 
+            // help_btn
+            // 
+            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.help_btn.Image = global::chemaths.Properties.Resources.help;
+            this.help_btn.Location = new System.Drawing.Point(12, 12);
+            this.help_btn.Name = "help_btn";
+            this.help_btn.Size = new System.Drawing.Size(25, 25);
+            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.help_btn.TabIndex = 14;
+            this.help_btn.TabStop = false;
+            // 
+            // close_btn
+            // 
+            this.close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close_btn.Image = global::chemaths.Properties.Resources.close;
+            this.close_btn.Location = new System.Drawing.Point(914, 12);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(25, 25);
+            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close_btn.TabIndex = 13;
+            this.close_btn.TabStop = false;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // output_box
             // 
@@ -89,28 +116,47 @@ namespace chemaths
             this.check_btn.TabIndex = 23;
             this.check_btn.TabStop = false;
             // 
-            // help_btn
+            // numericUpDown1
             // 
-            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.help_btn.Image = global::chemaths.Properties.Resources.help;
-            this.help_btn.Location = new System.Drawing.Point(12, 12);
-            this.help_btn.Name = "help_btn";
-            this.help_btn.Size = new System.Drawing.Size(25, 25);
-            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.help_btn.TabIndex = 14;
-            this.help_btn.TabStop = false;
+            this.numericUpDown1.Location = new System.Drawing.Point(12, 83);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(129, 20);
+            this.numericUpDown1.TabIndex = 33;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // close_btn
+            // label3
             // 
-            this.close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.close_btn.Image = global::chemaths.Properties.Resources.close;
-            this.close_btn.Location = new System.Drawing.Point(914, 12);
-            this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(25, 25);
-            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.close_btn.TabIndex = 13;
-            this.close_btn.TabStop = false;
-            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(12, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 16);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "ВИБЕРІТЬ РІВЕНЬ";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 22);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "ПІДТВЕРДЖЕННЯ";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // LevelWindow
             // 
@@ -118,6 +164,9 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.check_btn);
             this.Controls.Add(this.output_box);
             this.Controls.Add(this.input_box);
@@ -126,9 +175,10 @@ namespace chemaths
             this.Name = "LevelWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.active_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.check_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.check_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +191,8 @@ namespace chemaths
         private System.Windows.Forms.TextBox output_box;
         private System.Windows.Forms.TextBox input_box;
         private System.Windows.Forms.PictureBox check_btn;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
