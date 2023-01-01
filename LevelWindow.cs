@@ -34,7 +34,6 @@ namespace chemaths
         private void pictureBox_start_Click(object sender, EventArgs e)
         {
             label3.Visible = numericUpDown1.Visible = pictureBox_confirm.Visible = false;
-            //lvl_panel.Enabled = lvl_panel.Visible = false;
             label5.Visible = true;
             label5.Text = "Рівняння: 1";
             input_box.Visible = true;
@@ -55,7 +54,6 @@ namespace chemaths
         private void help_btn_Click(object sender, EventArgs e)
         {
             on_off_items(true);
-            //help_panel.Visible = check_btn.Visible = true;
         }
 
 
@@ -75,6 +73,46 @@ namespace chemaths
             tmp12.Show();
         }
 
+        private void check_btn_Click(object sender, EventArgs e)
+        {
+            if (index != taskArray.Length + 1)
+            {
+                if (index == taskArray.Length) { }
+                else { label5.Text = "Рівняння: " + (index + 1).ToString(); }
+                if (input_box.Text == taskArrayR[index - 1].InnerText)
+                {
+                    countR++;
+                    MessageBox.Show(input_box.Text + " - ПРАВИЛЬНА ВІДПОВІДЬ!");
+                    output_box.Text = "";
+                    input_box.Text = "";
+                }
+                else
+                {
+                    countW++;
+                    MessageBox.Show(input_box.Text + " - НЕПРАВИЛЬНА ВІДПОВІДЬ!");
+                    output_box.Text = "";
+                    input_box.Text = "";
+                }
+                if (index == taskArray.Length)
+                {
+                    input_box.Visible = false; output_box.Visible = false; label4.Visible = false;
+                    label5.Text = "НАТИСНІТЬ НА КНОПКУ ЩЕ РАЗ ЩОБ ДІЗНАТИСЬ СВІЙ РЕЗУЛЬТАТ";
+                }
+                else output_box.Text = taskArray[index].InnerText;
+                index++;
+            }
+            else
+            {
+                MessageBox.Show("Результат: " + countR + "/15");
+                N_Results1 = countW; N_Results2 = countR;
+                label5.Text = " "; input_box.Text = "";
+                output_box.Text = " "; label4.Text = " "; check_btn.Visible = false;
+                countR = 0; countW = 0; randomized = false;
+                this.Close();
+                tmp.Show();
+            }
+        }
+
         private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
             active_panel.Capture = false;
@@ -90,7 +128,6 @@ namespace chemaths
         private void LevelWindow_Load(object sender, EventArgs e)
         {
             help_panel.Visible = false;
-            //lvl_panel.Enabled = true;
             check_btn.Visible = false;
             pictureBox_start.Visible = false;
         }

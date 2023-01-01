@@ -31,6 +31,7 @@ namespace chemaths
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelWindow));
             this.active_panel = new System.Windows.Forms.Panel();
+            this.back_btn = new System.Windows.Forms.PictureBox();
             this.help_btn = new System.Windows.Forms.PictureBox();
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.output_box = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@ namespace chemaths
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.help_panel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.help_close_btn = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,8 +52,9 @@ namespace chemaths
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.back_btn = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.active_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.check_btn)).BeginInit();
@@ -62,7 +63,6 @@ namespace chemaths
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_start)).BeginInit();
             this.help_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -78,11 +78,23 @@ namespace chemaths
             this.active_panel.TabIndex = 20;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
             // 
+            // back_btn
+            // 
+            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back_btn.Image = global::chemaths.Properties.Resources.arrow;
+            this.back_btn.Location = new System.Drawing.Point(9, 12);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(25, 25);
+            this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.back_btn.TabIndex = 15;
+            this.back_btn.TabStop = false;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // help_btn
             // 
             this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.help_btn.Image = global::chemaths.Properties.Resources.help;
-            this.help_btn.Location = new System.Drawing.Point(426, 12);
+            this.help_btn.Location = new System.Drawing.Point(453, 12);
             this.help_btn.Name = "help_btn";
             this.help_btn.Size = new System.Drawing.Size(25, 25);
             this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,6 +149,7 @@ namespace chemaths
             this.check_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.check_btn.TabIndex = 23;
             this.check_btn.TabStop = false;
+            this.check_btn.Click += new System.EventHandler(this.check_btn_Click);
             // 
             // numericUpDown1
             // 
@@ -237,20 +250,6 @@ namespace chemaths
             this.help_panel.Size = new System.Drawing.Size(951, 525);
             this.help_panel.TabIndex = 42;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(3, 417);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(875, 96);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Щоб повернутись до попереднього вікна, натисніть кнопку повернення⁴.\r\nЩоб закрити" +
-    " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
-    " кнопку закриття підказки⁶.";
-            // 
             // help_close_btn
             // 
             this.help_close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -337,17 +336,19 @@ namespace chemaths
             this.label7.TabIndex = 1;
             this.label7.Text = "У першому полі¹ з\'являється хімічне рівняння";
             // 
-            // back_btn
+            // label2
             // 
-            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back_btn.Image = global::chemaths.Properties.Resources.arrow;
-            this.back_btn.Location = new System.Drawing.Point(9, 12);
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(25, 25);
-            this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.back_btn.TabIndex = 15;
-            this.back_btn.TabStop = false;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
+            this.label2.Location = new System.Drawing.Point(3, 417);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(875, 96);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Щоб повернутись до попереднього вікна, натисніть кнопку повернення⁴.\r\nЩоб закрити" +
+    " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
+    " кнопку закриття підказки⁶.";
             // 
             // LevelWindow
             // 
@@ -372,6 +373,7 @@ namespace chemaths
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.LevelWindow_Load);
             this.active_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.check_btn)).EndInit();
@@ -381,7 +383,6 @@ namespace chemaths
             this.help_panel.ResumeLayout(false);
             this.help_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
