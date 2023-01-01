@@ -32,6 +32,7 @@ namespace chemaths
 
         private void pictureBox_start_Click(object sender, EventArgs e)
         {
+            lvl_panel.Enabled = lvl_panel.Visible = false;
             label5.Text = "Рівняння: 1";
             input_box.Visible = true;
             output_box.Visible = true;
@@ -40,6 +41,20 @@ namespace chemaths
             check_btn.Visible = true;
             label4.Visible = true;
         }
+
+        private void on_off_items(bool commutator)
+        {
+            //input_box.Enabled = output_box.Enabled = calculate_btn.Enabled =
+            //back_btn.Enabled = help_btn.Enabled = commutator;
+            pictureBox_confirm.Enabled = commutator;
+
+        }
+
+        private void help_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         public LevelWindow()
         {
@@ -60,6 +75,7 @@ namespace chemaths
 
         private void LevelWindow_Load(object sender, EventArgs e)
         {
+            lvl_panel.Enabled = true;
             check_btn.Visible = false;
             pictureBox_start.Visible = false;
         }

@@ -208,7 +208,7 @@ namespace chemaths
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label5.Location = new System.Drawing.Point(12, 400);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(876, 96);
+            this.label5.Size = new System.Drawing.Size(875, 96);
             this.label5.TabIndex = 13;
             this.label5.Text = "Щоб повернутись до попереднього вікна, натисніть кнопку повернення⁴.\r\nЩоб закрити" +
     " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
