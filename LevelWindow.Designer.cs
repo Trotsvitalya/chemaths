@@ -53,6 +53,9 @@ namespace chemaths
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
@@ -120,7 +123,7 @@ namespace chemaths
             this.output_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.output_box.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.output_box.Location = new System.Drawing.Point(160, 132);
+            this.output_box.Location = new System.Drawing.Point(160, 112);
             this.output_box.Multiline = true;
             this.output_box.Name = "output_box";
             this.output_box.ReadOnly = true;
@@ -132,7 +135,7 @@ namespace chemaths
             // 
             this.input_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_box.ForeColor = System.Drawing.Color.DimGray;
-            this.input_box.Location = new System.Drawing.Point(160, 266);
+            this.input_box.Location = new System.Drawing.Point(160, 241);
             this.input_box.Multiline = true;
             this.input_box.Name = "input_box";
             this.input_box.Size = new System.Drawing.Size(611, 53);
@@ -143,9 +146,9 @@ namespace chemaths
             // 
             this.check_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_btn.Image = global::chemaths.Properties.Resources.clipboard;
-            this.check_btn.Location = new System.Drawing.Point(404, 383);
+            this.check_btn.Location = new System.Drawing.Point(404, 350);
             this.check_btn.Name = "check_btn";
-            this.check_btn.Size = new System.Drawing.Size(126, 83);
+            this.check_btn.Size = new System.Drawing.Size(126, 73);
             this.check_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.check_btn.TabIndex = 23;
             this.check_btn.TabStop = false;
@@ -197,9 +200,9 @@ namespace chemaths
             // pictureBox_start
             // 
             this.pictureBox_start.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_start.Image")));
-            this.pictureBox_start.Location = new System.Drawing.Point(404, 472);
+            this.pictureBox_start.Location = new System.Drawing.Point(404, 429);
             this.pictureBox_start.Name = "pictureBox_start";
-            this.pictureBox_start.Size = new System.Drawing.Size(126, 44);
+            this.pictureBox_start.Size = new System.Drawing.Size(126, 35);
             this.pictureBox_start.TabIndex = 36;
             this.pictureBox_start.TabStop = false;
             this.pictureBox_start.Click += new System.EventHandler(this.pictureBox_start_Click);
@@ -207,11 +210,11 @@ namespace chemaths
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(411, 66);
+            this.label1.Location = new System.Drawing.Point(409, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 25);
+            this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 38;
             this.label1.Text = "РІВЕНЬ:";
             // 
@@ -220,7 +223,7 @@ namespace chemaths
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(164, 105);
+            this.label5.Location = new System.Drawing.Point(158, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 25);
             this.label5.TabIndex = 40;
@@ -237,8 +240,12 @@ namespace chemaths
             // 
             // help_panel
             // 
+            this.help_panel.Controls.Add(this.label14);
+            this.help_panel.Controls.Add(this.label13);
+            this.help_panel.Controls.Add(this.label12);
             this.help_panel.Controls.Add(this.help_close_btn);
             this.help_panel.Controls.Add(this.label11);
+            this.help_panel.Controls.Add(this.label5);
             this.help_panel.Controls.Add(this.label10);
             this.help_panel.Controls.Add(this.label6);
             this.help_panel.Controls.Add(this.label9);
@@ -268,7 +275,7 @@ namespace chemaths
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label11.Location = new System.Drawing.Point(364, 349);
+            this.label11.Location = new System.Drawing.Point(364, 313);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 40);
             this.label11.TabIndex = 37;
@@ -280,7 +287,7 @@ namespace chemaths
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label10.Location = new System.Drawing.Point(222, 267);
+            this.label10.Location = new System.Drawing.Point(222, 242);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(489, 50);
             this.label10.TabIndex = 6;
@@ -293,7 +300,7 @@ namespace chemaths
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label6.Location = new System.Drawing.Point(236, 133);
+            this.label6.Location = new System.Drawing.Point(236, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(475, 75);
             this.label6.TabIndex = 5;
@@ -306,7 +313,7 @@ namespace chemaths
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label9.Location = new System.Drawing.Point(124, 218);
+            this.label9.Location = new System.Drawing.Point(124, 193);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(34, 40);
             this.label9.TabIndex = 4;
@@ -318,7 +325,7 @@ namespace chemaths
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label8.Location = new System.Drawing.Point(124, 84);
+            this.label8.Location = new System.Drawing.Point(124, 57);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 40);
             this.label8.TabIndex = 2;
@@ -330,7 +337,7 @@ namespace chemaths
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label7.Location = new System.Drawing.Point(265, 50);
+            this.label7.Location = new System.Drawing.Point(265, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(420, 25);
             this.label7.TabIndex = 1;
@@ -350,6 +357,42 @@ namespace chemaths
     " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
     " кнопку закриття підказки⁶.";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
+            this.label12.Location = new System.Drawing.Point(5, 1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 40);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "4";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
+            this.label13.Location = new System.Drawing.Point(907, 1);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 40);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "5";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
+            this.label14.Location = new System.Drawing.Point(901, 391);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(34, 40);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "6";
+            // 
             // LevelWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,7 +404,6 @@ namespace chemaths
             this.Controls.Add(this.input_box);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.pictureBox_confirm);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.output_box);
@@ -412,5 +454,8 @@ namespace chemaths
         private System.Windows.Forms.PictureBox help_close_btn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox back_btn;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

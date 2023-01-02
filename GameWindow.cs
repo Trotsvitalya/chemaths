@@ -39,6 +39,7 @@ namespace chemaths
 
         private void start_btn_Click(object sender, EventArgs e)
         {
+            results_list.Items.Add(nickname_box.Text);
             LevelWindow tmp = new LevelWindow();
             tmp.Show();
             tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);

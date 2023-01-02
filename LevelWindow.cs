@@ -45,6 +45,7 @@ namespace chemaths
 
         private void on_off_items(bool commutator)
         {
+            check_btn.Visible = true;
             help_panel.Visible = commutator;
             label5.Visible = check_btn.Enabled = !commutator;
 
@@ -53,6 +54,7 @@ namespace chemaths
         private void help_btn_Click(object sender, EventArgs e)
         {
             on_off_items(true);
+            //check_btn.Enabled = false;
         }
 
 
@@ -64,6 +66,7 @@ namespace chemaths
         private void help_close_btn_Click(object sender, EventArgs e)
         {
             on_off_items(false);
+            //check_btn.Enabled = true;
         }
 
         private void back_btn_Click(object sender, EventArgs e)
