@@ -46,3 +46,6 @@ H:\copy_for_fails\chemaths\obj\Debug\chemaths.csproj.GenerateResource.cache
 H:\copy_for_fails\chemaths\obj\Debug\chemaths.csproj.CoreCompileInputs.cache
 H:\copy_for_fails\chemaths\obj\Debug\chemaths.exe
 H:\copy_for_fails\chemaths\obj\Debug\chemaths.pdb
+H:\copy_for_fails\chemaths\bin\Debug\Newtonsoft.Json.dll
+H:\copy_for_fails\chemaths\bin\Debug\Newtonsoft.Json.xml
+H:\copy_for_fails\chemaths\obj\Debug\chemaths.csproj.CopyComplete

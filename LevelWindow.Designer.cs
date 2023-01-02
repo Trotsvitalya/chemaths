@@ -223,7 +223,7 @@ namespace chemaths
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(158, 29);
+            this.label5.Location = new System.Drawing.Point(165, 84);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 25);
             this.label5.TabIndex = 40;
@@ -245,7 +245,6 @@ namespace chemaths
             this.help_panel.Controls.Add(this.label12);
             this.help_panel.Controls.Add(this.help_close_btn);
             this.help_panel.Controls.Add(this.label11);
-            this.help_panel.Controls.Add(this.label5);
             this.help_panel.Controls.Add(this.label10);
             this.help_panel.Controls.Add(this.label6);
             this.help_panel.Controls.Add(this.label9);
@@ -404,6 +403,7 @@ namespace chemaths
             this.Controls.Add(this.input_box);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.pictureBox_confirm);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.output_box);
