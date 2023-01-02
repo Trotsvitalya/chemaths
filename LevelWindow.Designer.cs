@@ -153,7 +153,7 @@ namespace chemaths
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(16, 71);
+            this.numericUpDown1.Location = new System.Drawing.Point(13, 215);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             2,
             0,
@@ -178,7 +178,7 @@ namespace chemaths
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(15, 55);
+            this.label3.Location = new System.Drawing.Point(12, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 32;
@@ -187,7 +187,7 @@ namespace chemaths
             // pictureBox_confirm
             // 
             this.pictureBox_confirm.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_confirm.Image")));
-            this.pictureBox_confirm.Location = new System.Drawing.Point(16, 97);
+            this.pictureBox_confirm.Location = new System.Drawing.Point(12, 241);
             this.pictureBox_confirm.Name = "pictureBox_confirm";
             this.pictureBox_confirm.Size = new System.Drawing.Size(101, 22);
             this.pictureBox_confirm.TabIndex = 37;

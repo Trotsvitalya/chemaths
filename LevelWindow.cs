@@ -17,7 +17,6 @@ namespace chemaths
         XmlDocument doc = new XmlDocument();
         XmlNodeList tasks, tasksR;
         XmlNode[] taskArray, taskArrayR;
-        bool randomized = false;
         public int N_Results1;
         public int N_Results2;
         ActiveMainWindow tmp = new ActiveMainWindow();
@@ -82,14 +81,14 @@ namespace chemaths
                 if (input_box.Text == taskArrayR[index - 1].InnerText)
                 {
                     countR++;
-                    MessageBox.Show(input_box.Text + " - ПРАВИЛЬНА ВІДПОВІДЬ!");
+                    MessageBox.Show("ВІДПОВІДЬ ПРАВИЛЬНА!");
                     output_box.Text = "";
                     input_box.Text = "";
                 }
                 else
                 {
                     countW++;
-                    MessageBox.Show(input_box.Text + " - НЕПРАВИЛЬНА ВІДПОВІДЬ!");
+                    MessageBox.Show("ВІДПОВІДЬ НЕПРАВИЛЬНА!");
                     output_box.Text = "";
                     input_box.Text = "";
                 }
@@ -105,14 +104,22 @@ namespace chemaths
             {
                 MessageBox.Show("Результат: " + countR + "/15");
                 N_Results1 = countW; N_Results2 = countR;
-                label5.Text = " "; input_box.Text = "";
-                output_box.Text = " "; label4.Text = " "; check_btn.Visible = false;
-                countR = 0; countW = 0; randomized = false;
                 this.Close();
                 tmp.Show();
             }
         }
-
+        public void Fisher_Yates(XmlNode[] taskArray, XmlNode[] taskArrayR)
+        {
+            Random rnd = new Random();
+            for (int i = taskArray.Length - 1; i >= 1; i--)
+            {
+                int j = rnd.Next(i + 1);
+                XmlNode temp1 = taskArray[j];
+                XmlNode temp2 = taskArrayR[j];
+                taskArray[j] = taskArray[i]; taskArrayR[j] = taskArrayR[i];
+                taskArray[i] = temp1; taskArrayR[i] = temp2;
+            }
+        }
         private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
             active_panel.Capture = false;
@@ -135,6 +142,7 @@ namespace chemaths
         private void pictureBox_confirm_Click(object sender, EventArgs e)
         {
             Start();
+            Fisher_Yates(taskArray, taskArrayR);
             label1.Text = "РІВЕНЬ: " + numericUpDown1.Value.ToString();
             label4.Text = "";
             label5.Text = "НАТИСНІТЬ КНОПКУ РОЗПОЧАТИ ЩОБ ПОЧАТИ!";
@@ -143,7 +151,6 @@ namespace chemaths
             pictureBox_confirm.Visible = false;
             pictureBox_start.Visible = true;
             check_btn.Visible = false;
-            randomized = false;
         }
     }
 }
