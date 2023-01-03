@@ -23,9 +23,7 @@ namespace chemaths
         public int N_Results2;
         ActiveMainWindow tmp = new ActiveMainWindow();
         GameWindow tmp12 = new GameWindow();
-
-
-
+        public string userName;
         public void Start()
         {
             doc.Load("Levels.xml");
@@ -111,7 +109,13 @@ namespace chemaths
                 MessageBox.Show("Результат: " + countR + "/15");
                 N_Results1 = countW; N_Results2 = countR;
                 JObject file1 = JObject.Parse(File.ReadAllText("Results.json"));
-                JObject file2 = JObject.Parse(@"'{}");
+                JObject file2 = new JObject();
+                file2[userName] = countR; 
+                file1.Merge(file2, new JsonMergeSettings
+                {
+                    MergeArrayHandling = MergeArrayHandling.Union
+                });
+                File.WriteAllText(@"Results.json", file1.ToString());
                 this.Close();
                 tmp.Show();
             }
