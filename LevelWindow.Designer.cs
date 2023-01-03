@@ -85,7 +85,7 @@ namespace chemaths
             // 
             this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.back_btn.Image = global::chemaths.Properties.Resources.arrow;
-            this.back_btn.Location = new System.Drawing.Point(9, 12);
+            this.back_btn.Location = new System.Drawing.Point(12, 12);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(25, 25);
             this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +97,7 @@ namespace chemaths
             // 
             this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.help_btn.Image = global::chemaths.Properties.Resources.help;
-            this.help_btn.Location = new System.Drawing.Point(453, 12);
+            this.help_btn.Location = new System.Drawing.Point(462, 12);
             this.help_btn.Name = "help_btn";
             this.help_btn.Size = new System.Drawing.Size(25, 25);
             this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +212,7 @@ namespace chemaths
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(409, 55);
+            this.label1.Location = new System.Drawing.Point(417, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 38;
@@ -250,6 +250,7 @@ namespace chemaths
             this.help_panel.Controls.Add(this.label9);
             this.help_panel.Controls.Add(this.label8);
             this.help_panel.Controls.Add(this.label7);
+            this.help_panel.Controls.Add(this.label1);
             this.help_panel.Controls.Add(this.label2);
             this.help_panel.Location = new System.Drawing.Point(0, 55);
             this.help_panel.Name = "help_panel";
@@ -336,7 +337,7 @@ namespace chemaths
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label7.Location = new System.Drawing.Point(265, 22);
+            this.label7.Location = new System.Drawing.Point(265, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(420, 25);
             this.label7.TabIndex = 1;
@@ -408,7 +409,6 @@ namespace chemaths
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.output_box);
             this.Controls.Add(this.pictureBox_start);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.help_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LevelWindow";

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace chemaths
 {
@@ -21,6 +23,9 @@ namespace chemaths
         public int N_Results2;
         ActiveMainWindow tmp = new ActiveMainWindow();
         GameWindow tmp12 = new GameWindow();
+
+
+
         public void Start()
         {
             doc.Load("Levels.xml");
@@ -105,6 +110,8 @@ namespace chemaths
             {
                 MessageBox.Show("Результат: " + countR + "/15");
                 N_Results1 = countW; N_Results2 = countR;
+                JObject file1 = JObject.Parse(File.ReadAllText("Results.json"));
+                JObject file2 = JObject.Parse(@"'{}");
                 this.Close();
                 tmp.Show();
             }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace chemaths
 {
@@ -16,7 +19,15 @@ namespace chemaths
         {
             InitializeComponent();
         }
-
+        private void Start1()
+        {
+            JObject o1 = JObject.Parse(File.ReadAllText("Results.json"));
+            foreach (JProperty property in o1.Properties())
+            {
+                ListViewItem listviewItem = new ListViewItem(new string[] { property.Name, property.Value.ToString() });
+                results_list.Items.Add(listviewItem);
+            }
+        }
         private void back_btn_Click(object sender, EventArgs e)
         {
             ActiveMainWindow tmp = new ActiveMainWindow();
@@ -39,11 +50,15 @@ namespace chemaths
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-            results_list.Items.Add(nickname_box.Text);
             LevelWindow tmp = new LevelWindow();
             tmp.Show();
             tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
             this.Hide();
+        }
+
+        private void GameWindow_Load(object sender, EventArgs e)
+        {
+            Start1();
         }
     }
 }
