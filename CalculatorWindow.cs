@@ -72,7 +72,7 @@ namespace chemaths
             help_panel.Visible = false;
             on_off_items(true);
         }
-
+        
         private void calculate_btn_Click_1(object sender, EventArgs e)
         {
             Balancer.eq = input_box.Text;

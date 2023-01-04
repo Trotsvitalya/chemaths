@@ -40,11 +40,13 @@ namespace chemaths
             this.nickname_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.start_btn = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.start_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -102,10 +104,10 @@ namespace chemaths
             this.columnHeader2});
             this.results_list.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.results_list.HideSelection = false;
-            this.results_list.Location = new System.Drawing.Point(30, 65);
+            this.results_list.Location = new System.Drawing.Point(30, 77);
             this.results_list.Name = "results_list";
             this.results_list.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.results_list.Size = new System.Drawing.Size(441, 488);
+            this.results_list.Size = new System.Drawing.Size(441, 411);
             this.results_list.TabIndex = 15;
             this.results_list.UseCompatibleStateImageBehavior = false;
             this.results_list.View = System.Windows.Forms.View.Details;
@@ -113,12 +115,12 @@ namespace chemaths
             // columnHeader1
             // 
             this.columnHeader1.Text = "Користувач";
-            this.columnHeader1.Width = 214;
+            this.columnHeader1.Width = 223;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Результат";
-            this.columnHeader2.Width = 450;
+            this.columnHeader2.Width = 223;
             // 
             // nickname_box
             // 
@@ -152,12 +154,23 @@ namespace chemaths
             this.start_btn.TabStop = false;
             this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(30, 506);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(441, 50);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.start_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nickname_box);
@@ -173,6 +186,7 @@ namespace chemaths
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.start_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +203,6 @@ namespace chemaths
         private System.Windows.Forms.TextBox nickname_box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox start_btn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
