@@ -157,12 +157,11 @@ namespace chemaths
             Fisher_Yates(taskArray, taskArrayR);
             label1.Text = "РІВЕНЬ: " + numericUpDown1.Value.ToString();
             label4.Text = "";
-            label5.Text = "НАТИСНІТЬ КНОПКУ РОЗПОЧАТИ ЩОБ ПОЧАТИ!";
+            label5.Text = "НАТИСНІТЬ КНОПКУ 'СТАРТ' ЩОБ ПОЧАТИ!";
             output_box.Text = "";
             index = 1;
-            pictureBox_confirm.Visible = false;
+            pictureBox_confirm.Visible = check_btn.Visible = numericUpDown1.Enabled = false;
             pictureBox_start.Visible = true;
-            check_btn.Visible = false;
         }
     }
 }
