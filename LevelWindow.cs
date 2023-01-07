@@ -71,12 +71,16 @@ namespace chemaths
                 if (input_box.Text == taskArrayR[index - 1].InnerText)
                 {
                     countR++;
+                    MessageWindow message = new MessageWindow("Відповідь правильна!");
+                    message.ShowDialog();
                     output_box.Text = "";
                     input_box.Text = "";
                 }
                 else
                 {
                     countW++;
+                    MessageWindow message = new MessageWindow("Відповідь неправильна!");
+                    message.ShowDialog();
                     output_box.Text = "";
                     input_box.Text = "";
                 }

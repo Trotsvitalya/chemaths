@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelWindow));
             this.active_panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.help_panel = new System.Windows.Forms.Panel();
@@ -103,11 +104,11 @@ namespace chemaths
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label14.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label14.Location = new System.Drawing.Point(901, 391);
+            this.label14.Location = new System.Drawing.Point(901, 399);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 40);
+            this.label14.Size = new System.Drawing.Size(31, 32);
             this.label14.TabIndex = 44;
             this.label14.Text = "6";
             // 
@@ -115,11 +116,11 @@ namespace chemaths
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label13.Location = new System.Drawing.Point(907, 1);
+            this.label13.Location = new System.Drawing.Point(908, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 40);
+            this.label13.Size = new System.Drawing.Size(31, 32);
             this.label13.TabIndex = 43;
             this.label13.Text = "5";
             // 
@@ -127,11 +128,11 @@ namespace chemaths
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label12.Location = new System.Drawing.Point(5, 1);
+            this.label12.Location = new System.Drawing.Point(6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 40);
+            this.label12.Size = new System.Drawing.Size(31, 32);
             this.label12.TabIndex = 42;
             this.label12.Text = "4";
             // 
@@ -139,11 +140,11 @@ namespace chemaths
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label11.Location = new System.Drawing.Point(377, 330);
+            this.label11.Location = new System.Drawing.Point(394, 336);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 40);
+            this.label11.Size = new System.Drawing.Size(31, 32);
             this.label11.TabIndex = 37;
             this.label11.Text = "3";
             // 
@@ -166,11 +167,11 @@ namespace chemaths
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label9.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label9.Location = new System.Drawing.Point(124, 236);
+            this.label9.Location = new System.Drawing.Point(139, 237);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 40);
+            this.label9.Size = new System.Drawing.Size(31, 32);
             this.label9.TabIndex = 4;
             this.label9.Text = "2";
             // 
@@ -178,11 +179,11 @@ namespace chemaths
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label8.Location = new System.Drawing.Point(124, 128);
+            this.label8.Location = new System.Drawing.Point(139, 129);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 40);
+            this.label8.Size = new System.Drawing.Size(31, 32);
             this.label8.TabIndex = 2;
             this.label8.Text = "1\r\n";
             // 
@@ -324,6 +325,7 @@ namespace chemaths
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.help_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LevelWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.active_panel.ResumeLayout(false);
