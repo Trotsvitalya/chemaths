@@ -27,47 +27,34 @@ namespace chemaths
         public void Start()
         {
             doc.Load("Levels.xml");
-            tasks = doc.SelectNodes($"/root/level[@number='{(int)numericUpDown1.Value}']/task");
-            tasksR = doc.SelectNodes($"/root/level[@number='results{(int)numericUpDown1.Value}']/task");
+            tasks = doc.SelectNodes($"/root/level[@number='{(int)register_w.level_choice.Value}']/task");
+            tasksR = doc.SelectNodes($"/root/level[@number='results{(int)register_w.level_choice.Value}']/task");
             taskArray = tasks.OfType<XmlNode>().ToArray();
             taskArrayR = tasksR.OfType<XmlNode>().ToArray();
         }
 
-        private void pictureBox_start_Click(object sender, EventArgs e)
-        {
-            label3.Visible = numericUpDown1.Visible = pictureBox_confirm.Visible = false;
-            label5.Visible = true;
-            label5.Text = "Рівняння: 1";
-            input_box.Visible = true;
-            output_box.Visible = true;
-            pictureBox_start.Visible = false;
-            output_box.Text = taskArray[0].InnerText;
-            check_btn.Visible = true;
-            label4.Visible = true;
-        }
-
-        private void on_off_items(bool commutator)
-        {
-            check_btn.Visible = true;
-            help_panel.Visible = commutator;
-            label5.Visible = check_btn.Enabled = !commutator;
-
-        }
-
         private void help_btn_Click(object sender, EventArgs e)
         {
-            on_off_items(true);
+            help_panel.Visible = true;
         }
 
+        RegisterWindow register_w;
 
-        public LevelWindow()
+        public LevelWindow(RegisterWindow tmp)
         {
             InitializeComponent();
+            register_w = tmp;
+
+            Start();
+            Fisher_Yates(taskArray, taskArrayR);
+            output_box.Text = "";
+            index = 1;
+            output_box.Text = taskArray[0].InnerText;
         }
 
         private void help_close_btn_Click(object sender, EventArgs e)
         {
-            on_off_items(false);
+            help_panel.Visible = false;
         }
 
         private void back_btn_Click(object sender, EventArgs e)
@@ -142,26 +129,6 @@ namespace chemaths
         private void close_btn_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void LevelWindow_Load(object sender, EventArgs e)
-        {
-            help_panel.Visible = false;
-            check_btn.Visible = false;
-            pictureBox_start.Visible = false;
-        }
-
-        private void pictureBox_confirm_Click(object sender, EventArgs e)
-        {
-            Start();
-            Fisher_Yates(taskArray, taskArrayR);
-            label1.Text = "РІВЕНЬ: " + numericUpDown1.Value.ToString();
-            label4.Text = "";
-            label5.Text = "НАТИСНІТЬ КНОПКУ 'СТАРТ' ЩОБ ПОЧАТИ!";
-            output_box.Text = "";
-            index = 1;
-            pictureBox_confirm.Visible = check_btn.Visible = numericUpDown1.Enabled = false;
-            pictureBox_start.Visible = true;
         }
     }
 }

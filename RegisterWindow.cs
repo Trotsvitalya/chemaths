@@ -59,7 +59,7 @@ namespace chemaths
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-            LevelWindow tmp = new LevelWindow();
+            LevelWindow tmp = new LevelWindow(this);
             tmp.userName = nickname_box.Text;
             tmp.Show();
             tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
@@ -74,6 +74,11 @@ namespace chemaths
         private void nickname_box_TextChanged(object sender, EventArgs e)
         {
             info_label.Text = nickname_box.Text + "\nпочинає практику на рівні " + level_choice.Value;
+        }
+
+        private void help_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

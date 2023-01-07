@@ -29,7 +29,6 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelWindow));
             this.active_panel = new System.Windows.Forms.Panel();
             this.back_btn = new System.Windows.Forms.PictureBox();
             this.help_btn = new System.Windows.Forms.PictureBox();
@@ -37,11 +36,6 @@ namespace chemaths
             this.output_box = new System.Windows.Forms.TextBox();
             this.input_box = new System.Windows.Forms.TextBox();
             this.check_btn = new System.Windows.Forms.PictureBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox_confirm = new System.Windows.Forms.PictureBox();
-            this.pictureBox_start = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.help_panel = new System.Windows.Forms.Panel();
@@ -61,9 +55,6 @@ namespace chemaths
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.check_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_confirm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_start)).BeginInit();
             this.help_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).BeginInit();
             this.SuspendLayout();
@@ -154,70 +145,6 @@ namespace chemaths
             this.check_btn.TabStop = false;
             this.check_btn.Click += new System.EventHandler(this.check_btn_Click);
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 190);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(101, 20);
-            this.numericUpDown1.TabIndex = 33;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(11, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "ВИБЕРІТЬ РІВЕНЬ";
-            // 
-            // pictureBox_confirm
-            // 
-            this.pictureBox_confirm.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_confirm.Image")));
-            this.pictureBox_confirm.Location = new System.Drawing.Point(12, 216);
-            this.pictureBox_confirm.Name = "pictureBox_confirm";
-            this.pictureBox_confirm.Size = new System.Drawing.Size(101, 22);
-            this.pictureBox_confirm.TabIndex = 37;
-            this.pictureBox_confirm.TabStop = false;
-            this.pictureBox_confirm.Click += new System.EventHandler(this.pictureBox_confirm_Click);
-            // 
-            // pictureBox_start
-            // 
-            this.pictureBox_start.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_start.Image")));
-            this.pictureBox_start.Location = new System.Drawing.Point(404, 429);
-            this.pictureBox_start.Name = "pictureBox_start";
-            this.pictureBox_start.Size = new System.Drawing.Size(126, 40);
-            this.pictureBox_start.TabIndex = 36;
-            this.pictureBox_start.TabStop = false;
-            this.pictureBox_start.Click += new System.EventHandler(this.pictureBox_start_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(403, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 24);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "РІВЕНЬ:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -255,6 +182,7 @@ namespace chemaths
             this.help_panel.Name = "help_panel";
             this.help_panel.Size = new System.Drawing.Size(951, 525);
             this.help_panel.TabIndex = 42;
+            this.help_panel.Visible = false;
             // 
             // label14
             // 
@@ -386,7 +314,7 @@ namespace chemaths
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label2.Location = new System.Drawing.Point(3, 417);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(875, 96);
+            this.label2.Size = new System.Drawing.Size(876, 96);
             this.label2.TabIndex = 41;
             this.label2.Text = "Щоб повернутись до попереднього вікна, натисніть кнопку повернення⁴.\r\nЩоб закрити" +
     " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
@@ -398,30 +326,21 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.check_btn);
             this.Controls.Add(this.input_box);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.pictureBox_confirm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.output_box);
-            this.Controls.Add(this.pictureBox_start);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.help_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LevelWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Load += new System.EventHandler(this.LevelWindow_Load);
             this.active_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.check_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_confirm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_start)).EndInit();
             this.help_panel.ResumeLayout(false);
             this.help_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).EndInit();
@@ -437,11 +356,6 @@ namespace chemaths
         private System.Windows.Forms.TextBox output_box;
         private System.Windows.Forms.TextBox input_box;
         private System.Windows.Forms.PictureBox check_btn;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox_confirm;
-        private System.Windows.Forms.PictureBox pictureBox_start;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel help_panel;
