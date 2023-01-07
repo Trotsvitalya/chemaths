@@ -75,7 +75,7 @@ namespace chemaths
                     countR++;
                     if(result_choice == "yes")
                     {
-                        MessageWindow message = new MessageWindow("Відповідь правильна!");
+                        MessageWindow message = new MessageWindow("Відповідь правильна!", "right");
                         message.ShowDialog();
                     }
                     output_box.Text = "";
@@ -86,7 +86,7 @@ namespace chemaths
                     countW++;
                     if (result_choice == "yes")
                     {
-                        MessageWindow message = new MessageWindow("Відповідь неправильна!");
+                        MessageWindow message = new MessageWindow("Відповідь неправильна!", taskArrayR[index - 1].InnerText);
                         message.ShowDialog();
                     }
                     output_box.Text = "";

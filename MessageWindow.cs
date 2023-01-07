@@ -12,10 +12,18 @@ namespace chemaths
 {
     public partial class MessageWindow : Form
     {
-        public MessageWindow(string result)
+        public MessageWindow(string result, string answer)
         {
             InitializeComponent();
             result_label.Text = result;
+            if(answer == "right")
+            {
+                answer_label.Visible = false;
+            }
+            else
+            {
+                answer_label.Text = "Правильна відповідь: " + answer;
+            }
         }
 
         private void ok_btn_Click(object sender, EventArgs e)

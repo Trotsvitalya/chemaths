@@ -33,6 +33,7 @@ namespace chemaths
             this.result_label = new System.Windows.Forms.Label();
             this.ok_btn = new System.Windows.Forms.PictureBox();
             this.active_panel = new System.Windows.Forms.Panel();
+            this.answer_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ok_btn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@ namespace chemaths
             this.result_label.AutoSize = true;
             this.result_label.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.result_label.ForeColor = System.Drawing.Color.White;
-            this.result_label.Location = new System.Drawing.Point(53, 87);
+            this.result_label.Location = new System.Drawing.Point(54, 66);
             this.result_label.Name = "result_label";
             this.result_label.Size = new System.Drawing.Size(352, 37);
             this.result_label.TabIndex = 21;
@@ -68,12 +69,24 @@ namespace chemaths
             this.active_panel.TabIndex = 23;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
             // 
+            // answer_label
+            // 
+            this.answer_label.AutoSize = true;
+            this.answer_label.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.answer_label.ForeColor = System.Drawing.Color.White;
+            this.answer_label.Location = new System.Drawing.Point(12, 116);
+            this.answer_label.Name = "answer_label";
+            this.answer_label.Size = new System.Drawing.Size(351, 37);
+            this.answer_label.TabIndex = 24;
+            this.answer_label.Text = "Правильна відповідь:\r\n";
+            // 
             // MessageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(76)))), ((int)(((byte)(149)))));
             this.ClientSize = new System.Drawing.Size(462, 284);
+            this.Controls.Add(this.answer_label);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.ok_btn);
             this.Controls.Add(this.result_label);
@@ -93,5 +106,6 @@ namespace chemaths
         private System.Windows.Forms.Label result_label;
         private System.Windows.Forms.PictureBox ok_btn;
         private System.Windows.Forms.Panel active_panel;
+        private System.Windows.Forms.Label answer_label;
     }
 }
