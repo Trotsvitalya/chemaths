@@ -56,5 +56,24 @@ namespace chemaths
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
+
+        private void start_btn_Click(object sender, EventArgs e)
+        {
+            LevelWindow tmp = new LevelWindow();
+            tmp.userName = nickname_box.Text;
+            tmp.Show();
+            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
+        }
+
+        private void level_choice_ValueChanged(object sender, EventArgs e)
+        {
+            info_label.Text = nickname_box.Text + "\nпочинає практику на рівні " + level_choice.Value;
+        }
+
+        private void nickname_box_TextChanged(object sender, EventArgs e)
+        {
+            info_label.Text = nickname_box.Text + "\nпочинає практику на рівні " + level_choice.Value;
+        }
     }
 }

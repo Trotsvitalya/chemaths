@@ -48,15 +48,6 @@ namespace chemaths
             WndProc(ref m);
         }
 
-        private void start_btn_Click(object sender, EventArgs e)
-        {
-            LevelWindow tmp = new LevelWindow();
-            //tmp.userName = nickname_box.Text;
-            tmp.Show();
-            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
-        }
-
         private void GameWindow_Load(object sender, EventArgs e)
         {
             Start1();

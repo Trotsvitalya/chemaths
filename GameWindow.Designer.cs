@@ -37,13 +37,11 @@ namespace chemaths
             this.label1 = new System.Windows.Forms.Label();
             this.register_btn = new System.Windows.Forms.PictureBox();
             this.clear_results_btn = new System.Windows.Forms.PictureBox();
-            this.help_btn = new System.Windows.Forms.PictureBox();
             this.back_btn = new System.Windows.Forms.PictureBox();
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.register_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +49,6 @@ namespace chemaths
             // active_panel
             // 
             this.active_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.active_panel.Controls.Add(this.help_btn);
             this.active_panel.Controls.Add(this.back_btn);
             this.active_panel.Controls.Add(this.close_btn);
             this.active_panel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -63,13 +60,13 @@ namespace chemaths
             // 
             // results_list
             // 
-            this.results_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.results_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.results_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.results_list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
             this.results_list.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.results_list.ForeColor = System.Drawing.Color.White;
+            this.results_list.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
             this.results_list.HideSelection = false;
             this.results_list.Location = new System.Drawing.Point(98, 109);
             this.results_list.Name = "results_list";
@@ -124,17 +121,6 @@ namespace chemaths
             this.clear_results_btn.TabStop = false;
             this.clear_results_btn.Click += new System.EventHandler(this.clear_results_btn_Click);
             // 
-            // help_btn
-            // 
-            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.help_btn.Image = global::chemaths.Properties.Resources.help;
-            this.help_btn.Location = new System.Drawing.Point(462, 12);
-            this.help_btn.Name = "help_btn";
-            this.help_btn.Size = new System.Drawing.Size(25, 25);
-            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.help_btn.TabIndex = 14;
-            this.help_btn.TabStop = false;
-            // 
             // back_btn
             // 
             this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -178,7 +164,6 @@ namespace chemaths
             this.active_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.register_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.ResumeLayout(false);
@@ -190,7 +175,6 @@ namespace chemaths
         private System.Windows.Forms.PictureBox close_btn;
         private System.Windows.Forms.Panel active_panel;
         private System.Windows.Forms.PictureBox back_btn;
-        private System.Windows.Forms.PictureBox help_btn;
         private System.Windows.Forms.ListView results_list;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
