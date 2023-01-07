@@ -6,7 +6,7 @@
     <task number="3">()Na + ()H2O = ()NaOH + ()H2</task>
     <task number="4">()Fe2O3 + ()H2 = ()Fe + ()H2O</task>
     <task number="5">()Al + ()Fe3O4 = ()Al2O3 + ()Fe</task>
-    <task number="6">()C + ()H2 = CH4</task>
+    <task number="6">()C + ()H2 = ()CH4</task>
     <task number="7">()N2O5 + ()H2O = ()HNO3</task>
     <task number="8">()SO2 + O2 = ()SO3</task>
 	<task number="9">()CH4 + ()H2O = ()CO2 + ()H2</task>
@@ -31,7 +31,7 @@
 	<task number="11">()C2H2 + ()O2 = ()CO2 + ()H2O</task>
 	<task number="12">()PbO + ()Al = ()Al2O3 + ()Pb</task>
 	<task number="13">()P + ()Cl2 = ()PCl5</task>
-	<task number="14">()FeCl3 + Fe = FeCl2</task>
+	<task number="14">()FeCl3 + ()Fe = ()FeCl2</task>
 	<task number="15">()Na2O + P2O5 = ()Na3PO4</task>
   </level>
   <level number="results1">

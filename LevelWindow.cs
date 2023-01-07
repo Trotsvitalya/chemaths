@@ -75,7 +75,7 @@ namespace chemaths
 
         private void check_btn_Click_1(object sender, EventArgs e)
         {
-            if (index != taskArray.Length + 1)
+            if (index <= taskArray.Length)
             {
                 if (input_box.Text == taskArrayR[index - 1].InnerText)
                 {
