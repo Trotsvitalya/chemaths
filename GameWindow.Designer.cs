@@ -99,10 +99,13 @@ namespace chemaths
             // 
             // results_list
             // 
+            this.results_list.BackColor = System.Drawing.Color.White;
+            this.results_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.results_list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
             this.results_list.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.results_list.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
             this.results_list.HideSelection = false;
             this.results_list.Location = new System.Drawing.Point(12, 65);
             this.results_list.Name = "results_list";
@@ -115,7 +118,7 @@ namespace chemaths
             // columnHeader1
             // 
             this.columnHeader1.Text = "Користувач";
-            this.columnHeader1.Width = 223;
+            this.columnHeader1.Width = 226;
             // 
             // columnHeader2
             // 
@@ -125,7 +128,7 @@ namespace chemaths
             // nickname_box
             // 
             this.nickname_box.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nickname_box.Location = new System.Drawing.Point(525, 268);
+            this.nickname_box.Location = new System.Drawing.Point(514, 142);
             this.nickname_box.Multiline = true;
             this.nickname_box.Name = "nickname_box";
             this.nickname_box.Size = new System.Drawing.Size(381, 55);
@@ -136,7 +139,7 @@ namespace chemaths
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(615, 223);
+            this.label1.Location = new System.Drawing.Point(604, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 37);
             this.label1.TabIndex = 18;
@@ -158,7 +161,7 @@ namespace chemaths
             // 
             this.start_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.start_btn.Image = global::chemaths.Properties.Resources.start;
-            this.start_btn.Location = new System.Drawing.Point(632, 329);
+            this.start_btn.Location = new System.Drawing.Point(620, 421);
             this.start_btn.Name = "start_btn";
             this.start_btn.Size = new System.Drawing.Size(161, 105);
             this.start_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
