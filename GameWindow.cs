@@ -51,7 +51,7 @@ namespace chemaths
         private void start_btn_Click(object sender, EventArgs e)
         {
             LevelWindow tmp = new LevelWindow();
-            tmp.userName = nickname_box.Text;
+            //tmp.userName = nickname_box.Text;
             tmp.Show();
             tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
             this.Hide();
@@ -66,6 +66,14 @@ namespace chemaths
         {
             results_list.Items.Clear();
             File.WriteAllText("Results.json", "{}");
+        }
+
+        private void register_btn_Click(object sender, EventArgs e)
+        {
+            RegisterWindow tmp = new RegisterWindow();
+            tmp.Show();
+            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
         }
     }
 }

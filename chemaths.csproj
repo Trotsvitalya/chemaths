@@ -95,6 +95,12 @@
     <Compile Include="ActiveMainWindow.Designer.cs">
       <DependentUpon>ActiveMainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterWindow.Designer.cs">
+      <DependentUpon>RegisterWindow.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CalculatorWindow.resx">
       <DependentUpon>CalculatorWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActiveMainWindow.resx">
       <DependentUpon>ActiveMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterWindow.resx">
+      <DependentUpon>RegisterWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Resources\ex.otf" />
@@ -195,6 +204,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\login %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

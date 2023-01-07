@@ -31,22 +31,21 @@ namespace chemaths
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             this.active_panel = new System.Windows.Forms.Panel();
-            this.help_btn = new System.Windows.Forms.PictureBox();
-            this.back_btn = new System.Windows.Forms.PictureBox();
-            this.close_btn = new System.Windows.Forms.PictureBox();
             this.results_list = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nickname_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.register_btn = new System.Windows.Forms.PictureBox();
             this.clear_results_btn = new System.Windows.Forms.PictureBox();
-            this.start_btn = new System.Windows.Forms.PictureBox();
+            this.help_btn = new System.Windows.Forms.PictureBox();
+            this.back_btn = new System.Windows.Forms.PictureBox();
+            this.close_btn = new System.Windows.Forms.PictureBox();
             this.active_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.register_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.start_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -61,6 +60,69 @@ namespace chemaths
             this.active_panel.Size = new System.Drawing.Size(951, 49);
             this.active_panel.TabIndex = 14;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
+            // 
+            // results_list
+            // 
+            this.results_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.results_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.results_list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.results_list.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.results_list.ForeColor = System.Drawing.Color.White;
+            this.results_list.HideSelection = false;
+            this.results_list.Location = new System.Drawing.Point(98, 109);
+            this.results_list.Name = "results_list";
+            this.results_list.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.results_list.Size = new System.Drawing.Size(755, 368);
+            this.results_list.TabIndex = 15;
+            this.results_list.UseCompatibleStateImageBehavior = false;
+            this.results_list.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Користувач";
+            this.columnHeader1.Width = 378;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Результат";
+            this.columnHeader2.Width = 379;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(304, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(342, 37);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Таблиця результатів:";
+            // 
+            // register_btn
+            // 
+            this.register_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.register_btn.Image = global::chemaths.Properties.Resources.login__1_;
+            this.register_btn.Location = new System.Drawing.Point(406, 483);
+            this.register_btn.Name = "register_btn";
+            this.register_btn.Size = new System.Drawing.Size(138, 92);
+            this.register_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.register_btn.TabIndex = 41;
+            this.register_btn.TabStop = false;
+            this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
+            // 
+            // clear_results_btn
+            // 
+            this.clear_results_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clear_results_btn.Image = global::chemaths.Properties.Resources.clear;
+            this.clear_results_btn.Location = new System.Drawing.Point(859, 109);
+            this.clear_results_btn.Name = "clear_results_btn";
+            this.clear_results_btn.Size = new System.Drawing.Size(46, 38);
+            this.clear_results_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.clear_results_btn.TabIndex = 20;
+            this.clear_results_btn.TabStop = false;
+            this.clear_results_btn.Click += new System.EventHandler(this.clear_results_btn_Click);
             // 
             // help_btn
             // 
@@ -97,88 +159,15 @@ namespace chemaths
             this.close_btn.TabStop = false;
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
-            // results_list
-            // 
-            this.results_list.BackColor = System.Drawing.Color.White;
-            this.results_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.results_list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.results_list.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.results_list.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.results_list.HideSelection = false;
-            this.results_list.Location = new System.Drawing.Point(12, 65);
-            this.results_list.Name = "results_list";
-            this.results_list.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.results_list.Size = new System.Drawing.Size(441, 500);
-            this.results_list.TabIndex = 15;
-            this.results_list.UseCompatibleStateImageBehavior = false;
-            this.results_list.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Користувач";
-            this.columnHeader1.Width = 226;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Результат";
-            this.columnHeader2.Width = 223;
-            // 
-            // nickname_box
-            // 
-            this.nickname_box.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nickname_box.Location = new System.Drawing.Point(514, 142);
-            this.nickname_box.Multiline = true;
-            this.nickname_box.Name = "nickname_box";
-            this.nickname_box.Size = new System.Drawing.Size(381, 55);
-            this.nickname_box.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(604, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 37);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Введіть ім\'я:";
-            // 
-            // clear_results_btn
-            // 
-            this.clear_results_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clear_results_btn.Image = global::chemaths.Properties.Resources.clear;
-            this.clear_results_btn.Location = new System.Drawing.Point(462, 65);
-            this.clear_results_btn.Name = "clear_results_btn";
-            this.clear_results_btn.Size = new System.Drawing.Size(36, 33);
-            this.clear_results_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.clear_results_btn.TabIndex = 20;
-            this.clear_results_btn.TabStop = false;
-            this.clear_results_btn.Click += new System.EventHandler(this.clear_results_btn_Click);
-            // 
-            // start_btn
-            // 
-            this.start_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.start_btn.Image = global::chemaths.Properties.Resources.start;
-            this.start_btn.Location = new System.Drawing.Point(620, 421);
-            this.start_btn.Name = "start_btn";
-            this.start_btn.Size = new System.Drawing.Size(161, 105);
-            this.start_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.start_btn.TabIndex = 19;
-            this.start_btn.TabStop = false;
-            this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
-            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.clear_results_btn);
-            this.Controls.Add(this.start_btn);
+            this.Controls.Add(this.register_btn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nickname_box);
+            this.Controls.Add(this.clear_results_btn);
             this.Controls.Add(this.results_list);
             this.Controls.Add(this.active_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -187,11 +176,11 @@ namespace chemaths
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.GameWindow_Load);
             this.active_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.register_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.start_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,9 +194,8 @@ namespace chemaths
         private System.Windows.Forms.ListView results_list;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.TextBox nickname_box;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox start_btn;
         private System.Windows.Forms.PictureBox clear_results_btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox register_btn;
     }
 }

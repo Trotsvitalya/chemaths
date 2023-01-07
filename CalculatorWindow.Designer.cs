@@ -48,6 +48,7 @@ namespace chemaths
             this.label1 = new System.Windows.Forms.Label();
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.calculate_btn = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
@@ -95,7 +96,7 @@ namespace chemaths
             // 
             // input_box
             // 
-            this.input_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.input_box.ForeColor = System.Drawing.Color.DimGray;
             this.input_box.Location = new System.Drawing.Point(170, 199);
             this.input_box.Multiline = true;
@@ -103,14 +104,14 @@ namespace chemaths
             this.input_box.Size = new System.Drawing.Size(611, 53);
             this.input_box.TabIndex = 11;
             this.input_box.TabStop = false;
-            this.input_box.Text = "Введіть рівняння";
+            this.input_box.Text = "Cu + O2 => CuO";
             this.input_box.Click += new System.EventHandler(this.input_box_Click);
             this.input_box.Leave += new System.EventHandler(this.input_box_Leave);
             // 
             // output_box
             // 
             this.output_box.Cursor = System.Windows.Forms.Cursors.Default;
-            this.output_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.output_box.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.output_box.Location = new System.Drawing.Point(170, 322);
@@ -208,7 +209,7 @@ namespace chemaths
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label5.Location = new System.Drawing.Point(12, 400);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(875, 96);
+            this.label5.Size = new System.Drawing.Size(876, 96);
             this.label5.TabIndex = 13;
             this.label5.Text = "Щоб повернутись до попереднього вікна, натисніть кнопку повернення⁴.\r\nЩоб закрити" +
     " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
@@ -256,11 +257,14 @@ namespace chemaths
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(168, 1);
+            this.label1.Location = new System.Drawing.Point(132, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(615, 140);
+            this.label1.Size = new System.Drawing.Size(692, 84);
             this.label1.TabIndex = 0;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.Text = "Щоб скористатись калькулятором розстановки коефіцієнтів, введіть\r\nу перше поле¹ х" +
+    "імічне рівняння. Між реагентами та символами\r\nоперацій мають стояти пробіли. При" +
+    "клад рівняння наведено.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // close_btn
             // 
@@ -286,12 +290,24 @@ namespace chemaths
             this.calculate_btn.TabStop = false;
             this.calculate_btn.Click += new System.EventHandler(this.calculate_btn_Click_1);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(325, 159);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(295, 37);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Введіть рівняння:";
+            // 
             // CalculatorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.calculate_btn);
             this.Controls.Add(this.output_box);
             this.Controls.Add(this.input_box);
@@ -336,5 +352,6 @@ namespace chemaths
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox calculate_btn;
+        private System.Windows.Forms.Label label10;
     }
 }

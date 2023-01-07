@@ -32,9 +32,10 @@ namespace chemaths
 
         private void input_box_Click(object sender, EventArgs e)
         {
-            if(input_box.Text == "Введіть рівняння")
+            if(input_box.Text == "Cu + O2 => CuO")
             {
                 input_box.Text = null;
+                input_box.Font = new Font(input_box.Font, FontStyle.Regular);
                 input_box.ForeColor = Color.FromArgb(31, 34, 53);
             }
         }
@@ -43,7 +44,8 @@ namespace chemaths
         {
             if(string.IsNullOrWhiteSpace(input_box.Text))
             {
-                input_box.Text = "Введіть рівняння";
+                input_box.Text = "Cu + O2 => CuO";
+                input_box.Font = new Font(input_box.Font, FontStyle.Italic);
                 input_box.ForeColor = Color.DimGray;
             }
         }
@@ -55,22 +57,14 @@ namespace chemaths
             WndProc(ref m);
         }
 
-        private void on_off_items(bool commutator)
-        {
-            input_box.Enabled = output_box.Enabled = calculate_btn.Enabled = 
-            back_btn.Enabled = help_btn.Enabled = commutator;
-        }
-
         private void help_btn_Click(object sender, EventArgs e)
         {
             help_panel.Visible = true;
-            on_off_items(false);
         }
 
         private void help_close_btn_Click(object sender, EventArgs e)
         {
             help_panel.Visible = false;
-            on_off_items(true);
         }
         
         private void calculate_btn_Click_1(object sender, EventArgs e)
