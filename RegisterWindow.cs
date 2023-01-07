@@ -15,6 +15,7 @@ namespace chemaths
         public RegisterWindow()
         {
             InitializeComponent();
+            yes_btn.Checked = true;
         }
 
         private void nickname_box_Leave(object sender, EventArgs e)
@@ -59,7 +60,12 @@ namespace chemaths
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-            LevelWindow tmp = new LevelWindow(this);
+            string result_choice = "yes";
+            if (no_btn.Checked == true)
+            {
+                result_choice = "no";
+            }
+            LevelWindow tmp = new LevelWindow(this, result_choice);
             tmp.userName = nickname_box.Text;
             tmp.Show();
             tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);

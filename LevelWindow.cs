@@ -22,6 +22,7 @@ namespace chemaths
         public int N_Results1;
         public int N_Results2;
         public string userName;
+        string result_choice;
 
         public void Start()
         {
@@ -39,10 +40,11 @@ namespace chemaths
 
         RegisterWindow register_w;
 
-        public LevelWindow(RegisterWindow tmp)
+        public LevelWindow(RegisterWindow tmp, string tmp_s)
         {
             InitializeComponent();
             register_w = tmp;
+            result_choice = tmp_s;
 
             Start();
             Fisher_Yates(taskArray, taskArrayR);
@@ -71,16 +73,22 @@ namespace chemaths
                 if (input_box.Text == taskArrayR[index - 1].InnerText)
                 {
                     countR++;
-                    MessageWindow message = new MessageWindow("Відповідь правильна!");
-                    message.ShowDialog();
+                    if(result_choice == "yes")
+                    {
+                        MessageWindow message = new MessageWindow("Відповідь правильна!");
+                        message.ShowDialog();
+                    }
                     output_box.Text = "";
                     input_box.Text = "";
                 }
                 else
                 {
                     countW++;
-                    MessageWindow message = new MessageWindow("Відповідь неправильна!");
-                    message.ShowDialog();
+                    if (result_choice == "yes")
+                    {
+                        MessageWindow message = new MessageWindow("Відповідь неправильна!");
+                        message.ShowDialog();
+                    }
                     output_box.Text = "";
                     input_box.Text = "";
                 }
