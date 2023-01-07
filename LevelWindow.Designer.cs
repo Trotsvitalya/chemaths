@@ -36,7 +36,6 @@ namespace chemaths
             this.output_box = new System.Windows.Forms.TextBox();
             this.input_box = new System.Windows.Forms.TextBox();
             this.check_btn = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.help_panel = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -137,23 +136,13 @@ namespace chemaths
             // 
             this.check_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_btn.Image = global::chemaths.Properties.Resources.clipboard;
-            this.check_btn.Location = new System.Drawing.Point(404, 350);
+            this.check_btn.Location = new System.Drawing.Point(403, 298);
             this.check_btn.Name = "check_btn";
-            this.check_btn.Size = new System.Drawing.Size(126, 73);
+            this.check_btn.Size = new System.Drawing.Size(150, 99);
             this.check_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.check_btn.TabIndex = 23;
             this.check_btn.TabStop = false;
             this.check_btn.Click += new System.EventHandler(this.check_btn_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(165, 84);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 25);
-            this.label5.TabIndex = 40;
             // 
             // label4
             // 
@@ -167,6 +156,7 @@ namespace chemaths
             // 
             // help_panel
             // 
+            this.help_panel.Controls.Add(this.check_btn);
             this.help_panel.Controls.Add(this.label14);
             this.help_panel.Controls.Add(this.label13);
             this.help_panel.Controls.Add(this.label12);
@@ -180,7 +170,7 @@ namespace chemaths
             this.help_panel.Controls.Add(this.label2);
             this.help_panel.Location = new System.Drawing.Point(0, 55);
             this.help_panel.Name = "help_panel";
-            this.help_panel.Size = new System.Drawing.Size(951, 525);
+            this.help_panel.Size = new System.Drawing.Size(951, 510);
             this.help_panel.TabIndex = 42;
             this.help_panel.Visible = false;
             // 
@@ -238,7 +228,7 @@ namespace chemaths
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label11.Location = new System.Drawing.Point(377, 314);
+            this.label11.Location = new System.Drawing.Point(377, 335);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 40);
             this.label11.TabIndex = 37;
@@ -250,7 +240,7 @@ namespace chemaths
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label10.Location = new System.Drawing.Point(222, 242);
+            this.label10.Location = new System.Drawing.Point(452, 242);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(489, 50);
             this.label10.TabIndex = 6;
@@ -312,7 +302,7 @@ namespace chemaths
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(3, 417);
+            this.label2.Location = new System.Drawing.Point(12, 400);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(876, 96);
             this.label2.TabIndex = 41;
@@ -326,9 +316,7 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.check_btn);
             this.Controls.Add(this.input_box);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.output_box);
@@ -356,7 +344,6 @@ namespace chemaths
         private System.Windows.Forms.TextBox output_box;
         private System.Windows.Forms.TextBox input_box;
         private System.Windows.Forms.PictureBox check_btn;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel help_panel;
         private System.Windows.Forms.Label label7;

@@ -21,9 +21,8 @@ namespace chemaths
         XmlNode[] taskArray, taskArrayR;
         public int N_Results1;
         public int N_Results2;
-        ActiveMainWindow tmp = new ActiveMainWindow();
-        GameWindow tmp12 = new GameWindow();
         public string userName;
+
         public void Start()
         {
             doc.Load("Levels.xml");
@@ -59,41 +58,36 @@ namespace chemaths
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            tmp12.Show();
+            RegisterWindow tmp = new RegisterWindow();
+            tmp.Show();
+            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
         }
 
         private void check_btn_Click(object sender, EventArgs e)
         {
-            if (index != taskArray.Length + 1)
+            if (index != taskArray.Length)
             {
-                if (index == taskArray.Length) { }
-                else { label5.Text = "Рівняння: " + (index + 1).ToString(); }
                 if (input_box.Text == taskArrayR[index - 1].InnerText)
                 {
                     countR++;
-                    MessageBox.Show("ВІДПОВІДЬ ПРАВИЛЬНА!");
                     output_box.Text = "";
                     input_box.Text = "";
                 }
                 else
                 {
                     countW++;
-                    MessageBox.Show("ВІДПОВІДЬ НЕПРАВИЛЬНА!");
                     output_box.Text = "";
                     input_box.Text = "";
                 }
-                if (index == taskArray.Length)
+                if (index != taskArray.Length)
                 {
-                    input_box.Visible = false; output_box.Visible = false; label4.Visible = false;
-                    label5.Text = "НАТИСНІТЬ НА КНОПКУ ЩЕ РАЗ ЩОБ ДІЗНАТИСЬ СВІЙ РЕЗУЛЬТАТ";
+                    output_box.Text = taskArray[index].InnerText;
                 }
-                else output_box.Text = taskArray[index].InnerText;
                 index++;
             }
             else
             {
-                MessageBox.Show("Результат: " + countR + "/15");
                 N_Results1 = countW; N_Results2 = countR;
                 JObject file1 = JObject.Parse(File.ReadAllText("Results.json"));
                 JObject file2 = new JObject();
@@ -103,8 +97,11 @@ namespace chemaths
                     MergeArrayHandling = MergeArrayHandling.Union
                 });
                 File.WriteAllText(@"Results.json", file1.ToString());
-                this.Close();
+
+                GameWindow tmp = new GameWindow();
                 tmp.Show();
+                tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+                this.Hide();
             }
         }
         public void Fisher_Yates(XmlNode[] taskArray, XmlNode[] taskArrayR)
@@ -125,7 +122,6 @@ namespace chemaths
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
-
         private void close_btn_Click(object sender, EventArgs e)
         {
             Application.Exit();
