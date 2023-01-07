@@ -98,10 +98,10 @@ namespace chemaths
             // 
             this.input_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.input_box.ForeColor = System.Drawing.Color.DimGray;
-            this.input_box.Location = new System.Drawing.Point(170, 199);
+            this.input_box.Location = new System.Drawing.Point(46, 199);
             this.input_box.Multiline = true;
             this.input_box.Name = "input_box";
-            this.input_box.Size = new System.Drawing.Size(611, 53);
+            this.input_box.Size = new System.Drawing.Size(856, 53);
             this.input_box.TabIndex = 11;
             this.input_box.TabStop = false;
             this.input_box.Text = "Cu + O2 => CuO";
@@ -114,11 +114,11 @@ namespace chemaths
             this.output_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.output_box.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.output_box.Location = new System.Drawing.Point(170, 322);
+            this.output_box.Location = new System.Drawing.Point(46, 322);
             this.output_box.Multiline = true;
             this.output_box.Name = "output_box";
             this.output_box.ReadOnly = true;
-            this.output_box.Size = new System.Drawing.Size(611, 53);
+            this.output_box.Size = new System.Drawing.Size(856, 53);
             this.output_box.TabIndex = 12;
             this.output_box.TabStop = false;
             // 
@@ -149,7 +149,7 @@ namespace chemaths
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label9.Location = new System.Drawing.Point(886, 394);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 32);
+            this.label9.Size = new System.Drawing.Size(30, 32);
             this.label9.TabIndex = 18;
             this.label9.Text = "6";
             // 
@@ -173,7 +173,7 @@ namespace chemaths
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label8.Location = new System.Drawing.Point(908, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 32);
+            this.label8.Size = new System.Drawing.Size(30, 32);
             this.label8.TabIndex = 16;
             this.label8.Text = "5";
             // 
@@ -185,7 +185,7 @@ namespace chemaths
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label7.Location = new System.Drawing.Point(11, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 32);
+            this.label7.Size = new System.Drawing.Size(30, 32);
             this.label7.TabIndex = 15;
             this.label7.Text = "4";
             // 
@@ -195,9 +195,9 @@ namespace chemaths
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label6.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label6.Location = new System.Drawing.Point(133, 279);
+            this.label6.Location = new System.Drawing.Point(18, 279);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 32);
+            this.label6.Size = new System.Drawing.Size(30, 32);
             this.label6.TabIndex = 14;
             this.label6.Text = "3";
             // 
@@ -223,7 +223,7 @@ namespace chemaths
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label4.Location = new System.Drawing.Point(405, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 32);
+            this.label4.Size = new System.Drawing.Size(30, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "2";
             // 
@@ -245,9 +245,9 @@ namespace chemaths
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(133, 156);
+            this.label2.Location = new System.Drawing.Point(18, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 32);
+            this.label2.Size = new System.Drawing.Size(30, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "1\r\n";
             // 

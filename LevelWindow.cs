@@ -15,7 +15,7 @@ namespace chemaths
 {
     public partial class LevelWindow : Form
     {
-        int index, countR = 0, countW = 0;
+        int index, countR = 0;
         XmlDocument doc = new XmlDocument();
         XmlNodeList tasks, tasksR;
         XmlNode[] taskArray, taskArrayR;
@@ -68,9 +68,14 @@ namespace chemaths
             this.Hide();
         }
 
+        private void LevelWindow_Load(object sender, EventArgs e)
+        {
+            label_end.Visible = false;
+        }
+
         private void check_btn_Click_1(object sender, EventArgs e)
         {
-            if (index != taskArray.Length)
+            if (index != taskArray.Length + 1)
             {
                 if (input_box.Text == taskArrayR[index - 1].InnerText)
                 {
@@ -85,7 +90,6 @@ namespace chemaths
                 }
                 else
                 {
-                    countW++;
                     if (result_choice == "yes")
                     {
                         MessageWindow message = new MessageWindow("Відповідь неправильна!", taskArrayR[index - 1].InnerText);
@@ -98,11 +102,14 @@ namespace chemaths
                 {
                     output_box.Text = taskArray[index].InnerText;
                 }
+                else { output_box.Visible = input_box.Visible = label10.Visible = false;
+                       label_end.Visible = true;
+                }
                 index++;
             }
             else
             {
-                N_Results1 = countW; N_Results2 = countR;
+                N_Results2 = countR;
                 JObject file1 = JObject.Parse(File.ReadAllText("Results.json"));
                 JObject file2 = new JObject();
                 file2[userName] = countR;
@@ -111,7 +118,6 @@ namespace chemaths
                     MergeArrayHandling = MergeArrayHandling.Union
                 });
                 File.WriteAllText(@"Results.json", file1.ToString());
-
                 GameWindow tmp = new GameWindow();
                 tmp.Show();
                 tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);

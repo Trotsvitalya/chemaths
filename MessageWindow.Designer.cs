@@ -75,7 +75,7 @@ namespace chemaths
             this.answer_label.AutoSize = true;
             this.answer_label.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answer_label.ForeColor = System.Drawing.Color.White;
-            this.answer_label.Location = new System.Drawing.Point(12, 116);
+            this.answer_label.Location = new System.Drawing.Point(22, 116);
             this.answer_label.Name = "answer_label";
             this.answer_label.Size = new System.Drawing.Size(351, 37);
             this.answer_label.TabIndex = 24;

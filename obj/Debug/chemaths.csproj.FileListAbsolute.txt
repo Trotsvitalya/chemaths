@@ -75,3 +75,25 @@ C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.Le
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.csproj.CopyComplete
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.RegisterWindow.resources
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.MessageWindow.resources
+H:\FILE_JSON123\chemaths\bin\Debug\chemaths.exe.config
+H:\FILE_JSON123\chemaths\bin\Debug\chemaths.exe
+H:\FILE_JSON123\chemaths\bin\Debug\chemaths.pdb
+H:\FILE_JSON123\chemaths\bin\Debug\Newtonsoft.Json.dll
+H:\FILE_JSON123\chemaths\bin\Debug\Newtonsoft.Json.xml
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.csproj.AssemblyReference.cache
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.csproj.SuggestedBindingRedirects.cache
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.CalculatorWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.GameWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.HelpWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.InfoWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.LevelWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.MainWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.MessageWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.Properties.Resources.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.ActiveMainWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.RegisterWindow.resources
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.csproj.GenerateResource.cache
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.csproj.CoreCompileInputs.cache
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.csproj.CopyComplete
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.exe
+H:\FILE_JSON123\chemaths\obj\Debug\chemaths.pdb

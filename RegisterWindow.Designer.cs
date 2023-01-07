@@ -104,7 +104,7 @@ namespace chemaths
             this.level_choice.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.level_choice.Location = new System.Drawing.Point(483, 304);
             this.level_choice.Maximum = new decimal(new int[] {
-            2,
+            5,
             0,
             0,
             0});
