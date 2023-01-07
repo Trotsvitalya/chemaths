@@ -69,3 +69,7 @@ H:\FILE_JSON\chemaths\bin\Debug\chemaths.pdb
 H:\FILE_JSON\chemaths\bin\Debug\Newtonsoft.Json.dll
 H:\FILE_JSON\chemaths\bin\Debug\Newtonsoft.Json.xml
 H:\FILE_JSON\chemaths\obj\Debug\chemaths.csproj.CopyComplete
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.LevelWindow.resources
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.csproj.CopyComplete

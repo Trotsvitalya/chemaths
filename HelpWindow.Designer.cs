@@ -232,6 +232,7 @@ namespace chemaths
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HelpWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = " ";
             this.menu_panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

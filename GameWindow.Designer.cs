@@ -39,14 +39,14 @@ namespace chemaths
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nickname_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.clear_results_btn = new System.Windows.Forms.PictureBox();
             this.start_btn = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.start_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -102,12 +102,12 @@ namespace chemaths
             this.results_list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.results_list.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.results_list.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.results_list.HideSelection = false;
-            this.results_list.Location = new System.Drawing.Point(30, 77);
+            this.results_list.Location = new System.Drawing.Point(12, 65);
             this.results_list.Name = "results_list";
             this.results_list.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.results_list.Size = new System.Drawing.Size(441, 411);
+            this.results_list.Size = new System.Drawing.Size(441, 500);
             this.results_list.TabIndex = 15;
             this.results_list.UseCompatibleStateImageBehavior = false;
             this.results_list.View = System.Windows.Forms.View.Details;
@@ -124,7 +124,7 @@ namespace chemaths
             // 
             // nickname_box
             // 
-            this.nickname_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nickname_box.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nickname_box.Location = new System.Drawing.Point(525, 268);
             this.nickname_box.Multiline = true;
             this.nickname_box.Name = "nickname_box";
@@ -134,35 +134,37 @@ namespace chemaths
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(616, 217);
+            this.label1.Location = new System.Drawing.Point(615, 223);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 37);
+            this.label1.Size = new System.Drawing.Size(211, 37);
             this.label1.TabIndex = 18;
             this.label1.Text = "Введіть ім\'я:";
+            // 
+            // clear_results_btn
+            // 
+            this.clear_results_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clear_results_btn.Image = global::chemaths.Properties.Resources.clear;
+            this.clear_results_btn.Location = new System.Drawing.Point(462, 65);
+            this.clear_results_btn.Name = "clear_results_btn";
+            this.clear_results_btn.Size = new System.Drawing.Size(36, 33);
+            this.clear_results_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.clear_results_btn.TabIndex = 20;
+            this.clear_results_btn.TabStop = false;
+            this.clear_results_btn.Click += new System.EventHandler(this.clear_results_btn_Click);
             // 
             // start_btn
             // 
             this.start_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.start_btn.Image = global::chemaths.Properties.Resources.start;
-            this.start_btn.Location = new System.Drawing.Point(623, 329);
+            this.start_btn.Location = new System.Drawing.Point(632, 329);
             this.start_btn.Name = "start_btn";
-            this.start_btn.Size = new System.Drawing.Size(192, 132);
+            this.start_btn.Size = new System.Drawing.Size(161, 105);
             this.start_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.start_btn.TabIndex = 19;
             this.start_btn.TabStop = false;
             this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(30, 506);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(441, 50);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // GameWindow
             // 
@@ -170,7 +172,7 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.clear_results_btn);
             this.Controls.Add(this.start_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nickname_box);
@@ -185,8 +187,8 @@ namespace chemaths
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.start_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +205,6 @@ namespace chemaths
         private System.Windows.Forms.TextBox nickname_box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox start_btn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox clear_results_btn;
     }
 }
