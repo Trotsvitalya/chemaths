@@ -81,10 +81,5 @@ namespace chemaths
         {
             info_label.Text = nickname_box.Text + "\nпочинає практику на рівні " + level_choice.Value;
         }
-
-        private void help_btn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

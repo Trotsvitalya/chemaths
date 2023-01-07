@@ -39,17 +39,15 @@ namespace chemaths
             this.label1 = new System.Windows.Forms.Label();
             this.nickname_box = new System.Windows.Forms.TextBox();
             this.start_btn = new System.Windows.Forms.PictureBox();
-            this.help_btn = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.yes_btn = new System.Windows.Forms.RadioButton();
             this.no_btn = new System.Windows.Forms.RadioButton();
+            this.yes_btn = new System.Windows.Forms.RadioButton();
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.level_choice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.start_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,18 +173,6 @@ namespace chemaths
             this.start_btn.TabStop = false;
             this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
             // 
-            // help_btn
-            // 
-            this.help_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.help_btn.Image = ((System.Drawing.Image)(resources.GetObject("help_btn.Image")));
-            this.help_btn.Location = new System.Drawing.Point(12, 65);
-            this.help_btn.Name = "help_btn";
-            this.help_btn.Size = new System.Drawing.Size(65, 71);
-            this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.help_btn.TabIndex = 45;
-            this.help_btn.TabStop = false;
-            this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -207,19 +193,6 @@ namespace chemaths
             this.panel1.Size = new System.Drawing.Size(164, 78);
             this.panel1.TabIndex = 47;
             // 
-            // yes_btn
-            // 
-            this.yes_btn.AutoSize = true;
-            this.yes_btn.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.yes_btn.ForeColor = System.Drawing.Color.White;
-            this.yes_btn.Location = new System.Drawing.Point(1, 15);
-            this.yes_btn.Name = "yes_btn";
-            this.yes_btn.Size = new System.Drawing.Size(85, 41);
-            this.yes_btn.TabIndex = 0;
-            this.yes_btn.TabStop = true;
-            this.yes_btn.Text = "Так";
-            this.yes_btn.UseVisualStyleBackColor = true;
-            // 
             // no_btn
             // 
             this.no_btn.AutoSize = true;
@@ -233,6 +206,19 @@ namespace chemaths
             this.no_btn.Text = "Ні";
             this.no_btn.UseVisualStyleBackColor = true;
             // 
+            // yes_btn
+            // 
+            this.yes_btn.AutoSize = true;
+            this.yes_btn.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yes_btn.ForeColor = System.Drawing.Color.White;
+            this.yes_btn.Location = new System.Drawing.Point(1, 15);
+            this.yes_btn.Name = "yes_btn";
+            this.yes_btn.Size = new System.Drawing.Size(85, 41);
+            this.yes_btn.TabIndex = 0;
+            this.yes_btn.TabStop = true;
+            this.yes_btn.Text = "Так";
+            this.yes_btn.UseVisualStyleBackColor = true;
+            // 
             // RegisterWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +227,6 @@ namespace chemaths
             this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.help_btn);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.info_label);
             this.Controls.Add(this.level_choice);
@@ -258,7 +243,6 @@ namespace chemaths
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.level_choice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.start_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.help_btn)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -276,7 +260,6 @@ namespace chemaths
         private System.Windows.Forms.PictureBox start_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nickname_box;
-        private System.Windows.Forms.PictureBox help_btn;
         public System.Windows.Forms.NumericUpDown level_choice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;

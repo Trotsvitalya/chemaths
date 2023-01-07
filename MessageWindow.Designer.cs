@@ -50,6 +50,7 @@ namespace chemaths
             // 
             // ok_btn
             // 
+            this.ok_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ok_btn.Image = global::chemaths.Properties.Resources.like;
             this.ok_btn.Location = new System.Drawing.Point(155, 156);
             this.ok_btn.Name = "ok_btn";

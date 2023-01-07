@@ -36,6 +36,7 @@ namespace chemaths
         private void help_btn_Click(object sender, EventArgs e)
         {
             help_panel.Visible = true;
+            input_box.Enabled = output_box.Enabled = help_btn.Enabled = back_btn.Enabled = check_btn.Enabled = false;
         }
 
         RegisterWindow register_w;
@@ -56,6 +57,7 @@ namespace chemaths
         private void help_close_btn_Click(object sender, EventArgs e)
         {
             help_panel.Visible = false;
+            input_box.Enabled = output_box.Enabled = help_btn.Enabled = back_btn.Enabled = check_btn.Enabled = true;
         }
 
         private void back_btn_Click(object sender, EventArgs e)

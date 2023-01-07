@@ -60,11 +60,13 @@ namespace chemaths
         private void help_btn_Click(object sender, EventArgs e)
         {
             help_panel.Visible = true;
+            input_box.Enabled = help_btn.Enabled = output_box.Enabled = back_btn.Enabled = calculate_btn.Enabled = false;
         }
 
         private void help_close_btn_Click(object sender, EventArgs e)
         {
             help_panel.Visible = false;
+            input_box.Enabled = help_btn.Enabled = output_box.Enabled = back_btn.Enabled = calculate_btn.Enabled = true;
         }
         
         private void calculate_btn_Click_1(object sender, EventArgs e)
