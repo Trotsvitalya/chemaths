@@ -74,3 +74,4 @@ C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\bin\Debug\Newtonsoft.
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.LevelWindow.resources
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.csproj.CopyComplete
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.RegisterWindow.resources
+C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.MessageWindow.resources

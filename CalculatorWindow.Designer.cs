@@ -255,11 +255,11 @@ namespace chemaths
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(132, 0);
+            this.label1.Location = new System.Drawing.Point(110, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(692, 84);
+            this.label1.Size = new System.Drawing.Size(731, 81);
             this.label1.TabIndex = 0;
             this.label1.Text = "Щоб скористатись калькулятором розстановки коефіцієнтів, введіть\r\nу перше поле¹ х" +
     "імічне рівняння. Між реагентами та символами\r\nоперацій мають стояти пробіли. При" +

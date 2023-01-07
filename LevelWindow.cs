@@ -64,7 +64,7 @@ namespace chemaths
             this.Hide();
         }
 
-        private void check_btn_Click(object sender, EventArgs e)
+        private void check_btn_Click_1(object sender, EventArgs e)
         {
             if (index != taskArray.Length)
             {
@@ -91,7 +91,7 @@ namespace chemaths
                 N_Results1 = countW; N_Results2 = countR;
                 JObject file1 = JObject.Parse(File.ReadAllText("Results.json"));
                 JObject file2 = new JObject();
-                file2[userName] = countR; 
+                file2[userName] = countR;
                 file1.Merge(file2, new JsonMergeSettings
                 {
                     MergeArrayHandling = MergeArrayHandling.Union
