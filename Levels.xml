@@ -2,70 +2,82 @@
 <root>
   <level number="1">
     <task number="1">()H + ()O2 = ()H2O</task>
-    <task number="2">()Mg + ()HCl = ()H2 + ()MgCl2</task>
-    <task number="3">()Na + ()H2O = ()NaOH + ()H2</task>
-    <task number="4">()Fe2O3 + ()H2 = ()Fe + ()H2O</task>
-    <task number="5">()Al + ()Fe3O4 = ()Al2O3 + ()Fe</task>
-    <task number="6">()C + ()H2 = ()CH4</task>
-    <task number="7">()N2O5 + ()H2O = ()HNO3</task>
-    <task number="8">()SO2 + O2 = ()SO3</task>
-	<task number="9">()CH4 + ()H2O = ()CO2 + ()H2</task>
-	<task number="10">()Al + ()WO3 = ()W + ()Al2O3</task>
-	<task number="11">()KOH + ()H2SO4 = ()K2SO4 + ()H2O</task>
-	<task number="12">()FeS2 + ()O2 = ()Fe2O3 + ()SO2</task>
-	<task number="13">()NH3 + ()O2 = ()NO + ()H2O</task>
-	<task number="14">()B2O3 + ()H2O = ()H3BO3</task>
-	<task number="15">()H2SO4 + ()NaOH = ()Na2SO4 + ()H2O</task>
+    <task number="2">()C + ()H2 = CH4</task>
+    <task number="3">()P + ()Cl2 = ()PCl5</task>
+    <task number="4">()Mg + ()N2 = ()Mg3N2 </task>
+    <task number="5">()Al + ()O2 = ()Al2O3  </task>
+    <task number="6">()P + ()O2 = ()P2O5  </task>
   </level>
   <level number="2">
-    <task number="1">()Zn + ()Fe2Br3 = ()ZnBr2 + ()Fe</task>
-	<task number="2">()Mg + ()N2 = ()Mg3N2</task>
-	<task number="3">()Na + ()HCl = ()NaCl + ()H2</task>
-	<task number="4">()H2O + ()K = () H2 + ()KOH</task>
-	<task number="5">()NH3 + ()O2 = ()H2O + ()N2</task>
-	<task number="6">()P + ()O2 = ()P2O5</task>
-	<task number="7">()HCl + ()Al = ()AlCl3 + ()H2</task>
-	<task number="8">()Fe + ()H2O = ()Fe3O4 + ()H2</task>
-	<task number="9">()NO2 + ()H2O = ()HNO3 + ()NO</task>
-	<task number="10">()Al + ()O2 = ()Al2O3</task>
-	<task number="11">()C2H2 + ()O2 = ()CO2 + ()H2O</task>
-	<task number="12">()PbO + ()Al = ()Al2O3 + ()Pb</task>
-	<task number="13">()P + ()Cl2 = ()PCl5</task>
-	<task number="14">()FeCl3 + ()Fe = ()FeCl2</task>
-	<task number="15">()Na2O + P2O5 = ()Na3PO4</task>
+    <task number="1">()SO2 + O2 = ()SO3</task>
+	<task number="2">()Na + ()H2O = ()NaOH + ()H2</task>
+	<task number="3">()B2O3 + ()H2O = ()H3BO3</task>
+	<task number="4">()Fe + ()H2O = ()Fe3O4 + ()H2</task>
+	<task number="5">()H2O + ()K = ()H2 + ()KOH</task>
+	<task number="6">()FeCl3 + Fe = FeCl2</task>
+  </level>
+  <level number="3">
+    <task number="1">()PbO + ()Al = ()Al2O3 + ()Pb</task>
+    <task number="2">()Al + ()WO3 = ()W + ()Al2O3</task>
+    <task number="3">()HCl + ()Al = ()AlCl3 + ()H2</task>
+    <task number="4">()Mg + ()HCl = ()H2 + ()MgCl2   </task>
+    <task number="5">()FeS2 + ()O2 = ()Fe2O3 + ()SO2</task>
+    <task number="6">()Fe2O3 + ()H2 = ()Fe + ()H2O</task>
+  </level>
+  <level number="4">
+    <task number="1">()Al + ()Fe3O4 = ()Al2O3 + ()Fe</task>
+    <task number="2">()C2H2 + ()O2 = ()CO2 + ()H2O</task>
+    <task number="3">()NH3 + ()O2 = ()NO + ()H2O</task>
+    <task number="4">()NO2 + ()H2O = ()HNO3 + ()NO</task>
+    <task number="5">()N2O5 + ()H2O = ()HNO3</task>
+    <task number="6">()CH4 + ()H2O = ()CO2 + ()H2</task>
+  </level>
+  <level number="5">
+    <task number="1">()Na2O2 + ()CO2 = ()Na2CO3 + ()O2</task>
+    <task number="2">()H2SO4 + ()NaOH = ()Na2SO4 + ()H2O</task>
+    <task number="3">()Na2O2 + ()HCl = ()NaCl + ()H2O + ()Cl2</task>
+    <task number="4">()FeS + ()O2 = ()Fe2O3W + ()SO2</task>
+    <task number="5">()Na2O + ()P2O5 = ()Na3PO4</task>
+    <task number="6">()Zn + ()Fe2Br3 = ()ZnBr2 + ()Fe</task>
   </level>
   <level number="results1">
-	<task number="1">212</task>
-	<task number="2">1211</task>
-	<task number="3">2221</task>
-	<task number="4">1323</task>
-	<task number="5">8349</task>
-	<task number="6">121</task>
-	<task number="7">112</task>
-	<task number="8">212</task>
-	<task number="9">1214</task>
-	<task number="10">2111</task>
-	<task number="11">2112</task>
-	<task number="12">41128</task>
-	<task number="13">4546</task>
-	<task number="14">132</task>
-	<task number="15">1212</task>
+	<task number="1">412</task>
+	<task number="2">121</task>
+	<task number="3">252</task>
+	<task number="4">311</task>
+	<task number="5">432</task>
+	<task number="6">452</task>
   </level>
   <level number="results2">
-	<task number="1">3232</task>
-	<task number="2">311</task>
-	<task number="3">2221</task>
-	<task number="4">2212</task>
-	<task number="5">4362</task>
-	<task number="6">452</task>
-	<task number="7">6223</task>
-	<task number="8">3414</task>
-	<task number="9">3121</task>
-	<task number="10">432</task>
-	<task number="11">2542</task>
-	<task number="12">3213</task>
-	<task number="13">252</task>
-	<task number="14">213</task>
-	<task number="15">312</task>
+	<task number="1">212</task>
+	<task number="2">2221</task>
+	<task number="3">132</task>
+	<task number="4">3414</task>
+	<task number="5">2212</task>
+	<task number="6">213</task>
+  </level>
+  <level number="results3">
+	<task number="1">3213</task>
+	<task number="2">2111</task>
+	<task number="3">6223</task>
+	<task number="4">1211</task>
+	<task number="5">41128</task>
+	<task number="6">1323</task>
+  </level>
+  <level number="results4">
+	<task number="1">8349</task>
+	<task number="2">2542</task>
+	<task number="3">4546</task>
+	<task number="4">3121</task>
+	<task number="5">112</task>
+	<task number="6">1214</task>
+  </level>
+  <level number="results5">
+	<task number="1">2221</task>
+	<task number="2">1212</task>
+	<task number="3">14221</task>
+	<task number="4">4724</task>
+	<task number="5">312</task>
+	<task number="6">3232</task>
   </level>
 </root>
