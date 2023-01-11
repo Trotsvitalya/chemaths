@@ -104,7 +104,7 @@ namespace chemaths
             this.input_box.Size = new System.Drawing.Size(856, 53);
             this.input_box.TabIndex = 11;
             this.input_box.TabStop = false;
-            this.input_box.Text = "Cu + O2 => CuO";
+            this.input_box.Text = "Cu + O2 -> CuO";
             this.input_box.Click += new System.EventHandler(this.input_box_Click);
             this.input_box.Leave += new System.EventHandler(this.input_box_Leave);
             // 
