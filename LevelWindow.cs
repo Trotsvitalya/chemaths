@@ -24,7 +24,7 @@ namespace chemaths
         public string userName;
         string result_choice;
 
-        public void Start()
+        public void Start() // заповнення масиву рівнянь та масиву результатів
         {
             doc.Load("Levels.xml");
             tasks = doc.SelectNodes($"/root/level[@number='{(int)register_w.level_choice.Value}']/task");
@@ -41,7 +41,7 @@ namespace chemaths
 
         RegisterWindow register_w;
 
-        public LevelWindow(RegisterWindow tmp, string tmp_s)
+        public LevelWindow(RegisterWindow tmp, string tmp_s) // початок тесту, тасування масиву рівнянь, виведення першого рівняння
         {
             InitializeComponent();
             register_w = tmp;
@@ -73,34 +73,34 @@ namespace chemaths
             label_end.Visible = false;
         }
 
-        private void check_btn_Click_1(object sender, EventArgs e)
+        private void check_btn_Click_1(object sender, EventArgs e) // перевірка відповіді користувача
         {
-            if (index <= taskArray.Length)
+            if (index <= taskArray.Length) // якщо тест ще не пройдено
             {
-                if (input_box.Text == taskArrayR[index - 1].InnerText)
+                if (input_box.Text == taskArrayR[index - 1].InnerText) // якщо відповідь правильна
                 {
                     countR++;
                     if(result_choice == "yes")
                     {
                         MessageWindow message = new MessageWindow("Відповідь правильна!", "right");
-                        message.ShowDialog();
+                        message.ShowDialog(); // показ діалогу, що користувач відповів правильно
                     }
-                    output_box.Text = "";
+                    output_box.Text = ""; // очищення текстових полів
                     input_box.Text = "";
                 }
-                else
+                else // якщо неправильна
                 {
                     if (result_choice == "yes")
                     {
                         MessageWindow message = new MessageWindow("Відповідь неправильна!", taskArrayR[index - 1].InnerText);
-                        message.ShowDialog();
+                        message.ShowDialog(); // показ діалогу, що користувач відповів правильно
                     }
                     output_box.Text = "";
                     input_box.Text = "";
                 }
-                if (index != taskArray.Length)
+                if (index != taskArray.Length) // якщо не дійшли до кінця
                 {
-                    output_box.Text = taskArray[index].InnerText;
+                    output_box.Text = taskArray[index].InnerText; // виводимо хім. рівняння, що необхідно урівняти
                 }
                 else { output_box.Visible = input_box.Visible = label10.Visible = false;
                        label_end.Visible = true;
@@ -110,23 +110,23 @@ namespace chemaths
             else
             {
                 N_Results2 = countR;
-                JObject file1 = JObject.Parse(File.ReadAllText("Results.json"));
+                JObject file1 = JObject.Parse(File.ReadAllText("Results.json")); // парсинг файлу з результатами до тесту
                 JObject file2 = new JObject();
-                file2[userName] = countR;
-                file1.Merge(file2, new JsonMergeSettings
+                file2[userName] = countR; // "ім'я": результат
+                file1.Merge(file2, new JsonMergeSettings // злиття об'єктів json 
                 {
                     MergeArrayHandling = MergeArrayHandling.Union
                 });
-                File.WriteAllText(@"Results.json", file1.ToString());
-                GameWindow tmp = new GameWindow();
+                File.WriteAllText(@"Results.json", file1.ToString()); // перезапис файлу з новим результатом
+                GameWindow tmp = new GameWindow(); // повернення до початковго меню
                 tmp.Show();
                 tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
                 this.Hide();
             }
         }
-        public void Fisher_Yates(XmlNode[] taskArray, XmlNode[] taskArrayR)
+        public void Fisher_Yates(XmlNode[] taskArray, XmlNode[] taskArrayR) // алгоритм тасування Фішера-Йетса
         {
-            Random rnd = new Random();
+            Random rnd = new Random(); 
             for (int i = taskArray.Length - 1; i >= 1; i--)
             {
                 int j = rnd.Next(i + 1);
