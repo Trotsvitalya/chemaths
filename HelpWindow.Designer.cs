@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpWindow));
             this.menu_panel = new System.Windows.Forms.Panel();
             this.side_panel = new System.Windows.Forms.Panel();
@@ -43,11 +44,18 @@ namespace chemaths
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.active_panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.active_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menu_panel
@@ -88,6 +96,7 @@ namespace chemaths
             this.info_btn.TabIndex = 4;
             this.info_btn.Text = "Розробники";
             this.info_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tool_tip.SetToolTip(this.info_btn, "Інформація про розробників");
             this.info_btn.UseVisualStyleBackColor = true;
             this.info_btn.Click += new System.EventHandler(this.info_btn_Click);
             // 
@@ -107,6 +116,7 @@ namespace chemaths
             this.subject_btn.TabIndex = 3;
             this.subject_btn.Text = "Активність";
             this.subject_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tool_tip.SetToolTip(this.subject_btn, "Перейти до вікна активності");
             this.subject_btn.UseVisualStyleBackColor = true;
             this.subject_btn.Click += new System.EventHandler(this.subject_btn_Click);
             // 
@@ -126,6 +136,7 @@ namespace chemaths
             this.help_btn.TabIndex = 2;
             this.help_btn.Text = "Допомога";
             this.help_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tool_tip.SetToolTip(this.help_btn, "Допомога з експлуатації");
             this.help_btn.UseVisualStyleBackColor = true;
             // 
             // panel2
@@ -171,6 +182,7 @@ namespace chemaths
             this.main_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.main_btn.TabIndex = 0;
             this.main_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.main_btn, "Повернутись до головного вікна");
             this.main_btn.Click += new System.EventHandler(this.main_btn_Click);
             // 
             // label3
@@ -194,6 +206,7 @@ namespace chemaths
             this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.close_btn.TabIndex = 8;
             this.close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.close_btn, "Закрити програму");
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // active_panel
@@ -210,14 +223,83 @@ namespace chemaths
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(231, 189);
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.label4.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.label4.Location = new System.Drawing.Point(186, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(647, 150);
+            this.label4.Size = new System.Drawing.Size(765, 100);
             this.label4.TabIndex = 14;
-            this.label4.Text = resources.GetString("label4.Text");
+            this.label4.Text = "    Кожне вікно активності містить допоміжні підказки.\r\n  Щоб їх отримати, натисн" +
+    "іть кнопку, яка розташована\r\n  у верхній частині вікна в центрі. Виглядає вона т" +
+    "ак:";
+            // 
+            // tool_tip
+            // 
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.label5.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.label5.Location = new System.Drawing.Point(186, 210);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(765, 100);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "    Після цього, на екрані з\'являться допоміжні підказки,\r\n  а усі кнопки стануть" +
+    " неактивними, окрім кнопки\r\n  закриття програми та кнопки закриття підказки.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::chemaths.Properties.Resources.help;
+            this.pictureBox1.Location = new System.Drawing.Point(882, 154);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.label6.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.label6.Location = new System.Drawing.Point(186, 334);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(765, 100);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "    Також Ви можете активувати спливаючі підказки, які\r\n  будуть відображені при " +
+    "наведенні та утриманні курсору\r\n  на активному елементі.";
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.label7.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(287, 483);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(447, 45);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Активувати спливаючі підказки:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox1.Font = new System.Drawing.Font("Castellar", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(749, 483);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(45, 45);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // HelpWindow
             // 
@@ -225,6 +307,11 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.menu_panel);
@@ -240,8 +327,8 @@ namespace chemaths
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.active_panel.ResumeLayout(false);
             this.active_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -260,5 +347,11 @@ namespace chemaths
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel active_panel;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolTip tool_tip;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

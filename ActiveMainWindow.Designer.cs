@@ -241,6 +241,7 @@ namespace chemaths
             this.active_panel.Controls.Add(this.close_btn);
             this.active_panel.Controls.Add(this.label3);
             this.active_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.active_panel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
             this.active_panel.Location = new System.Drawing.Point(186, 0);
             this.active_panel.Name = "active_panel";
             this.active_panel.Size = new System.Drawing.Size(765, 49);
