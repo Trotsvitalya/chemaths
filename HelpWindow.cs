@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace chemaths
 {
@@ -19,6 +18,7 @@ namespace chemaths
         {
             InitializeComponent();
             ACTIVE_BTN(help_btn);
+            tool_tip.Active = active_tool_tips;
         }
 
         private void ACTIVE_BTN(object sender)
@@ -80,6 +80,16 @@ namespace chemaths
             active_panel.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
+        }
+
+        bool active_tool_tips = false;
+        private void activate_tool_tips_Click(object sender, EventArgs e)
+        {
+            active_tool_tips = !active_tool_tips;
+            if(active_tool_tips == true)
+            {
+                tool_tip.Active = true;
+            }
         }
     }
 }

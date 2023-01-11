@@ -49,7 +49,7 @@ namespace chemaths
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.activate_tool_tips = new System.Windows.Forms.CheckBox();
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
@@ -287,19 +287,23 @@ namespace chemaths
             this.label7.Text = "Активувати спливаючі підказки:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // checkBox1
+            // activate_tool_tips
             // 
-            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Font = new System.Drawing.Font("Castellar", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(749, 483);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(45, 45);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.activate_tool_tips.Appearance = System.Windows.Forms.Appearance.Button;
+            this.activate_tool_tips.BackColor = System.Drawing.Color.Crimson;
+            this.activate_tool_tips.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.activate_tool_tips.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.activate_tool_tips.FlatAppearance.BorderSize = 0;
+            this.activate_tool_tips.FlatAppearance.CheckedBackColor = System.Drawing.Color.LimeGreen;
+            this.activate_tool_tips.Font = new System.Drawing.Font("Castellar", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activate_tool_tips.ForeColor = System.Drawing.Color.White;
+            this.activate_tool_tips.Location = new System.Drawing.Point(749, 483);
+            this.activate_tool_tips.Name = "activate_tool_tips";
+            this.activate_tool_tips.Size = new System.Drawing.Size(45, 45);
+            this.activate_tool_tips.TabIndex = 19;
+            this.activate_tool_tips.TabStop = false;
+            this.activate_tool_tips.UseVisualStyleBackColor = false;
+            this.activate_tool_tips.Click += new System.EventHandler(this.activate_tool_tips_Click);
             // 
             // HelpWindow
             // 
@@ -307,7 +311,7 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.activate_tool_tips);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
@@ -352,6 +356,6 @@ namespace chemaths
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox activate_tool_tips;
     }
 }
