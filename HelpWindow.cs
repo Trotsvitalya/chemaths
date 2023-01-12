@@ -18,6 +18,7 @@ namespace chemaths
         {
             InitializeComponent();
             ACTIVE_BTN(help_btn);
+            activate_tool_tips.Checked = active_tool_tips;
             tool_tip.Active = active_tool_tips;
         }
 
@@ -88,14 +89,13 @@ namespace chemaths
             active_tool_tips = !active_tool_tips;
             tool_tip.Active = active_tool_tips;
 
-            CheckBox chk = sender as CheckBox;
-            if(chk.Checked)
+            if(activate_tool_tips.Checked)
             {
-                chk.Image = Properties.Resources.checkbox__1_;
+                activate_tool_tips.Image = Properties.Resources.checkbox__1_;
             }
             else
             {
-                chk.Image = Properties.Resources.stop__1_;
+                activate_tool_tips.Image = Properties.Resources.stop__1_;
             }
         }
     }
