@@ -29,21 +29,23 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             this.active_panel = new System.Windows.Forms.Panel();
+            this.back_btn = new System.Windows.Forms.PictureBox();
+            this.close_btn = new System.Windows.Forms.PictureBox();
             this.results_list = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.register_btn = new System.Windows.Forms.PictureBox();
             this.clear_results_btn = new System.Windows.Forms.PictureBox();
-            this.back_btn = new System.Windows.Forms.PictureBox();
-            this.close_btn = new System.Windows.Forms.PictureBox();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
             this.active_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.register_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.register_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -57,6 +59,32 @@ namespace chemaths
             this.active_panel.Size = new System.Drawing.Size(951, 49);
             this.active_panel.TabIndex = 14;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
+            // 
+            // back_btn
+            // 
+            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back_btn.Image = global::chemaths.Properties.Resources.arrow;
+            this.back_btn.Location = new System.Drawing.Point(12, 12);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(25, 25);
+            this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.back_btn.TabIndex = 11;
+            this.back_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.back_btn, "Повернутись до попереднього вікна");
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
+            // close_btn
+            // 
+            this.close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close_btn.Image = global::chemaths.Properties.Resources.close;
+            this.close_btn.Location = new System.Drawing.Point(914, 12);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(25, 25);
+            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close_btn.TabIndex = 13;
+            this.close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.close_btn, "Закрити програму");
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // results_list
             // 
@@ -73,6 +101,7 @@ namespace chemaths
             this.results_list.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.results_list.Size = new System.Drawing.Size(755, 368);
             this.results_list.TabIndex = 15;
+            this.tool_tip.SetToolTip(this.results_list, "Таблиця результатів");
             this.results_list.UseCompatibleStateImageBehavior = false;
             this.results_list.View = System.Windows.Forms.View.Details;
             // 
@@ -107,6 +136,7 @@ namespace chemaths
             this.register_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.register_btn.TabIndex = 41;
             this.register_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.register_btn, "Зареєструватись у грі");
             this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
             // 
             // clear_results_btn
@@ -119,31 +149,14 @@ namespace chemaths
             this.clear_results_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.clear_results_btn.TabIndex = 20;
             this.clear_results_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.clear_results_btn, "Очистити таблицю");
             this.clear_results_btn.Click += new System.EventHandler(this.clear_results_btn_Click);
             // 
-            // back_btn
+            // tool_tip
             // 
-            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back_btn.Image = global::chemaths.Properties.Resources.arrow;
-            this.back_btn.Location = new System.Drawing.Point(12, 12);
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(25, 25);
-            this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.back_btn.TabIndex = 11;
-            this.back_btn.TabStop = false;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
-            // 
-            // close_btn
-            // 
-            this.close_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.close_btn.Image = global::chemaths.Properties.Resources.close;
-            this.close_btn.Location = new System.Drawing.Point(914, 12);
-            this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(25, 25);
-            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.close_btn.TabIndex = 13;
-            this.close_btn.TabStop = false;
-            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
+            this.tool_tip.Active = false;
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
             // 
             // GameWindow
             // 
@@ -162,10 +175,10 @@ namespace chemaths
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.GameWindow_Load);
             this.active_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.register_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.register_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clear_results_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +194,6 @@ namespace chemaths
         private System.Windows.Forms.PictureBox clear_results_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox register_btn;
+        private System.Windows.Forms.ToolTip tool_tip;
     }
 }

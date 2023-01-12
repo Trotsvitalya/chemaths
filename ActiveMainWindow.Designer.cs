@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActiveMainWindow));
             this.menu_panel = new System.Windows.Forms.Panel();
             this.side_panel = new System.Windows.Forms.Panel();
@@ -44,6 +45,7 @@ namespace chemaths
             this.coefficient_btn = new System.Windows.Forms.Button();
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.active_panel = new System.Windows.Forms.Panel();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
@@ -89,6 +91,7 @@ namespace chemaths
             this.info_btn.TabIndex = 4;
             this.info_btn.Text = "Розробники";
             this.info_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tool_tip.SetToolTip(this.info_btn, "Інформація про розробників");
             this.info_btn.UseVisualStyleBackColor = true;
             this.info_btn.Click += new System.EventHandler(this.info_btn_Click);
             // 
@@ -108,6 +111,7 @@ namespace chemaths
             this.subject_btn.TabIndex = 3;
             this.subject_btn.Text = "Активність";
             this.subject_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tool_tip.SetToolTip(this.subject_btn, "Перейти до вікна активності");
             this.subject_btn.UseVisualStyleBackColor = true;
             // 
             // help_btn
@@ -126,6 +130,7 @@ namespace chemaths
             this.help_btn.TabIndex = 2;
             this.help_btn.Text = "Допомога";
             this.help_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tool_tip.SetToolTip(this.help_btn, "Допомога з експлуатації");
             this.help_btn.UseVisualStyleBackColor = true;
             this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
             // 
@@ -172,6 +177,7 @@ namespace chemaths
             this.main_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.main_btn.TabIndex = 0;
             this.main_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.main_btn, "Повернутись до головного вікна");
             this.main_btn.Click += new System.EventHandler(this.main_btn_Click);
             // 
             // label3
@@ -201,6 +207,7 @@ namespace chemaths
             this.game_btn.TabIndex = 10;
             this.game_btn.Text = "Практика\r\nкоефіцієнтів";
             this.game_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tool_tip.SetToolTip(this.game_btn, "Перейти до практики");
             this.game_btn.UseVisualStyleBackColor = false;
             this.game_btn.Click += new System.EventHandler(this.game_btn_Click);
             // 
@@ -220,6 +227,7 @@ namespace chemaths
             this.coefficient_btn.TabIndex = 9;
             this.coefficient_btn.Text = "Калькулятор\r\nкоефіцієнтів";
             this.coefficient_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tool_tip.SetToolTip(this.coefficient_btn, "Перейти до калькулятора коефіцієнтів");
             this.coefficient_btn.UseVisualStyleBackColor = false;
             this.coefficient_btn.Click += new System.EventHandler(this.coefficient_btn_Click);
             // 
@@ -233,6 +241,7 @@ namespace chemaths
             this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.close_btn.TabIndex = 8;
             this.close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.close_btn, "Закрити програму");
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // active_panel
@@ -247,6 +256,12 @@ namespace chemaths
             this.active_panel.Size = new System.Drawing.Size(765, 49);
             this.active_panel.TabIndex = 11;
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
+            // 
+            // tool_tip
+            // 
+            this.tool_tip.Active = false;
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
             // 
             // ActiveMainWindow
             // 
@@ -289,5 +304,6 @@ namespace chemaths
         private System.Windows.Forms.Button coefficient_btn;
         private System.Windows.Forms.Button game_btn;
         private System.Windows.Forms.Panel active_panel;
+        private System.Windows.Forms.ToolTip tool_tip;
     }
 }

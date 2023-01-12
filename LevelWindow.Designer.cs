@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelWindow));
             this.active_panel = new System.Windows.Forms.Panel();
             this.back_btn = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,7 @@ namespace chemaths
             this.input_box = new System.Windows.Forms.TextBox();
             this.output_box = new System.Windows.Forms.TextBox();
             this.label_end = new System.Windows.Forms.Label();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
@@ -83,6 +85,7 @@ namespace chemaths
             this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.back_btn.TabIndex = 15;
             this.back_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.back_btn, "Повернутись до попереднього вікна");
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // help_btn
@@ -95,6 +98,7 @@ namespace chemaths
             this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.help_btn.TabIndex = 14;
             this.help_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.help_btn, "Відкрити вікно допомоги");
             this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
             // 
             // close_btn
@@ -107,6 +111,7 @@ namespace chemaths
             this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.close_btn.TabIndex = 13;
             this.close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.close_btn, "Закрити програму");
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // label4
@@ -159,7 +164,7 @@ namespace chemaths
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label14.Location = new System.Drawing.Point(901, 399);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 32);
+            this.label14.Size = new System.Drawing.Size(31, 32);
             this.label14.TabIndex = 44;
             this.label14.Text = "6";
             // 
@@ -171,7 +176,7 @@ namespace chemaths
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label13.Location = new System.Drawing.Point(908, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 32);
+            this.label13.Size = new System.Drawing.Size(31, 32);
             this.label13.TabIndex = 43;
             this.label13.Text = "5";
             // 
@@ -183,7 +188,7 @@ namespace chemaths
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label12.Location = new System.Drawing.Point(6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 32);
+            this.label12.Size = new System.Drawing.Size(31, 32);
             this.label12.TabIndex = 42;
             this.label12.Text = "4";
             // 
@@ -197,6 +202,7 @@ namespace chemaths
             this.help_close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.help_close_btn.TabIndex = 18;
             this.help_close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.help_close_btn, "Закрити вікно допомоги");
             this.help_close_btn.Click += new System.EventHandler(this.help_close_btn_Click);
             // 
             // label11
@@ -207,7 +213,7 @@ namespace chemaths
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label11.Location = new System.Drawing.Point(394, 336);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 32);
+            this.label11.Size = new System.Drawing.Size(31, 32);
             this.label11.TabIndex = 37;
             this.label11.Text = "3";
             // 
@@ -234,7 +240,7 @@ namespace chemaths
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label9.Location = new System.Drawing.Point(139, 237);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 32);
+            this.label9.Size = new System.Drawing.Size(31, 32);
             this.label9.TabIndex = 4;
             this.label9.Text = "2";
             // 
@@ -246,7 +252,7 @@ namespace chemaths
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label8.Location = new System.Drawing.Point(139, 129);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 32);
+            this.label8.Size = new System.Drawing.Size(31, 32);
             this.label8.TabIndex = 2;
             this.label8.Text = "1\r\n";
             // 
@@ -274,6 +280,7 @@ namespace chemaths
             this.check_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.check_btn.TabIndex = 49;
             this.check_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.check_btn, "Перевірити відповідь");
             this.check_btn.Click += new System.EventHandler(this.check_btn_Click_1);
             // 
             // label10
@@ -297,6 +304,7 @@ namespace chemaths
             this.input_box.Size = new System.Drawing.Size(611, 53);
             this.input_box.TabIndex = 48;
             this.input_box.TabStop = false;
+            this.tool_tip.SetToolTip(this.input_box, "Введіть відповідь у форматі: 1234");
             // 
             // output_box
             // 
@@ -311,6 +319,7 @@ namespace chemaths
             this.output_box.Size = new System.Drawing.Size(611, 53);
             this.output_box.TabIndex = 47;
             this.output_box.TabStop = false;
+            this.tool_tip.SetToolTip(this.output_box, "Отримане завдання");
             // 
             // label_end
             // 
@@ -322,6 +331,12 @@ namespace chemaths
             this.label_end.Size = new System.Drawing.Size(899, 37);
             this.label_end.TabIndex = 51;
             this.label_end.Text = "Натисніть на кнопку ще раз та дізнайтесь свій результат!";
+            // 
+            // tool_tip
+            // 
+            this.tool_tip.Active = false;
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
             // 
             // LevelWindow
             // 
@@ -377,5 +392,6 @@ namespace chemaths
         private System.Windows.Forms.TextBox input_box;
         private System.Windows.Forms.TextBox output_box;
         private System.Windows.Forms.Label label_end;
+        private System.Windows.Forms.ToolTip tool_tip;
     }
 }

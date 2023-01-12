@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculatorWindow));
             this.active_panel = new System.Windows.Forms.Panel();
             this.help_btn = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,7 @@ namespace chemaths
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.calculate_btn = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
@@ -80,6 +82,7 @@ namespace chemaths
             this.help_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.help_btn.TabIndex = 12;
             this.help_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.help_btn, "Відкрити вікно допомоги");
             this.help_btn.Click += new System.EventHandler(this.help_btn_Click);
             // 
             // back_btn
@@ -92,6 +95,7 @@ namespace chemaths
             this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.back_btn.TabIndex = 11;
             this.back_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.back_btn, "Повернутись до попереднього вікна");
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // input_box
@@ -105,6 +109,7 @@ namespace chemaths
             this.input_box.TabIndex = 11;
             this.input_box.TabStop = false;
             this.input_box.Text = "Cu + O2 -> CuO";
+            this.tool_tip.SetToolTip(this.input_box, "Введіть рівняння, в якому необхідно проставити коефіцієнти");
             this.input_box.Click += new System.EventHandler(this.input_box_Click);
             this.input_box.Leave += new System.EventHandler(this.input_box_Leave);
             // 
@@ -121,6 +126,7 @@ namespace chemaths
             this.output_box.Size = new System.Drawing.Size(856, 53);
             this.output_box.TabIndex = 12;
             this.output_box.TabStop = false;
+            this.tool_tip.SetToolTip(this.output_box, "Результат обчислення");
             // 
             // help_panel
             // 
@@ -149,7 +155,7 @@ namespace chemaths
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label9.Location = new System.Drawing.Point(886, 394);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 32);
+            this.label9.Size = new System.Drawing.Size(31, 32);
             this.label9.TabIndex = 18;
             this.label9.Text = "6";
             // 
@@ -163,6 +169,7 @@ namespace chemaths
             this.help_close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.help_close_btn.TabIndex = 17;
             this.help_close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.help_close_btn, "Закрити вікно допомоги");
             this.help_close_btn.Click += new System.EventHandler(this.help_close_btn_Click);
             // 
             // label8
@@ -173,7 +180,7 @@ namespace chemaths
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label8.Location = new System.Drawing.Point(908, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 32);
+            this.label8.Size = new System.Drawing.Size(31, 32);
             this.label8.TabIndex = 16;
             this.label8.Text = "5";
             // 
@@ -185,7 +192,7 @@ namespace chemaths
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label7.Location = new System.Drawing.Point(11, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 32);
+            this.label7.Size = new System.Drawing.Size(31, 32);
             this.label7.TabIndex = 15;
             this.label7.Text = "4";
             // 
@@ -197,7 +204,7 @@ namespace chemaths
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label6.Location = new System.Drawing.Point(18, 279);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 32);
+            this.label6.Size = new System.Drawing.Size(31, 32);
             this.label6.TabIndex = 14;
             this.label6.Text = "3";
             // 
@@ -223,7 +230,7 @@ namespace chemaths
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label4.Location = new System.Drawing.Point(405, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 32);
+            this.label4.Size = new System.Drawing.Size(31, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "2";
             // 
@@ -247,7 +254,7 @@ namespace chemaths
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
             this.label2.Location = new System.Drawing.Point(18, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 32);
+            this.label2.Size = new System.Drawing.Size(31, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "1\r\n";
             // 
@@ -276,6 +283,7 @@ namespace chemaths
             this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.close_btn.TabIndex = 9;
             this.close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.close_btn, "Закрити програму");
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // calculate_btn
@@ -288,6 +296,7 @@ namespace chemaths
             this.calculate_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.calculate_btn.TabIndex = 15;
             this.calculate_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.calculate_btn, "Обчислити");
             this.calculate_btn.Click += new System.EventHandler(this.calculate_btn_Click_1);
             // 
             // label10
@@ -300,6 +309,12 @@ namespace chemaths
             this.label10.Size = new System.Drawing.Size(295, 37);
             this.label10.TabIndex = 20;
             this.label10.Text = "Введіть рівняння:";
+            // 
+            // tool_tip
+            // 
+            this.tool_tip.Active = false;
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
             // 
             // CalculatorWindow
             // 
@@ -353,5 +368,6 @@ namespace chemaths
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox calculate_btn;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolTip tool_tip;
     }
 }

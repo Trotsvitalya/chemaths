@@ -151,6 +151,7 @@ namespace chemaths
             // 
             // tool_tip
             // 
+            this.tool_tip.Active = false;
             this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.tool_tip.ToolTipTitle = "Підказка";
             // 
@@ -209,6 +210,7 @@ namespace chemaths
             this.activate_tool_tips.Size = new System.Drawing.Size(77, 64);
             this.activate_tool_tips.TabIndex = 19;
             this.activate_tool_tips.TabStop = false;
+            this.tool_tip.SetToolTip(this.activate_tool_tips, "Управління спливаючими підказками");
             this.activate_tool_tips.UseVisualStyleBackColor = false;
             this.activate_tool_tips.Click += new System.EventHandler(this.activate_tool_tips_Click);
             // 

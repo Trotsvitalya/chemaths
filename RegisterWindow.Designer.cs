@@ -29,6 +29,7 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterWindow));
             this.active_panel = new System.Windows.Forms.Panel();
             this.back_btn = new System.Windows.Forms.PictureBox();
@@ -43,6 +44,7 @@ namespace chemaths
             this.panel1 = new System.Windows.Forms.Panel();
             this.no_btn = new System.Windows.Forms.RadioButton();
             this.yes_btn = new System.Windows.Forms.RadioButton();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
             this.active_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
@@ -73,6 +75,7 @@ namespace chemaths
             this.back_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.back_btn.TabIndex = 11;
             this.back_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.back_btn, "Повернутись до попереднього вікна");
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // close_btn
@@ -85,6 +88,7 @@ namespace chemaths
             this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.close_btn.TabIndex = 13;
             this.close_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.close_btn, "Закрити програму");
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // info_label
@@ -117,6 +121,7 @@ namespace chemaths
             this.level_choice.Size = new System.Drawing.Size(101, 51);
             this.level_choice.TabIndex = 43;
             this.level_choice.TabStop = false;
+            this.tool_tip.SetToolTip(this.level_choice, "Оберіть рівень");
             this.level_choice.Value = new decimal(new int[] {
             1,
             0,
@@ -157,6 +162,7 @@ namespace chemaths
             this.nickname_box.TabIndex = 38;
             this.nickname_box.TabStop = false;
             this.nickname_box.Text = "Куриленко Дмитро";
+            this.tool_tip.SetToolTip(this.nickname_box, "Введіть ім\'я");
             this.nickname_box.Click += new System.EventHandler(this.nickname_box_Click);
             this.nickname_box.TextChanged += new System.EventHandler(this.nickname_box_TextChanged);
             this.nickname_box.Leave += new System.EventHandler(this.nickname_box_Leave);
@@ -171,6 +177,7 @@ namespace chemaths
             this.start_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.start_btn.TabIndex = 40;
             this.start_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.start_btn, "Почати практику");
             this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
             // 
             // label3
@@ -192,6 +199,7 @@ namespace chemaths
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 78);
             this.panel1.TabIndex = 47;
+            this.tool_tip.SetToolTip(this.panel1, "Управління відображенням результатів");
             // 
             // no_btn
             // 
@@ -218,6 +226,12 @@ namespace chemaths
             this.yes_btn.TabStop = true;
             this.yes_btn.Text = "Так";
             this.yes_btn.UseVisualStyleBackColor = true;
+            // 
+            // tool_tip
+            // 
+            this.tool_tip.Active = false;
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
             // 
             // RegisterWindow
             // 
@@ -265,5 +279,6 @@ namespace chemaths
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton no_btn;
         private System.Windows.Forms.RadioButton yes_btn;
+        private System.Windows.Forms.ToolTip tool_tip;
     }
 }

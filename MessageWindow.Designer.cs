@@ -29,11 +29,13 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageWindow));
             this.result_label = new System.Windows.Forms.Label();
             this.ok_btn = new System.Windows.Forms.PictureBox();
             this.active_panel = new System.Windows.Forms.Panel();
             this.answer_label = new System.Windows.Forms.Label();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ok_btn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,7 @@ namespace chemaths
             this.ok_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ok_btn.TabIndex = 22;
             this.ok_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.ok_btn, "Продовжити практику");
             this.ok_btn.Click += new System.EventHandler(this.ok_btn_Click);
             // 
             // active_panel
@@ -80,6 +83,12 @@ namespace chemaths
             this.answer_label.Size = new System.Drawing.Size(351, 37);
             this.answer_label.TabIndex = 24;
             this.answer_label.Text = "Правильна відповідь:\r\n";
+            // 
+            // tool_tip
+            // 
+            this.tool_tip.Active = false;
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
             // 
             // MessageWindow
             // 
@@ -108,5 +117,6 @@ namespace chemaths
         private System.Windows.Forms.PictureBox ok_btn;
         private System.Windows.Forms.Panel active_panel;
         private System.Windows.Forms.Label answer_label;
+        private System.Windows.Forms.ToolTip tool_tip;
     }
 }
