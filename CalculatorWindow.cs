@@ -32,7 +32,7 @@ namespace chemaths
 
         private void input_box_Click(object sender, EventArgs e)
         {
-            if(input_box.Text == "Cu + O2 => CuO")
+            if(input_box.Text == "Cu + O2 -> CuO")
             {
                 input_box.Text = null;
                 input_box.Font = new Font(input_box.Font, FontStyle.Regular);
@@ -44,7 +44,7 @@ namespace chemaths
         {
             if(string.IsNullOrWhiteSpace(input_box.Text))
             {
-                input_box.Text = "Cu + O2 => CuO";
+                input_box.Text = "Cu + O2 -> CuO";
                 input_box.Font = new Font(input_box.Font, FontStyle.Italic);
                 input_box.ForeColor = Color.DimGray;
             }
