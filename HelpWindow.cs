@@ -86,9 +86,16 @@ namespace chemaths
         private void activate_tool_tips_Click(object sender, EventArgs e)
         {
             active_tool_tips = !active_tool_tips;
-            if(active_tool_tips == true)
+            tool_tip.Active = active_tool_tips;
+
+            CheckBox chk = sender as CheckBox;
+            if(chk.Checked)
             {
-                tool_tip.Active = true;
+                chk.Image = Properties.Resources.checkbox__1_;
+            }
+            else
+            {
+                chk.Image = Properties.Resources.stop__1_;
             }
         }
     }

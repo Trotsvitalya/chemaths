@@ -229,5 +229,17 @@
   <ItemGroup>
     <None Include="Properties\Images\like.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\checkbox %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\stop %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
