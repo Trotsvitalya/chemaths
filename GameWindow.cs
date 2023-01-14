@@ -18,9 +18,12 @@ namespace chemaths
         public GameWindow()
         {
             InitializeComponent();
+            Start1();
         }
+
         private void Start1()
         {
+            //заповнення таблиці результатів даними з файлу
             JObject o1 = JObject.Parse(File.ReadAllText("Results.json"));
             foreach (JProperty property in o1.Properties())
             {
@@ -28,43 +31,43 @@ namespace chemaths
                 results_list.Items.Add(listviewItem);
             }
         }
+
+        private void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        {
+            point_form.Show();
+            //задання границь попереднього вікна
+            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
+        }
+
         private void back_btn_Click(object sender, EventArgs e)
         {
-            ActiveMainWindow tmp = new ActiveMainWindow();
-            tmp.Show();
-            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
+            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до попереднього вікна
         }
 
         private void close_btn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit();//закриття програми
         }
 
         private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
+            //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
 
-        private void GameWindow_Load(object sender, EventArgs e)
-        {
-            Start1();
-        }
-
         private void clear_results_btn_Click(object sender, EventArgs e)
         {
+            //очищення таблиці результатів
             results_list.Items.Clear();
             File.WriteAllText("Results.json", "{}");
         }
 
         private void register_btn_Click(object sender, EventArgs e)
         {
-            RegisterWindow tmp = new RegisterWindow();
-            tmp.Show();
-            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
+            OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до наступного вікна
         }
     }
 }

@@ -173,7 +173,6 @@ namespace chemaths
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Load += new System.EventHandler(this.GameWindow_Load);
             this.active_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.back_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
