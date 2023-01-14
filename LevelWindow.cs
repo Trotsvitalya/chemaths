@@ -24,7 +24,7 @@ namespace chemaths
         public string userName;
         string result_choice;
 
-        public void Start() // заповнення масиву рівнянь та масиву результатів
+        public void Start()//заповнення масиву рівнянь та масиву результатів
         {
             doc.Load("Levels.xml");
             tasks = doc.SelectNodes($"/root/level[@number='{(int)register_w.level_choice.Value}']/task");
@@ -33,15 +33,24 @@ namespace chemaths
             taskArrayR = tasksR.OfType<XmlNode>().ToArray();
         }
 
+        private void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        {
+            point_form.Show();
+            //задання границь попереднього вікна
+            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
+        }
+
         private void help_btn_Click(object sender, EventArgs e)
         {
-            help_panel.Visible = true;
+            help_panel.Visible = true;//відображення допоміжних підказок
+            //вимкнення відповіді елементів на дії користувача
             input_box.Enabled = output_box.Enabled = help_btn.Enabled = back_btn.Enabled = check_btn.Enabled = false;
         }
 
         RegisterWindow register_w;
 
-        public LevelWindow(RegisterWindow tmp, string tmp_s) // початок тесту, тасування масиву рівнянь, виведення першого рівняння
+        public LevelWindow(RegisterWindow tmp, string tmp_s)//початок тесту, тасування масиву рівнянь, виведення першого рівняння
         {
             InitializeComponent();
             register_w = tmp;
@@ -56,16 +65,14 @@ namespace chemaths
 
         private void help_close_btn_Click(object sender, EventArgs e)
         {
-            help_panel.Visible = false;
+            help_panel.Visible = false;//закриття допоміжних підказок
+            //увімкнення відповіді елементів на дії користувача
             input_box.Enabled = output_box.Enabled = help_btn.Enabled = back_btn.Enabled = check_btn.Enabled = true;
         }
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            RegisterWindow tmp = new RegisterWindow();
-            tmp.Show();
-            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
+            OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до попереднього вікна
         }
 
         private void LevelWindow_Load(object sender, EventArgs e)
@@ -136,15 +143,17 @@ namespace chemaths
                 taskArray[i] = temp1; taskArrayR[i] = temp2;
             }
         }
+
         private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
+            //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
         private void close_btn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit();//закриття програми
         }
     }
 }
