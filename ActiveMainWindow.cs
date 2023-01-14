@@ -24,25 +24,11 @@ namespace chemaths
         {
             if (sender != null && current_btn != (Button)sender)
             {
-                INACTIVE_BTN();//зняття виділення
-
                 current_btn = (Button)sender;
                 current_btn.BackColor = Color.FromArgb(31, 34, 53);//зміна кольору фону
                 current_btn.ForeColor = Color.White;//зміна кольору тексту
                 side_panel.Height = current_btn.Height;//зміна розміру додаткової панелі виділення
                 side_panel.Top = current_btn.Top;//зміна розташування додаткової панелі на рівні обраного пункту
-            }
-        }
-
-        private void INACTIVE_BTN()//функція зняття виділення
-        {
-            foreach (Control previous_btn in menu_panel.Controls)
-            {
-                if (previous_btn.GetType() == typeof(Button))
-                {
-                    previous_btn.BackColor = Color.FromArgb(36, 41, 61);
-                    previous_btn.ForeColor = Color.FromArgb(11, 107, 210);
-                }
             }
         }
 
