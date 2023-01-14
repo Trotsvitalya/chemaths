@@ -213,6 +213,7 @@ namespace chemaths
             this.active_panel.Name = "active_panel";
             this.active_panel.Size = new System.Drawing.Size(765, 49);
             this.active_panel.TabIndex = 12;
+            this.tool_tip.SetToolTip(this.active_panel, "Затисніть ліву клавішу миші для перетягування вікна");
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
             // 
             // label4
@@ -220,9 +221,9 @@ namespace chemaths
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.label4.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.label4.Location = new System.Drawing.Point(186, 167);
+            this.label4.Location = new System.Drawing.Point(186, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(765, 263);
+            this.label4.Size = new System.Drawing.Size(765, 296);
             this.label4.TabIndex = 13;
             this.label4.Text = resources.GetString("label4.Text");
             // 

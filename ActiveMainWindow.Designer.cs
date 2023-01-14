@@ -255,6 +255,7 @@ namespace chemaths
             this.active_panel.Name = "active_panel";
             this.active_panel.Size = new System.Drawing.Size(765, 49);
             this.active_panel.TabIndex = 11;
+            this.tool_tip.SetToolTip(this.active_panel, "Затисніть ліву клавішу миші для перетягування вікна");
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
             // 
             // tool_tip
