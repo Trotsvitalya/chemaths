@@ -15,24 +15,27 @@ namespace chemaths
         public MessageWindow(string result, string answer)
         {
             InitializeComponent();
-            result_label.Text = result;
-            if(answer == "right")
+
+            result_label.Text = result;//виведення результату відповіді
+            if(answer == "right")//якщо відповідь корситувача правильна
             {
-                answer_label.Visible = false;
+                answer_label.Visible = false;//приховання тексту правильної відповіді
             }
-            else
+            else //якщо відповідь корситувача неправильна
             {
+                //виведення правильної відповіді
                 answer_label.Text = "Правильна відповідь: " + answer;
             }
         }
 
         private void ok_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();//закриття форми
         }
 
         private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
+            //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
