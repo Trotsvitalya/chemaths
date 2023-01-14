@@ -20,7 +20,7 @@ namespace chemaths
             ACTIVE_BTN(info_btn);
         }
 
-        private void ACTIVE_BTN(object sender)
+        private void ACTIVE_BTN(object sender)//функція виділення обраного пункту меню
         {
             if (sender != null && current_btn != (Button)sender)
             {
@@ -32,50 +32,37 @@ namespace chemaths
             }
         }
 
-        private void INACTIVE_BTN()
-        {
-            foreach (Control previous_btn in menu_panel.Controls)
-            {
-                if (previous_btn.GetType() == typeof(Button))
-                {
-                    previous_btn.BackColor = Color.FromArgb(36, 41, 61);
-                    previous_btn.ForeColor = Color.FromArgb(11, 107, 210);
-                }
-            }
-        }
-
-        private void OPEN_MENU_POINT(Form point_form, object sender)
+        private void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
         {
             point_form.Show();
+            //задання границь попереднього вікна
             point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
             this.Hide();
         }
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new HelpWindow(), sender);
+            OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void subject_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new ActiveMainWindow(), sender);
+            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void main_btn_Click(object sender, EventArgs e)
         {
-            INACTIVE_BTN();
-            MainWindow tmp = new MainWindow();
-            tmp.Show();
-            this.Hide();
+            OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
         }
 
         private void close_btn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit();//закриття програми
         }
 
         private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
+            //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
