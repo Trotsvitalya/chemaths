@@ -17,23 +17,24 @@ namespace chemaths
         public ActiveMainWindow()
         {
             InitializeComponent();
-            ACTIVE_BTN(subject_btn);
+            ACTIVE_BTN(subject_btn);//виділення обраного пункту меню
         }
-        private void ACTIVE_BTN(object sender)
+
+        private void ACTIVE_BTN(object sender)//функція виділення обраного пункту меню
         {
             if (sender != null && current_btn != (Button)sender)
             {
-                INACTIVE_BTN();
+                INACTIVE_BTN();//зняття виділення
 
                 current_btn = (Button)sender;
-                current_btn.BackColor = Color.FromArgb(31, 34, 53);
-                current_btn.ForeColor = Color.White;
-                side_panel.Height = current_btn.Height;
-                side_panel.Top = current_btn.Top;
+                current_btn.BackColor = Color.FromArgb(31, 34, 53);//зміна кольору фону
+                current_btn.ForeColor = Color.White;//зміна кольору тексту
+                side_panel.Height = current_btn.Height;//зміна розміру додаткової панелі виділення
+                side_panel.Top = current_btn.Top;//зміна розташування додаткової панелі на рівні обраного пункту
             }
         }
 
-        private void INACTIVE_BTN()
+        private void INACTIVE_BTN()//функція зняття виділення
         {
             foreach (Control previous_btn in menu_panel.Controls)
             {
@@ -45,49 +46,47 @@ namespace chemaths
             }
         }
 
-        private void OPEN_MENU_POINT(Form point_form, object sender)
+        private void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
         {
             point_form.Show();
+            //задання границь попереднього вікна
             point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
             this.Hide();
         }
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new HelpWindow(), sender);
+            OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void info_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new InfoWindow(), sender);
+            OPEN_MENU_POINT(new InfoWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void main_btn_Click(object sender, EventArgs e)
         {
-            INACTIVE_BTN();
-            MainWindow tmp = new MainWindow();
-            tmp.Show();
-            tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
+            OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
         }
 
-        private void close_btn_Click(object sender, EventArgs e)
+        private void close_btn_Click(object sender, EventArgs e)//закриття програми
         {
             Application.Exit();
         }
 
         private void coefficient_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new CalculatorWindow(), sender);
+            OPEN_MENU_POINT(new CalculatorWindow(), sender);//перехід до вікна активності
         }
 
         private void game_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new GameWindow(), sender);
+            OPEN_MENU_POINT(new GameWindow(), sender);//перехід до вікна активності
         }
 
         private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
+            //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
