@@ -14,6 +14,8 @@ namespace chemaths
         public static string cof;
         public static void runs()
         {
+
+
             //получаем список всех элементов и химических веществ
             ArrayList elements = AllUniqueElements(eq); //Приклад: H
             ArrayList chemicals = AllUniqueChemicals(eq);//Приклад: H2O

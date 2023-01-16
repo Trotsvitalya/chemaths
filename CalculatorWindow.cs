@@ -82,9 +82,17 @@ namespace chemaths
         private void calculate_btn_Click_1(object sender, EventArgs e)
         {
             //розстановка коефіцієнтів рівняння та виведення результату
-            Balancer.eq = input_box.Text;
-            Balancer.runs();
-            output_box.Text = Balancer.final;
+            try
+            {
+                Balancer.eq = input_box.Text;
+                Balancer.runs();
+                output_box.Text = Balancer.final;
+            }
+            catch(ArgumentException)
+            {
+                MistakeWindow mistake = new MistakeWindow();
+                mistake.ShowDialog();
+            }
         }
     }
 }

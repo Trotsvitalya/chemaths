@@ -162,3 +162,4 @@ C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths
 C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths.csproj.CopyComplete
 C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths.exe
 C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths.pdb
+C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths.MistakeWindow.resources
