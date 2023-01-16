@@ -278,7 +278,7 @@ namespace chemaths
         }
     }
 
-    //класс з розрахунками
+    //клас з розрахунками
     class CalculateBalancer : Balancer
     {
         public static Boolean DividesAll(double div, double[] dArr)
