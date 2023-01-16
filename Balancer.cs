@@ -16,15 +16,15 @@ namespace chemaths
         {
 
 
-            //получаем список всех элементов и химических веществ
+            //отримуємо список усіх елементів та хімічних речовин
             ArrayList elements = AllUniqueElements(eq); //Приклад: H
             ArrayList chemicals = AllUniqueChemicals(eq);//Приклад: H2O
 
-            //получить матрицу для всех химических веществ, кроме последнего и матрица для последней химической вещества
+            //отримати матрицю для всіх хімічних речовин, крім останнього і матриця для останньої хімічної речовини
             Matrix A = SymbolBalancer.PopulateChemMatrix((string[])chemicals.ToArray(typeof(string)), (string[])elements.ToArray(typeof(string)), eq);
             Matrix B = SymbolBalancer.PopulateEquivalentMatrix((string[])chemicals.ToArray(typeof(string)), (string[])elements.ToArray(typeof(string)));
 
-            //рассчитуем коэффициенты
+            //розрахуємо коефіцієнти
             Matrix C = (A.GetInverse().Multiply(B)).Multiply(A.GetDeterminant());
 
             double[] coefficients = new double[C.GetColumn(0).Length];
@@ -45,11 +45,11 @@ namespace chemaths
                 coefficients = (double[])c.ToArray(typeof(double));
             }
 
-            coefficients = RatioBalancer.MakeAllPositive(coefficients); //все коэффициенты должны быть положительными
+            coefficients = RatioBalancer.MakeAllPositive(coefficients); //всі коефіцієнти мають бути позитивними
 
-            coefficients = RatioBalancer.ReduceSet(coefficients); //сводит все числа к наименьшим значениям
+            coefficients = RatioBalancer.ReduceSet(coefficients); //зводить усі числа до найменших значень
 
-            final = RatioBalancer.FillCoefficients(coefficients, eq); //добавляет коэффициенты к химическим веществам
+            final = RatioBalancer.FillCoefficients(coefficients, eq); //додає коефіцієнти до хімічних речовин
             cof = string.Join("", coefficients);
 
         }
@@ -80,7 +80,7 @@ namespace chemaths
 
             return indexChem > indexYield;
         }
-        //возвращает массив всех уникальных хим.веществ
+        //повертає масив усіх унікальних хімічних речовин
         public static ArrayList AllUniqueChemicals(string unsplit)
         {
             string[] unparsed = unsplit.Split(' ');
@@ -97,21 +97,21 @@ namespace chemaths
             return allUniqueChemicals;
         }
 
-        //принимает разделенное, но не проанализированное уравнение и возвращает массив всех уникальных элементов
+        //приймає розділене, але не проаналізоване рівняння та повертає масив усіх унікальних елементів
         public static ArrayList AllUniqueElements(string unsplit)
         {
 
             string[] unparsed = unsplit.Split(' ');
 
             ArrayList allUniqueElements = new ArrayList();
-            //этот цикл будет проходить через каждый токен в уравнении
+            //цей цикл проходитиме через кожен токен у рівнянні
             for (int i = 0; i < unparsed.Length; i++)
             {
                 string chemical = unparsed[i];
 
                 if (chemical != "+" && chemical != "->")
                 {
-                    //разбивать его на элементы
+                    //розбивати його на елементи
                     for (int j = 0; j < chemical.Length; j++)
                     {
 
@@ -120,19 +120,19 @@ namespace chemaths
                             break;
                         }
 
-                        //пропустить числа и выполнить создание элемента только в том случае, если мы найдем новый в верхнем регистре
+                        //пропустити числа та виконати створення елемента тільки в тому випадку, якщо ми знайдемо новий у верхньому регістрі
                         while (CheckBalancer.IsNumeric(chemical[j]) && j < chemical.Length - 1)
                         {
                             j++;
                         }
 
-                        string element = chemical[j] + "";//создать элемент
+                        string element = chemical[j] + "";//створити елемент
 
                         if (j < chemical.Length - 1)
                         {
                             int nextLetterSwitch;
                             char nextChar = chemical[j + 1];
-                            //(число, верхний регистр, строчная буква)
+                            //(число, верхній регістр, мала літера)
                             if (CheckBalancer.IsNumeric(nextChar))
                             {
                                 nextLetterSwitch = 1;
@@ -148,7 +148,7 @@ namespace chemaths
 
                             switch (nextLetterSwitch)
                             {
-                                case 1: //Случай, когда следующий символ - это число
+                                case 1: //Випадок, коли наступний символ - це число
                                     if (!CheckBalancer.ListContains(allUniqueElements, element))
                                     {
                                         allUniqueElements.Add(element);
@@ -156,7 +156,7 @@ namespace chemaths
                                     }
 
                                     break;
-                                case 2: //Случай, когда следующий символ - это заглавная буква
+                                case 2: //Випадок, коли наступний символ - це велика літера
                                     if (!CheckBalancer.ListContains(allUniqueElements, element))
                                     {
                                         allUniqueElements.Add(element);
@@ -164,7 +164,7 @@ namespace chemaths
                                     }
 
                                     break;
-                                case 3: //Случай, когда следующий символ - это строчная буква
+                                case 3: //Випадок, коли наступний символ - це мала буква
                                     element += nextChar;
                                     j++;
                                     if (!CheckBalancer.ListContains(allUniqueElements, element))
@@ -186,7 +186,7 @@ namespace chemaths
             return allUniqueElements;
         }
 
-        //преобразует символ в число
+        //перетворює символ на число
         public static int ToInt(char c)
         {
             return c - 48;
@@ -206,10 +206,10 @@ namespace chemaths
 
     }
 
-    //класс з перевірками
+    //клас з перевірками
     class CheckBalancer : Balancer 
     {
-        //проверяет, содержится ли строка в списке строк
+        //перевіряє, чи міститься рядок у списку рядків
         public static Boolean ListContains(ArrayList AL, String s)
         {
             foreach (object o in AL)
@@ -235,26 +235,26 @@ namespace chemaths
             }
             return true;
         }
-        //Проверяет, является ли символ заглавной буквой английского алфавита
+        //Перевіряє, чи є символ великою літерою англійського алфавіту
         public static Boolean IsUpperCase(char c)
         {
             return ((c >= 65) && (c <= 90));
         }
-        //проверяет, является ли символ числом
+        //перевіряє, чи є символом числом
         public static Boolean IsNumeric(char c)
         {
             return ((c >= 48) && (c <= 57));
         }
-        //ищет в строке подстроку и возвращает последний индекс подстроки
+        //шукає у рядку підрядок і повертає останній індекс підрядка
         public static int FindLastIndex(string str, string subStr)
         {
-            //если они равны, то вернуть на единицу меньше, чем длина
+            //якщо вони рівні, то повернути на одиницю менше, ніж довжина
             if (str == subStr)
             {
                 return str.Length - 1;
             }
 
-            //конкретный случай, когда substr представляет собой только один символ, тогда он может перебирать каждый символ в хим.
+            //конкретний випадок, коли substr є лише один символ, тоді він може перебирати кожен символ в хім.
             if (subStr.Length == 1)
             {
                 char c = subStr[0];
@@ -304,7 +304,7 @@ namespace chemaths
             return dArr;
         }
 
-        public static double GCD(double a, double b)//наибольший общий делитель
+        public static double GCD(double a, double b)//найбільший спільний дільник
         {
             while (a != 0 && b != 0)
             {
@@ -321,7 +321,7 @@ namespace chemaths
         }
     }
     
-    //класс з розрахунками коефіціентів
+    //клас з розрахунками коефіціентів
     class RatioBalancer : Balancer
     {
         public static double[] ReduceSet(double[] dArr)
@@ -342,7 +342,7 @@ namespace chemaths
             return dArr;
         }
 
-        //возвращает строку с коэффициентами уравнения, добавленными для балансировки уравнения
+        //повертає рядок з коефіцієнтами рівняння, доданими для балансування рівняння
         public static string FillCoefficients(double[] coef, string eq)
         {
             string[] eqParse = eq.Split(' ');
@@ -391,7 +391,7 @@ namespace chemaths
         }
     }
 
-    //класс з розрахунками елементів
+    //клас з розрахунками елементів
     class SymbolBalancer : Balancer
     {
         public static Matrix PopulateEquivalentMatrix(string[] chemicals, string[] elmts)
@@ -407,7 +407,7 @@ namespace chemaths
 
                 if (chemical.Contains(element))
                 {
-                    //получает символ после элемента, который указывает количество атомов, если это начало следующего элемента, то этот элемент появляется только один раз в химическом
+                    //отримує символ після елемента, який вказує кількість атомів, якщо це початок наступного елемента, то цей елемент з'являється лише один раз у хімічному
 
                     if (chemical == element)
                     {
@@ -417,14 +417,14 @@ namespace chemaths
                     {
                         int endOfAtom = CheckBalancer.FindLastIndex(chemical, element) + 1;
                         char num = '\0';
-                        //если атом только один и является последним элементом в химической формуле, то он выйдет за пределы индекса 
+                        //якщо атом лише один і є останнім елементом у хімічній формулі, то він вийде за межі індексу
                         if (endOfAtom != chemical.Length)
                         {
                             num = chemical[endOfAtom];
 
                             if (CheckBalancer.IsUpperCase(num))
                             {
-                                //следующий символ является заглавной буквой, поэтому предыдущий элемент появляется только один раз
+                                //наступний символ є великою літерою, тому попередній елемент з'являється лише один раз
 
 
                                 A.SetEntry(i, 0, 1);
@@ -432,7 +432,7 @@ namespace chemaths
                             }
                             else
                             {
-                                //символ является числом и поэтому должен быть преобразован
+                                //символ є числом і тому має бути перетворений
                                 int numInt = ToInt(num);
 
                                 endOfAtom++;
@@ -464,7 +464,7 @@ namespace chemaths
             return A;
         }
 
-        //заполняет химическую матрицу количеством каждого элемента, содержащегося в каждом химическом веществе
+        //заповнює хімічну матрицю кількістю кожного елемента, що міститься в кожній хімічній речовині
         public static Matrix PopulateChemMatrix(string[] chems, string[] elmts, string eq)
         {
             Matrix A = new Matrix(elmts.Length, chems.Length - 1);
@@ -479,8 +479,8 @@ namespace chemaths
 
                     if (chemical.Contains(element))
                     {
-                        /*получает символ после элемента, который указывает количество атомов, 
-            если это начало следующего элемента, то этот элемент появляется только один раз в химическом*/
+                        /*отримує символ після елемента, який вказує кількість атомів,
+                        якщо це початок наступного елемента, то цей елемент з'являється лише один раз у хімічному*/
                         if (chemical == element)
                         {
                             A.SetEntry(i, j, 1);
@@ -489,14 +489,14 @@ namespace chemaths
                         {
                             int endOfAtom = CheckBalancer.FindLastIndex(chemical, element) + 1;
                             char num = '\0';
-                            //если атом только один и он последний элемент в химической формуле, то он выйдет за пределы индекса,
+                            //якщо атом тільки один і він останній елемент у хімічній формулі, то він вийде за межі індексу,
                             if (endOfAtom != chemical.Length)
                             {
                                 num = chemical[endOfAtom];
 
                                 if (CheckBalancer.IsUpperCase(num))
                                 {
-                                    //следующий символ является заглавной буквой, поэтому предыдущий элемент появляется только один раз
+                                    //наступний символ є великою літерою, тому попередній елемент з'являється лише один раз
                                     if (IsProduct(chemical, eq))
                                     {
                                         A.SetEntry(i, j, -1);
