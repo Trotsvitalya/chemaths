@@ -41,14 +41,14 @@ namespace chemaths
             // 
             // result_label
             // 
-            this.result_label.AutoSize = true;
             this.result_label.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.result_label.ForeColor = System.Drawing.Color.White;
-            this.result_label.Location = new System.Drawing.Point(54, 66);
+            this.result_label.Location = new System.Drawing.Point(0, 66);
             this.result_label.Name = "result_label";
-            this.result_label.Size = new System.Drawing.Size(352, 37);
+            this.result_label.Size = new System.Drawing.Size(462, 37);
             this.result_label.TabIndex = 21;
             this.result_label.Text = "Відповідь правильна!";
+            this.result_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ok_btn
             // 
@@ -76,14 +76,14 @@ namespace chemaths
             // 
             // answer_label
             // 
-            this.answer_label.AutoSize = true;
             this.answer_label.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answer_label.ForeColor = System.Drawing.Color.White;
-            this.answer_label.Location = new System.Drawing.Point(22, 116);
+            this.answer_label.Location = new System.Drawing.Point(0, 116);
             this.answer_label.Name = "answer_label";
-            this.answer_label.Size = new System.Drawing.Size(351, 37);
+            this.answer_label.Size = new System.Drawing.Size(462, 37);
             this.answer_label.TabIndex = 24;
             this.answer_label.Text = "Правильна відповідь:\r\n";
+            this.answer_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tool_tip
             // 
@@ -108,7 +108,6 @@ namespace chemaths
             this.Text = "MessageWindow";
             ((System.ComponentModel.ISupportInitialize)(this.ok_btn)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
