@@ -164,3 +164,26 @@ C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths
 C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths.pdb
 C:\Users\User\Desktop\uni\2 курс\курсач\ex\chemaths\obj\Debug\chemaths.MistakeWindow.resources
 C:\Users\User\Desktop\uni\2 курс\курсач\chemaths\obj\Debug\chemaths.MistakeWindow.resources
+J:\FIX_ERROR\chemaths\bin\Debug\chemaths.exe.config
+J:\FIX_ERROR\chemaths\bin\Debug\chemaths.exe
+J:\FIX_ERROR\chemaths\bin\Debug\chemaths.pdb
+J:\FIX_ERROR\chemaths\bin\Debug\Newtonsoft.Json.dll
+J:\FIX_ERROR\chemaths\bin\Debug\Newtonsoft.Json.xml
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.csproj.AssemblyReference.cache
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.csproj.SuggestedBindingRedirects.cache
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.CalculatorWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.GameWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.HelpWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.InfoWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.LevelWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.MainWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.MessageWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.MistakeWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.Properties.Resources.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.ActiveMainWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.RegisterWindow.resources
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.csproj.GenerateResource.cache
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.csproj.CoreCompileInputs.cache
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.csproj.CopyComplete
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.exe
+J:\FIX_ERROR\chemaths\obj\Debug\chemaths.pdb

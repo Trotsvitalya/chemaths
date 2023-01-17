@@ -83,8 +83,9 @@ namespace chemaths
                             break;
                         }
                     }
+                    counter = 0;
                 }
-
+                
 
                 foreach (string element in atoms)
                 {
