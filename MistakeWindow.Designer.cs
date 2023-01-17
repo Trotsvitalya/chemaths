@@ -59,12 +59,11 @@ namespace chemaths
             // 
             // mistake_label
             // 
-            this.mistake_label.AutoSize = true;
             this.mistake_label.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mistake_label.ForeColor = System.Drawing.Color.White;
-            this.mistake_label.Location = new System.Drawing.Point(30, 52);
+            this.mistake_label.Location = new System.Drawing.Point(0, 52);
             this.mistake_label.Name = "mistake_label";
-            this.mistake_label.Size = new System.Drawing.Size(388, 111);
+            this.mistake_label.Size = new System.Drawing.Size(462, 111);
             this.mistake_label.TabIndex = 26;
             this.mistake_label.Text = "Виникла помилка!\r\nПеревірте правильність\r\nвведених даних!";
             this.mistake_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,7 +82,6 @@ namespace chemaths
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)(this.ok_btn)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

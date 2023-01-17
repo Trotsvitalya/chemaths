@@ -78,7 +78,7 @@ namespace chemaths
             //увімкнення відповіді елементів на дії користувача
             input_box.Enabled = help_btn.Enabled = output_box.Enabled = back_btn.Enabled = calculate_btn.Enabled = true;
         }
-        
+
         private void calculate_btn_Click_1(object sender, EventArgs e)
         {
             //розстановка коефіцієнтів рівняння та виведення результату
@@ -88,10 +88,23 @@ namespace chemaths
                 Balancer.runs();
                 output_box.Text = Balancer.final;
             }
-            catch(ArgumentException)
+            catch (Exception exc)
             {
-                MistakeWindow mistake = new MistakeWindow();
-                mistake.ShowDialog();
+                if (exc.Message == "sides_mistake")
+                {
+                    MistakeWindow mistake_w = new MistakeWindow("Тут має бути\nодин -> символ");
+                    mistake_w.ShowDialog();
+                }
+                if (exc.Message == "atom_mistake")
+                {
+                    MistakeWindow mistake_w = new MistakeWindow("Не існує такого елемента!\nПеревірте введені дані!");
+                    mistake_w.ShowDialog();
+                }
+                if (exc.Message == "space_mistake")
+                {
+                    MistakeWindow mistake_w = new MistakeWindow("Невірна кількість пробілів!\nПеревірте введені дані!");
+                    mistake_w.ShowDialog();
+                }
             }
         }
     }
