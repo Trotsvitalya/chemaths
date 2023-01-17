@@ -13,6 +13,7 @@ namespace chemaths
         public static string eq;
         public static string final;
         public static string cof;
+        public static int counter;
 
         public static void PARSE(string eq)
         {
@@ -56,7 +57,7 @@ namespace chemaths
                                       "Re|Rf|Rg|Rh|Rn|Ru|S|Sb|Sc|Se|Sg|Si|Sm|Sn|Sr|Ta|Tb|Tc|Te|Th|" +
                                       "Ti|Tl|Tm|U|V|W|Xe|Y|Yb|Zn|Zr";
             string[] atoms = periodical_table.Split('|');
-
+            int counter = 0;
             for (int i = 0; i < molecule.Length; i++)
             {
                 //зчитання першого символу
@@ -84,7 +85,7 @@ namespace chemaths
                     }
                 }
 
-                int counter = 0;
+
                 foreach (string element in atoms)
                 {
                     if (atom == element)//якщо утворений атом існує в періодичній таблиці
