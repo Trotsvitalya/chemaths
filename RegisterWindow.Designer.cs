@@ -154,15 +154,14 @@ namespace chemaths
             // 
             // nickname_box
             // 
-            this.nickname_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nickname_box.ForeColor = System.Drawing.Color.DimGray;
+            this.nickname_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nickname_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.nickname_box.Location = new System.Drawing.Point(483, 217);
             this.nickname_box.Multiline = true;
             this.nickname_box.Name = "nickname_box";
             this.nickname_box.Size = new System.Drawing.Size(381, 55);
             this.nickname_box.TabIndex = 38;
             this.nickname_box.TabStop = false;
-            this.nickname_box.Text = "Куриленко Дмитро";
             this.tool_tip.SetToolTip(this.nickname_box, "Введіть ім\'я");
             this.nickname_box.Click += new System.EventHandler(this.nickname_box_Click);
             this.nickname_box.TextChanged += new System.EventHandler(this.nickname_box_TextChanged);

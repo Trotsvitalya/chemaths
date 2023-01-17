@@ -12,9 +12,10 @@ namespace chemaths
 {
     public partial class MistakeWindow : Form
     {
-        public MistakeWindow()
+        public MistakeWindow(string mistake)
         {
             InitializeComponent();
+            mistake_label.Text = "Виникла помилка!\n" + mistake;
         }
 
         private void ok_btn_Click(object sender, EventArgs e)
