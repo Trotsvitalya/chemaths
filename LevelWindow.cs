@@ -87,7 +87,7 @@ namespace chemaths
                 if (input_box.Text == taskArrayR[index - 1].InnerText) // якщо відповідь правильна
                 {
                     countR++;
-                    if(result_choice == "yes")
+                    if (result_choice == "yes")
                     {
                         MessageWindow message = new MessageWindow("Відповідь правильна!", "right");
                         message.ShowDialog(); // показ діалогу, що користувач відповів правильно
@@ -109,8 +109,10 @@ namespace chemaths
                 {
                     output_box.Text = taskArray[index].InnerText; // виводимо хім. рівняння, що необхідно урівняти
                 }
-                else { output_box.Visible = input_box.Visible = label10.Visible = false;
-                       label_end.Visible = true;
+                else
+                {
+                    output_box.Visible = input_box.Visible = label10.Visible = false;
+                    label_end.Visible = true;
                 }
                 index++;
             }
