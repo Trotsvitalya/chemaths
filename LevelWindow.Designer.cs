@@ -224,13 +224,11 @@ namespace chemaths
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.label6.Font = new System.Drawing.Font("Cambria", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(216)))), ((int)(((byte)(214)))));
-            this.label6.Location = new System.Drawing.Point(106, 19);
+            this.label6.Location = new System.Drawing.Point(73, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(750, 81);
+            this.label6.Size = new System.Drawing.Size(829, 81);
             this.label6.TabIndex = 5;
-            this.label6.Text = "У першому полі¹ з\'являється хімічне рівняння. Вам необхідно\r\nввести у друге поле²" +
-    " коефіцієнти (без крапок, пробілів та інших \r\nдодаткових знаків), які повинні ст" +
-    "ояти у дужках для урівнення сторін.";
+            this.label6.Text = resources.GetString("label6.Text");
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -297,20 +295,23 @@ namespace chemaths
             // 
             // input_box
             // 
-            this.input_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.input_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.input_box.ForeColor = System.Drawing.Color.DimGray;
             this.input_box.Location = new System.Drawing.Point(176, 279);
             this.input_box.Multiline = true;
             this.input_box.Name = "input_box";
             this.input_box.Size = new System.Drawing.Size(611, 53);
             this.input_box.TabIndex = 48;
             this.input_box.TabStop = false;
+            this.input_box.Text = "123456";
             this.tool_tip.SetToolTip(this.input_box, "Введіть відповідь у форматі: 1234");
+            this.input_box.Click += new System.EventHandler(this.input_box_Click);
+            this.input_box.Leave += new System.EventHandler(this.input_box_Leave);
             // 
             // output_box
             // 
             this.output_box.Cursor = System.Windows.Forms.Cursors.Default;
-            this.output_box.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output_box.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.output_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.output_box.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.output_box.Location = new System.Drawing.Point(176, 171);

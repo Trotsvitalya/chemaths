@@ -131,6 +131,29 @@ namespace chemaths
                 this.Hide();
             }
         }
+
+        private void input_box_Click(object sender, EventArgs e)
+        {
+            //якщо користувач не вводив нічого в поле та вміст поля дорівнює допоміжній підказці
+            if (input_box.Text == "123456")
+            {
+                input_box.Text = null;//очищення поля
+                input_box.Font = new Font(input_box.Font, FontStyle.Regular);//зняття курсиву
+                input_box.ForeColor = Color.FromArgb(31, 34, 53);//зміна кольору
+            }
+        }
+
+        private void input_box_Leave(object sender, EventArgs e)
+        {
+            //якщо поле порожнє
+            if (string.IsNullOrWhiteSpace(input_box.Text))
+            {
+                input_box.Text = "123456";//виведення допоміжної підказки
+                input_box.Font = new Font(input_box.Font, FontStyle.Italic);//встановлення курсиву
+                input_box.ForeColor = Color.DimGray;//зміна кольору
+            }
+        }
+
         public void Fisher_Yates(XmlNode[] taskArray, XmlNode[] taskArrayR) // алгоритм тасування Фішера-Йетса
         {
             Random rnd = new Random(); 
