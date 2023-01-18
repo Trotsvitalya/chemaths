@@ -132,6 +132,13 @@ namespace chemaths
                 tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
                 this.Hide();
             }
+
+            if (string.IsNullOrWhiteSpace(input_box.Text))
+            {
+                input_box.Text = "123456";//виведення допоміжної підказки
+                input_box.Font = new Font(input_box.Font, FontStyle.Italic);//встановлення курсиву
+                input_box.ForeColor = Color.DimGray;//зміна кольору
+            }
         }
 
         private void input_box_Click(object sender, EventArgs e)
