@@ -70,28 +70,15 @@ namespace chemaths
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-            try
+            string result_choice = "yes";
+            if (no_btn.Checked == true)
             {
-                if (nickname_box.Text == "")
-                {
-                    throw new Exception();
-                }
-
-                string result_choice = "yes";
-                if (no_btn.Checked == true)
-                {
-                    result_choice = "no";
-                }
-
-                LevelWindow tmp = new LevelWindow(this, result_choice);
-                OPEN_MENU_POINT(tmp, sender);//перехід до наступного вікна
-                tmp.userName = nickname_box.Text;//передача ім'я користувача
+                result_choice = "no";
             }
-            catch (Exception)
-            {
-                MistakeWindow mistake_w = new MistakeWindow("Введіть ім'я!");
-                mistake_w.ShowDialog();
-            }
+
+            LevelWindow tmp = new LevelWindow(this, result_choice);
+            OPEN_MENU_POINT(tmp, sender);//перехід до наступного вікна
+            tmp.userName = nickname_box.Text;//передача ім'я користувача
         }
 
         private void level_choice_ValueChanged(object sender, EventArgs e)
