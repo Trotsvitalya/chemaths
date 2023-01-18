@@ -82,35 +82,9 @@ namespace chemaths
         private void calculate_btn_Click_1(object sender, EventArgs e)
         {
             //розстановка коефіцієнтів рівняння та виведення результату
-            try
-            {
-                Balancer.eq = input_box.Text;
-                Balancer.runs();
-                output_box.Text = Balancer.final;
-            }
-            catch (Exception exc)
-            {
-                if (exc.Message == "sides_mistake")
-                {
-                    MistakeWindow mistake_w = new MistakeWindow("Тут має бути\nодин -> символ");
-                    mistake_w.ShowDialog();
-                }
-                if (exc.Message == "atom_mistake")
-                {
-                    MistakeWindow mistake_w = new MistakeWindow("Не існує такого елемента!\nПеревірте введені дані!");
-                    mistake_w.ShowDialog();
-                }
-                if (exc.Message == "space_mistake")
-                {
-                    MistakeWindow mistake_w = new MistakeWindow("Невірна кількість пробілів!\nПеревірте введені дані!");
-                    mistake_w.ShowDialog();
-                }
-                if (exc.Message == "alphabet_mistake")
-                {
-                    MistakeWindow mistake_w = new MistakeWindow("Рівняння має містити тільки латиницю!");
-                    mistake_w.ShowDialog();
-                }
-            }
+            Balancer.eq = input_box.Text;
+            Balancer.runs();
+            output_box.Text = Balancer.final;
         }
     }
 }
