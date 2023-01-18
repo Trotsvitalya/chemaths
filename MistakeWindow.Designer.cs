@@ -30,6 +30,7 @@ namespace chemaths
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MistakeWindow));
             this.active_panel = new System.Windows.Forms.Panel();
             this.ok_btn = new System.Windows.Forms.PictureBox();
             this.mistake_label = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@ namespace chemaths
             this.Controls.Add(this.ok_btn);
             this.Controls.Add(this.active_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MistakeWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)(this.ok_btn)).EndInit();
