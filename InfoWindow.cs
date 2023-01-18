@@ -67,5 +67,66 @@ namespace chemaths
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
+
+        void site_click()//функція відкриття сайту
+        {
+            site_link.LinkVisited = site2_link.LinkVisited = site3_link.LinkVisited = site4_link.LinkVisited = site5_link.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.flaticon.com/");
+        }
+
+        private void site_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            site_click();
+        }
+
+        private void author1_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            author1_link.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.flaticon.com/authors/rizki-ahmad-fauzi");
+        }
+
+        private void author2_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            author2_link.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.flaticon.com/authors/freepik");
+        }
+
+        private void author3_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            author3_link.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.flaticon.com/authors/alfanz");
+        }
+
+        private void author4_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            author4_link.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.flaticon.com/authors/muhammad-atif");
+        }
+
+        private void author5_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            author5_link.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.flaticon.com/authors/icon-wind");
+        }
+
+        private void site2_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            site_click();
+        }
+
+        private void site3_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            site_click();
+        }
+
+        private void site4_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            site_click();
+        }
+
+        private void site5_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            site_click();
+        }
     }
 }

@@ -45,6 +45,17 @@ namespace chemaths
             this.active_panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.site_link = new System.Windows.Forms.LinkLabel();
+            this.author1_link = new System.Windows.Forms.LinkLabel();
+            this.site2_link = new System.Windows.Forms.LinkLabel();
+            this.site4_link = new System.Windows.Forms.LinkLabel();
+            this.site3_link = new System.Windows.Forms.LinkLabel();
+            this.site5_link = new System.Windows.Forms.LinkLabel();
+            this.author2_link = new System.Windows.Forms.LinkLabel();
+            this.author3_link = new System.Windows.Forms.LinkLabel();
+            this.author4_link = new System.Windows.Forms.LinkLabel();
+            this.author5_link = new System.Windows.Forms.LinkLabel();
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
@@ -221,7 +232,7 @@ namespace chemaths
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
             this.label4.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
-            this.label4.Location = new System.Drawing.Point(186, 152);
+            this.label4.Location = new System.Drawing.Point(186, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(765, 296);
             this.label4.TabIndex = 13;
@@ -233,12 +244,194 @@ namespace chemaths
             this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.tool_tip.ToolTipTitle = "Підказка";
             // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.label5.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.label5.Location = new System.Drawing.Point(186, 383);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(765, 167);
+            this.label5.TabIndex = 14;
+            this.label5.Text = resources.GetString("label5.Text");
+            // 
+            // site_link
+            // 
+            this.site_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site_link.AutoSize = true;
+            this.site_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.site_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.site_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.site_link.Location = new System.Drawing.Point(715, 383);
+            this.site_link.Name = "site_link";
+            this.site_link.Size = new System.Drawing.Size(236, 32);
+            this.site_link.TabIndex = 15;
+            this.site_link.TabStop = true;
+            this.site_link.Text = "www.flaticon.com";
+            this.site_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site_link_LinkClicked);
+            // 
+            // author1_link
+            // 
+            this.author1_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author1_link.AutoSize = true;
+            this.author1_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.author1_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.author1_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.author1_link.Location = new System.Drawing.Point(452, 383);
+            this.author1_link.Name = "author1_link";
+            this.author1_link.Size = new System.Drawing.Size(243, 32);
+            this.author1_link.TabIndex = 16;
+            this.author1_link.TabStop = true;
+            this.author1_link.Text = "Rizki Ahmad Fauzi";
+            this.author1_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author1_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author1_link_LinkClicked);
+            // 
+            // site2_link
+            // 
+            this.site2_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site2_link.AutoSize = true;
+            this.site2_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.site2_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.site2_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.site2_link.Location = new System.Drawing.Point(589, 415);
+            this.site2_link.Name = "site2_link";
+            this.site2_link.Size = new System.Drawing.Size(236, 32);
+            this.site2_link.TabIndex = 17;
+            this.site2_link.TabStop = true;
+            this.site2_link.Text = "www.flaticon.com";
+            this.site2_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site2_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site2_link_LinkClicked);
+            // 
+            // site4_link
+            // 
+            this.site4_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site4_link.AutoSize = true;
+            this.site4_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.site4_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.site4_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.site4_link.Location = new System.Drawing.Point(686, 479);
+            this.site4_link.Name = "site4_link";
+            this.site4_link.Size = new System.Drawing.Size(236, 32);
+            this.site4_link.TabIndex = 19;
+            this.site4_link.TabStop = true;
+            this.site4_link.Text = "www.flaticon.com";
+            this.site4_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site4_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site4_link_LinkClicked);
+            // 
+            // site3_link
+            // 
+            this.site3_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site3_link.AutoSize = true;
+            this.site3_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.site3_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.site3_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.site3_link.Location = new System.Drawing.Point(558, 447);
+            this.site3_link.Name = "site3_link";
+            this.site3_link.Size = new System.Drawing.Size(236, 32);
+            this.site3_link.TabIndex = 18;
+            this.site3_link.TabStop = true;
+            this.site3_link.Text = "www.flaticon.com";
+            this.site3_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site3_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site3_link_LinkClicked);
+            // 
+            // site5_link
+            // 
+            this.site5_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site5_link.AutoSize = true;
+            this.site5_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.site5_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.site5_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.site5_link.Location = new System.Drawing.Point(607, 511);
+            this.site5_link.Name = "site5_link";
+            this.site5_link.Size = new System.Drawing.Size(236, 32);
+            this.site5_link.TabIndex = 20;
+            this.site5_link.TabStop = true;
+            this.site5_link.Text = "www.flaticon.com";
+            this.site5_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.site5_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site5_link_LinkClicked);
+            // 
+            // author2_link
+            // 
+            this.author2_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author2_link.AutoSize = true;
+            this.author2_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.author2_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.author2_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.author2_link.Location = new System.Drawing.Point(452, 415);
+            this.author2_link.Name = "author2_link";
+            this.author2_link.Size = new System.Drawing.Size(109, 32);
+            this.author2_link.TabIndex = 21;
+            this.author2_link.TabStop = true;
+            this.author2_link.Text = "Freepik";
+            this.author2_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author2_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author2_link_LinkClicked);
+            // 
+            // author3_link
+            // 
+            this.author3_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author3_link.AutoSize = true;
+            this.author3_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.author3_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.author3_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.author3_link.Location = new System.Drawing.Point(452, 447);
+            this.author3_link.Name = "author3_link";
+            this.author3_link.Size = new System.Drawing.Size(89, 32);
+            this.author3_link.TabIndex = 22;
+            this.author3_link.TabStop = true;
+            this.author3_link.Text = "alfanz";
+            this.author3_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author3_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author3_link_LinkClicked);
+            // 
+            // author4_link
+            // 
+            this.author4_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author4_link.AutoSize = true;
+            this.author4_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.author4_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.author4_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.author4_link.Location = new System.Drawing.Point(452, 479);
+            this.author4_link.Name = "author4_link";
+            this.author4_link.Size = new System.Drawing.Size(212, 32);
+            this.author4_link.TabIndex = 23;
+            this.author4_link.TabStop = true;
+            this.author4_link.Text = "Muhammad Atif";
+            this.author4_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author4_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author4_link_LinkClicked);
+            // 
+            // author5_link
+            // 
+            this.author5_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author5_link.AutoSize = true;
+            this.author5_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.author5_link.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.author5_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.author5_link.Location = new System.Drawing.Point(452, 511);
+            this.author5_link.Name = "author5_link";
+            this.author5_link.Size = new System.Drawing.Size(135, 32);
+            this.author5_link.TabIndex = 24;
+            this.author5_link.TabStop = true;
+            this.author5_link.Text = "icon wind";
+            this.author5_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.author5_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author5_link_LinkClicked);
+            // 
             // InfoWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.author5_link);
+            this.Controls.Add(this.author4_link);
+            this.Controls.Add(this.author3_link);
+            this.Controls.Add(this.author2_link);
+            this.Controls.Add(this.site5_link);
+            this.Controls.Add(this.site4_link);
+            this.Controls.Add(this.site3_link);
+            this.Controls.Add(this.site2_link);
+            this.Controls.Add(this.author1_link);
+            this.Controls.Add(this.site_link);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.menu_panel);
@@ -254,6 +447,7 @@ namespace chemaths
             this.active_panel.ResumeLayout(false);
             this.active_panel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -273,5 +467,16 @@ namespace chemaths
         private System.Windows.Forms.Panel active_panel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolTip tool_tip;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel site_link;
+        private System.Windows.Forms.LinkLabel author1_link;
+        private System.Windows.Forms.LinkLabel site2_link;
+        private System.Windows.Forms.LinkLabel site4_link;
+        private System.Windows.Forms.LinkLabel site3_link;
+        private System.Windows.Forms.LinkLabel site5_link;
+        private System.Windows.Forms.LinkLabel author2_link;
+        private System.Windows.Forms.LinkLabel author3_link;
+        private System.Windows.Forms.LinkLabel author4_link;
+        private System.Windows.Forms.LinkLabel author5_link;
     }
 }
