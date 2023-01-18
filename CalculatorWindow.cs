@@ -105,6 +105,11 @@ namespace chemaths
                     MistakeWindow mistake_w = new MistakeWindow("Невірна кількість пробілів!\nПеревірте введені дані!");
                     mistake_w.ShowDialog();
                 }
+                if (exc.Message == "alphabet_mistake")
+                {
+                    MistakeWindow mistake_w = new MistakeWindow("Рівняння має містити тільки латиницю!");
+                    mistake_w.ShowDialog();
+                }
             }
         }
     }

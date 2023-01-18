@@ -29,9 +29,11 @@ namespace chemaths
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.active_panel = new System.Windows.Forms.Panel();
             this.ok_btn = new System.Windows.Forms.PictureBox();
             this.mistake_label = new System.Windows.Forms.Label();
+            this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ok_btn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +45,7 @@ namespace chemaths
             this.active_panel.Name = "active_panel";
             this.active_panel.Size = new System.Drawing.Size(462, 49);
             this.active_panel.TabIndex = 24;
+            this.tool_tip.SetToolTip(this.active_panel, "Затисніть ліву клавішу миші для перетягування вікна");
             this.active_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.active_panel_MouseDown);
             // 
             // ok_btn
@@ -55,6 +58,7 @@ namespace chemaths
             this.ok_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ok_btn.TabIndex = 25;
             this.ok_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.ok_btn, "Продовжити роботу");
             this.ok_btn.Click += new System.EventHandler(this.ok_btn_Click);
             // 
             // mistake_label
@@ -67,6 +71,12 @@ namespace chemaths
             this.mistake_label.TabIndex = 26;
             this.mistake_label.Text = "Виникла помилка!\r\nПеревірте правильність\r\nвведених даних!";
             this.mistake_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tool_tip
+            // 
+            this.tool_tip.Active = false;
+            this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tool_tip.ToolTipTitle = "Підказка";
             // 
             // MistakeWindow
             // 
@@ -90,5 +100,6 @@ namespace chemaths
         private System.Windows.Forms.Panel active_panel;
         private System.Windows.Forms.PictureBox ok_btn;
         private System.Windows.Forms.Label mistake_label;
+        private System.Windows.Forms.ToolTip tool_tip;
     }
 }

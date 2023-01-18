@@ -13,7 +13,6 @@ namespace chemaths
         public static string eq;
         public static string final;
         public static string cof;
-        public static int counter;
 
         public static void PARSE(string eq)
         {
@@ -23,6 +22,12 @@ namespace chemaths
             if (regex.IsMatch(eq) || !eq.Contains(' '))
             {
                 throw new Exception("space_mistake");
+            }
+
+            //обробка ситуації, коли рівняння містить символи не тільки латинської абетки
+            if (Regex.IsMatch(eq, @"\p{IsCyrillic}"))
+            {
+                throw new Exception("alphabet_mistake");
             }
 
             //обробка ситуації, коли рівняння містить більше або менше 2 сторін, розділених "->"
