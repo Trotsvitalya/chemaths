@@ -85,17 +85,17 @@ namespace chemaths
         {
             try
             {
-                if (input_box.Text == "123456")
-                {
-                    throw new Exception("empty_mistake");
-                }
-                if (!input_box.Text.All(Char.IsNumber))
-                {
-                    throw new Exception("character_mistake");
-                }
-
                 if (index <= taskArray.Length) // якщо тест ще не пройдено
                 {
+                    if (input_box.Text == "123456")
+                    {
+                        throw new Exception("empty_mistake");
+                    }
+                    if (!input_box.Text.All(Char.IsNumber))
+                    {
+                        throw new Exception("character_mistake");
+                    }
+
                     if (input_box.Text == taskArrayR[index - 1].InnerText) // якщо відповідь правильна
                     {
                         countR++;
