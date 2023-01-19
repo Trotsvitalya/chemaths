@@ -93,7 +93,7 @@ namespace chemaths
             {
                 if (exc.Message == "sides_mistake")
                 {
-                    MistakeWindow mistake_w = new MistakeWindow("Тут має бути\nодин -> символ");
+                    MistakeWindow mistake_w = new MistakeWindow("Тут має бути один -> символ з пробілами з обох боків");
                     mistake_w.ShowDialog();
                 }
                 if (exc.Message == "atom_mistake")
