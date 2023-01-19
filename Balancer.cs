@@ -14,6 +14,34 @@ namespace chemaths
         public static string final;
         public static string cof;
 
+        public static void PARSE(string eq)
+        {
+            //обробка ситуації, коли рівняння не містить пробілів або містить більше, ніж 1 пробіл
+            //підряд
+            Regex regex = new Regex(@"\s{2,}");
+            if (regex.IsMatch(eq) || !eq.Contains(' '))
+            {
+                throw new Exception("space_mistake");
+            }
+
+            //обробка ситуації, коли рівняння містить символи не тільки латинської абетки
+            if (Regex.IsMatch(eq, @"\p{IsCyrillic}"))
+            {
+                throw new Exception("alphabet_mistake");
+            }
+
+            //обробка ситуації, коли рівняння містить більше або менше 2 сторін, розділених "->"
+            string[] sides = eq.Split(new string[] { "->" }, StringSplitOptions.None);
+            if (sides.Length != 2)
+            {
+                throw new Exception("sides_mistake");
+            }
+            PARSE_SIDE(sides[0]);
+            PARSE_SIDE(sides[1]);
+        }
+
+        
+
         public static void runs()
         {
             //отримуємо список усіх елементів та хімічних речовин
