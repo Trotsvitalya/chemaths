@@ -84,8 +84,8 @@ namespace chemaths
                 }
 
                 LevelWindow tmp = new LevelWindow(this, result_choice);
-                OPEN_MENU_POINT(tmp, sender);
-                tmp.userName = nickname_box.Text;
+                OPEN_MENU_POINT(tmp, sender); //перехід до наступного вікна
+                tmp.userName = nickname_box.Text; //передача ім'я користувача
             }
             catch (Exception)
             {
