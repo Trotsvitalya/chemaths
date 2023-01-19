@@ -83,5 +83,13 @@ namespace chemaths
             //зміна інформаційного поля в реальному часі
             info_label.Text = nickname_box.Text + "\nпочинає практику на рівні " + level_choice.Value;
         }
+
+        private void nickname_box_Leave(object sender, EventArgs e)
+        {
+            if (nickname_box.Text == "")
+            {
+                info_label.Text = "Невідомий\nпочинає практику на рівні " + level_choice.Value;
+            }
+        }
     }
 }

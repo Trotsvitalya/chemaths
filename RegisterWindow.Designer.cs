@@ -164,6 +164,7 @@ namespace chemaths
             this.nickname_box.TabStop = false;
             this.tool_tip.SetToolTip(this.nickname_box, "Введіть ім\'я");
             this.nickname_box.TextChanged += new System.EventHandler(this.nickname_box_TextChanged);
+            this.nickname_box.Leave += new System.EventHandler(this.nickname_box_Leave);
             // 
             // start_btn
             // 
