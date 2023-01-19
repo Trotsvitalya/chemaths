@@ -108,6 +108,8 @@ namespace chemaths
 
         public static void runs()
         {
+            PARSE(eq); //обробка виключних ситуацій
+
             //отримуємо список усіх елементів та хімічних речовин
             ArrayList elements = AllUniqueElements(eq); //Приклад: H
             ArrayList chemicals = AllUniqueChemicals(eq);//Приклад: H2O
@@ -143,8 +145,6 @@ namespace chemaths
 
             final = RatioBalancer.FillCoefficients(coefficients, eq); //додає коефіцієнти до хімічних речовин
             cof = string.Join("", coefficients);
-
-            PARSE(eq); //обробка виключних ситуацій
         }
 
         public static Boolean IsProduct(string chem, string eq)
