@@ -15,6 +15,7 @@ namespace chemaths
         public MistakeWindow(string mistake)
         {
             InitializeComponent();
+            tool_tip.Active = Program.active_tool_tips; 
             mistake_label.Text = "Виникла помилка!\n" + mistake;
         }
 

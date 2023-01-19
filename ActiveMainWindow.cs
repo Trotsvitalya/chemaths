@@ -18,6 +18,7 @@ namespace chemaths
         {
             InitializeComponent();
             ACTIVE_BTN(subject_btn);//виділення обраного пункту меню
+            tool_tip.Active = Program.active_tool_tips; 
         }
 
         private void ACTIVE_BTN(object sender)//функція виділення обраного пункту меню

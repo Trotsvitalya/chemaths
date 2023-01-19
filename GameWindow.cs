@@ -18,6 +18,7 @@ namespace chemaths
         public GameWindow()
         {
             InitializeComponent();
+            tool_tip.Active = Program.active_tool_tips; 
             Start1();
         }
 

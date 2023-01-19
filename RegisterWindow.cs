@@ -15,8 +15,9 @@ namespace chemaths
         public RegisterWindow()
         {
             InitializeComponent();
+            tool_tip.Active = Program.active_tool_tips;
             yes_btn.Checked = true;
-        }
+        } 
 
         private void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
         {

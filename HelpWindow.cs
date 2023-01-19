@@ -14,12 +14,13 @@ namespace chemaths
     {
         private Button current_btn;
 
+
         public HelpWindow()
         {
             InitializeComponent();
+            tool_tip.Active = Program.active_tool_tips;
+            CheckedChanged();
             ACTIVE_BTN(help_btn);
-            activate_tool_tips.Checked = active_tool_tips;
-            tool_tip.Active = active_tool_tips;
         }
 
         private void ACTIVE_BTN(object sender)//функція виділення обраного пункту меню
@@ -69,15 +70,10 @@ namespace chemaths
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
-
-        bool active_tool_tips = false;
-
-        private void activate_tool_tips_Click(object sender, EventArgs e)
+        //зміна фото чекбоксу в залежності від його стану
+        private void CheckedChanged()
         {
-            active_tool_tips = !active_tool_tips;
-            tool_tip.Active = active_tool_tips;
-            //зміна фото чекбоксу в залежності від його стану
-            if(activate_tool_tips.Checked)
+            if (tool_tip.Active)
             {
                 activate_tool_tips.Image = Properties.Resources.checkbox__1_;
             }
@@ -86,5 +82,16 @@ namespace chemaths
                 activate_tool_tips.Image = Properties.Resources.stop__1_;
             }
         }
+
+
+        private void activate_tool_tips_Click(object sender, EventArgs e)
+        {
+            Program.active_tool_tips = !Program.active_tool_tips;
+
+            tool_tip.Active = Program.active_tool_tips;
+            CheckedChanged();
+        }
+
     }
 }
+ 
