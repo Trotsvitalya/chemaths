@@ -101,7 +101,7 @@ namespace chemaths
             this.info_label.Name = "info_label";
             this.info_label.Size = new System.Drawing.Size(471, 85);
             this.info_label.TabIndex = 44;
-            this.info_label.Text = "Куриленко Дмитро\r\nпочинає практику на рівні 1";
+            this.info_label.Text = "Невідомий\r\nпочинає практику на рівні 1";
             this.info_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // level_choice
@@ -163,9 +163,7 @@ namespace chemaths
             this.nickname_box.TabIndex = 38;
             this.nickname_box.TabStop = false;
             this.tool_tip.SetToolTip(this.nickname_box, "Введіть ім\'я");
-            this.nickname_box.Click += new System.EventHandler(this.nickname_box_Click);
             this.nickname_box.TextChanged += new System.EventHandler(this.nickname_box_TextChanged);
-            this.nickname_box.Leave += new System.EventHandler(this.nickname_box_Leave);
             // 
             // start_btn
             // 
