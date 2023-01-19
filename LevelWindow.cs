@@ -82,62 +82,87 @@ namespace chemaths
 
         private void check_btn_Click_1(object sender, EventArgs e) // перевірка відповіді користувача
         {
-            if (index <= taskArray.Length) // якщо тест ще не пройдено
+            try
             {
-                if (input_box.Text == taskArrayR[index - 1].InnerText) // якщо відповідь правильна
+                if (input_box.Text == "123456")
                 {
-                    countR++;
-                    if (result_choice == "yes")
-                    {
-                        MessageWindow message = new MessageWindow("Відповідь правильна!", "right");
-                        message.ShowDialog(); // показ діалогу, що користувач відповів правильно
-                    }
-                    output_box.Text = ""; // очищення текстових полів
-                    input_box.Text = "";
+                    throw new Exception("empty_mistake");
                 }
-                else // якщо неправильна
+                if (!input_box.Text.All(Char.IsNumber))
                 {
-                    if (result_choice == "yes")
-                    {
-                        MessageWindow message = new MessageWindow("Відповідь неправильна!", taskArrayR[index - 1].InnerText);
-                        message.ShowDialog(); // показ діалогу, що користувач відповів правильно
-                    }
-                    output_box.Text = "";
-                    input_box.Text = "";
+                    throw new Exception("character_mistake");
                 }
-                if (index != taskArray.Length) // якщо не дійшли до кінця
+
+                if (index <= taskArray.Length) // якщо тест ще не пройдено
                 {
-                    output_box.Text = taskArray[index].InnerText; // виводимо хім. рівняння, що необхідно урівняти
+                    if (input_box.Text == taskArrayR[index - 1].InnerText) // якщо відповідь правильна
+                    {
+                        countR++;
+                        if (result_choice == "yes")
+                        {
+                            MessageWindow message = new MessageWindow("Відповідь правильна!", "right");
+                            message.ShowDialog(); // показ діалогу, що користувач відповів правильно
+                        }
+                        output_box.Text = ""; // очищення текстових полів
+                        input_box.Text = "";
+                    }
+                    else // якщо неправильна
+                    {
+                        if (result_choice == "yes")
+                        {
+                            MessageWindow message = new MessageWindow("Відповідь неправильна!", taskArrayR[index - 1].InnerText);
+                            message.ShowDialog(); // показ діалогу, що користувач відповів правильно
+                        }
+                        output_box.Text = "";
+                        input_box.Text = "";
+                    }
+                    if (index != taskArray.Length) // якщо не дійшли до кінця
+                    {
+                        output_box.Text = taskArray[index].InnerText; // виводимо хім. рівняння, що необхідно урівняти
+                    }
+                    else
+                    {
+                        output_box.Visible = input_box.Visible = label10.Visible = false;
+                        label_end.Visible = true;
+                    }
+                    index++;
                 }
                 else
                 {
-                    output_box.Visible = input_box.Visible = label10.Visible = false;
-                    label_end.Visible = true;
+                    N_Results2 = countR;
+                    JObject file1 = JObject.Parse(File.ReadAllText("Results.json")); // парсинг файлу з результатами до тесту
+                    JObject file2 = new JObject();
+                    file2[userName] = countR; // "ім'я": результат
+                    file1.Merge(file2, new JsonMergeSettings // злиття об'єктів json 
+                    {
+                        MergeArrayHandling = MergeArrayHandling.Union
+                    });
+                    File.WriteAllText(@"Results.json", file1.ToString()); // перезапис файлу з новим результатом
+                    GameWindow tmp = new GameWindow(); // повернення до початковго меню
+                    tmp.Show();
+                    tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+                    this.Hide();
                 }
-                index++;
-            }
-            else
-            {
-                N_Results2 = countR;
-                JObject file1 = JObject.Parse(File.ReadAllText("Results.json")); // парсинг файлу з результатами до тесту
-                JObject file2 = new JObject();
-                file2[userName] = countR; // "ім'я": результат
-                file1.Merge(file2, new JsonMergeSettings // злиття об'єктів json 
-                {
-                    MergeArrayHandling = MergeArrayHandling.Union
-                });
-                File.WriteAllText(@"Results.json", file1.ToString()); // перезапис файлу з новим результатом
-                GameWindow tmp = new GameWindow(); // повернення до початковго меню
-                tmp.Show();
-                tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-                this.Hide();
-            }
 
-            if (string.IsNullOrWhiteSpace(input_box.Text))
+                if (string.IsNullOrWhiteSpace(input_box.Text))
+                {
+                    input_box.Text = "123456";//виведення допоміжної підказки
+                    input_box.Font = new Font(input_box.Font, FontStyle.Italic);//встановлення курсиву
+                    input_box.ForeColor = Color.DimGray;//зміна кольору
+                }
+            }
+            catch (Exception ex)
             {
-                input_box.Text = "123456";//виведення допоміжної підказки
-                input_box.Font = new Font(input_box.Font, FontStyle.Italic);//встановлення курсиву
-                input_box.ForeColor = Color.DimGray;//зміна кольору
+                if (ex.Message == "empty_mistake")
+                {
+                    MistakeWindow mistake_w = new MistakeWindow("Поле відповіді містить лише допоміжну підказку!");
+                    mistake_w.ShowDialog();
+                }
+                if (ex.Message == "character_mistake")
+                {
+                    MistakeWindow mistake_w = new MistakeWindow("Поле відповіді має містити лише цифри!");
+                    mistake_w.ShowDialog();
+                }
             }
         }
 
