@@ -144,6 +144,7 @@ namespace chemaths
             final = RatioBalancer.FillCoefficients(coefficients, eq); //додає коефіцієнти до хімічних речовин
             cof = string.Join("", coefficients);
 
+            PARSE(eq);
         }
 
         public static Boolean IsProduct(string chem, string eq)
