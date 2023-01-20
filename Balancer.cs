@@ -572,7 +572,7 @@ namespace chemaths
                 throw new Exception("alphabet_mistake");
             }
 
-            //обробка ситуації, коли рівняння містить більше або менше 2 сторін, розділених "->"
+            //обробка ситуації, коли рівняння містить більше або менше 2 сторін, розділених " -> "
             string[] sides = eq.Split(new string[] { " -> " }, StringSplitOptions.None);
             if (sides.Length != 2)
             {
