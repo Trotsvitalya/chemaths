@@ -81,6 +81,7 @@ namespace chemaths
 
             return indexChem > indexYield;
         }
+        
         //повертає масив усіх унікальних хімічних речовин
         public static ArrayList AllUniqueChemicals(string unsplit)
         {
@@ -236,16 +237,19 @@ namespace chemaths
             }
             return true;
         }
-        //Перевіряє, чи є символ великою літерою англійського алфавіту
+        
+        //перевіряє, чи є символ великою літерою англійського алфавіту
         public static Boolean IsUpperCase(char c)
         {
             return ((c >= 65) && (c <= 90));
         }
-        //перевіряє, чи є символом числом
+        
+        //перевіряє, чи є символ числом
         public static Boolean IsNumeric(char c)
         {
             return ((c >= 48) && (c <= 57));
         }
+
         //шукає у рядку підрядок і повертає останній індекс підрядка
         public static int FindLastIndex(string str, string subStr)
         {
@@ -382,6 +386,7 @@ namespace chemaths
 
             return balance;
         }
+        
         public static double[] MakeAllPositive(double[] dArr)
         {
             for (int i = 0; i < dArr.Length; i++)
@@ -553,6 +558,7 @@ namespace chemaths
             return A;
         }
     }
+
     //клас з обробкою виключних ситуацій
     class ExceptionHandlingBalancer : Balancer
     {
