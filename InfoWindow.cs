@@ -33,40 +33,22 @@ namespace chemaths
             }
         }
 
-        private void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
-        }
-
         private void help_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
+            InterInfoWindow obj = new InterInfoWindow();
+            obj.OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void subject_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до іншого пункту меню
+            InterInfoWindow obj = new InterInfoWindow();
+            obj.OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void main_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
-        }
-
-        private void close_btn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();//закриття програми
-        }
-
-        private void active_panel_MouseDown(object sender, MouseEventArgs e)
-        {
-            //функція перетягування безрамкового вікна за допоміжну активну панель
-            active_panel.Capture = false;
-            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-            WndProc(ref m);
+            InterInfoWindow obj = new InterInfoWindow();
+            obj.OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
         }
 
         void site_click()//функція відкриття сайту
@@ -128,6 +110,30 @@ namespace chemaths
         private void site5_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             site_click();
+        }
+    }
+
+    class InterInfoWindow : Interface
+    {
+        public override void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        {
+            point_form.Show();
+            //задання границь попереднього вікна
+            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
+        }
+
+        public override void close_btn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();//закриття програми
+        }
+
+        public override void active_panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            //функція перетягування безрамкового вікна за допоміжну активну панель
+            active_panel.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            WndProc(ref m);
         }
     }
 }
