@@ -15,25 +15,13 @@ namespace chemaths
         public CalculatorWindow()
         {
             InitializeComponent();
-            tool_tip.Active = Program.active_tool_tips; 
-        }
-
-        private void close_btn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();//закриття програми
-        }
-
-        private void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
+            tool_tip.Active = Program.active_tool_tips;
         }
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до попереднього вікна
+            InterCalculatorWindow obj = new InterCalculatorWindow();
+            obj.OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до попереднього вікна
         }
 
         private void input_box_Click(object sender, EventArgs e)
@@ -50,20 +38,12 @@ namespace chemaths
         private void input_box_Leave(object sender, EventArgs e)
         {
             //якщо поле порожнє
-            if(string.IsNullOrWhiteSpace(input_box.Text))
+            if (string.IsNullOrWhiteSpace(input_box.Text))
             {
                 input_box.Text = "Cu + O2 -> CuO";//виведення допоміжної підказки
                 input_box.Font = new Font(input_box.Font, FontStyle.Italic);//встановлення курсиву
                 input_box.ForeColor = Color.DimGray;//зміна кольору
             }
-        }
-
-        private void active_panel_MouseDown(object sender, MouseEventArgs e)
-        {
-            //функція перетягування безрамкового вікна за допоміжну активну панель
-            active_panel.Capture = false;
-            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-            WndProc(ref m);
         }
 
         private void help_btn_Click(object sender, EventArgs e)
@@ -118,5 +98,29 @@ namespace chemaths
                 }
             }
         }
+    }
+
+    class InterCalculatorWindow : Interface
+    {
+        public override void close_btn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();//закриття програми
+        }
+
+        public override void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        {
+            point_form.Show();
+            //задання границь попереднього вікна
+            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
+        }
+        public override void active_panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            //функція перетягування безрамкового вікна за допоміжну активну панель
+            active_panel.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            WndProc(ref m);
+        }
+
     }
 }
