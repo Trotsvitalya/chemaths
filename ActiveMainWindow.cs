@@ -35,51 +35,42 @@ namespace chemaths
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            InterActiveMainWindow obj = new InterActiveMainWindow();
-            obj.OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
+            OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void info_btn_Click(object sender, EventArgs e)
         {
-            InterActiveMainWindow obj = new InterActiveMainWindow();
-            obj.OPEN_MENU_POINT(new InfoWindow(), sender);//перехід до іншого пункту меню
+            OPEN_MENU_POINT(new InfoWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void main_btn_Click(object sender, EventArgs e)
         {
-            InterActiveMainWindow obj = new InterActiveMainWindow();
-            obj.OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
+            OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
         }
 
         private void coefficient_btn_Click(object sender, EventArgs e)
         {
-            InterActiveMainWindow obj = new InterActiveMainWindow();
-            obj.OPEN_MENU_POINT(new CalculatorWindow(), sender);//перехід до вікна активності
+            OPEN_MENU_POINT(new CalculatorWindow(), sender);//перехід до вікна активності
         }
 
         private void game_btn_Click(object sender, EventArgs e)
         {
-            InterActiveMainWindow obj = new InterActiveMainWindow();
-            obj.OPEN_MENU_POINT(new GameWindow(), sender);//перехід до вікна активності
+            OPEN_MENU_POINT(new GameWindow(), sender);//перехід до вікна активності
         }
-    }
 
-    class InterActiveMainWindow : Interface
-    {
-        public override void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
         {
             point_form.Show();
             //задання границь попереднього вікна
             point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
             this.Hide();
         }
-
-        public override void close_btn_Click(object sender, EventArgs e)//закриття програми
+        private void close_btn_Click(object sender, EventArgs e)//закриття програми
         {
             Application.Exit();
         }
 
-        public override void active_panel_MouseDown(object sender, MouseEventArgs e)
+        private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
             //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;
@@ -87,4 +78,6 @@ namespace chemaths
             WndProc(ref m);
         }
     }
+
+    
 }

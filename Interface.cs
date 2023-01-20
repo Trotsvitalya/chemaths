@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace chemaths
 {
-    public class Interface : Form
+    class Interface
     {
         public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
         {
