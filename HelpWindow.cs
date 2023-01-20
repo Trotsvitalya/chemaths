@@ -37,20 +37,17 @@ namespace chemaths
 
         private void subject_btn_Click(object sender, EventArgs e)
         {
-            InterHelpWindow obj = new InterHelpWindow();
-            obj.OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до іншого пункту меню
+            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void info_btn_Click(object sender, EventArgs e)
         {
-            InterHelpWindow obj = new InterHelpWindow();
-            obj.OPEN_MENU_POINT(new InfoWindow(), sender);//перехід до іншого пункту меню
+            OPEN_MENU_POINT(new InfoWindow(), sender);//перехід до іншого пункту меню
         }
 
         private void main_btn_Click(object sender, EventArgs e)
         {
-            InterHelpWindow obj = new InterHelpWindow();
-            obj.OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
+            OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
         }
 
         //зміна фото чекбоксу в залежності від його стану
@@ -66,7 +63,6 @@ namespace chemaths
             }
         }
 
-
         private void activate_tool_tips_Click(object sender, EventArgs e)
         {
             Program.active_tool_tips = !Program.active_tool_tips;
@@ -75,11 +71,7 @@ namespace chemaths
             CheckedChanged();
         }
 
-    }
-
-    class InterHelpWindow : Interface
-    {
-        public override void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
         {
             point_form.Show();
             //задання границь попереднього вікна
@@ -87,12 +79,12 @@ namespace chemaths
             this.Hide();
         }
 
-        public override void close_btn_Click(object sender, EventArgs e)
+        private void close_btn_Click(object sender, EventArgs e)//закриття програми
         {
-            Application.Exit();//закриття програми
+            Application.Exit();
         }
 
-        public override void active_panel_MouseDown(object sender, MouseEventArgs e)
+        private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
             //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;

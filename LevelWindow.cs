@@ -65,8 +65,7 @@ namespace chemaths
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            InterLevelWindow obj = new InterLevelWindow();
-            obj.OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до попереднього вікна
+            OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до попереднього вікна
         }
 
         private void LevelWindow_Load(object sender, EventArgs e)
@@ -194,11 +193,7 @@ namespace chemaths
                 taskArray[i] = temp1; taskArrayR[i] = temp2;
             }
         }
-    }
-
-    class InterLevelWindow : Interface
-    {
-        public override void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
         {
             point_form.Show();
             //задання границь попереднього вікна
@@ -206,17 +201,17 @@ namespace chemaths
             this.Hide();
         }
 
-        public override void active_panel_MouseDown(object sender, MouseEventArgs e)
+        private void close_btn_Click(object sender, EventArgs e)//закриття програми
+        {
+            Application.Exit();
+        }
+
+        private void active_panel_MouseDown(object sender, MouseEventArgs e)
         {
             //функція перетягування безрамкового вікна за допоміжну активну панель
             active_panel.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
-        }
-
-        public override void close_btn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();//закриття програми
         }
     }
 }

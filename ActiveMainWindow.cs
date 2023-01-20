@@ -33,6 +33,14 @@ namespace chemaths
             }
         }
 
+        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
+        {
+            point_form.Show();
+            //задання границь попереднього вікна
+            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
+            this.Hide();
+        }
+
         private void help_btn_Click(object sender, EventArgs e)
         {
             OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
@@ -58,13 +66,6 @@ namespace chemaths
             OPEN_MENU_POINT(new GameWindow(), sender);//перехід до вікна активності
         }
 
-        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
-        }
         private void close_btn_Click(object sender, EventArgs e)//закриття програми
         {
             Application.Exit();
