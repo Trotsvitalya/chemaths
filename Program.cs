@@ -15,8 +15,6 @@ namespace chemaths
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());
         }
-         
-        public static bool active_tool_tips { get; set; }// перемінна для включення/виключення підказок 
     }
     
 }

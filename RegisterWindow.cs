@@ -15,7 +15,7 @@ namespace chemaths
         public RegisterWindow()
         {
             InitializeComponent();
-            tool_tip.Active = Program.active_tool_tips;
+            tool_tip.Active = Interface.active_tool_tips;
             yes_btn.Checked = true;
         } 
 

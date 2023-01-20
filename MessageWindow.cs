@@ -15,7 +15,7 @@ namespace chemaths
         public MessageWindow(string result, string answer)
         {
             InitializeComponent();
-            tool_tip.Active = Program.active_tool_tips; 
+            tool_tip.Active = Interface.active_tool_tips; 
 
             result_label.Text = result;//виведення результату відповіді
             if(answer == "right")//якщо відповідь корситувача правильна

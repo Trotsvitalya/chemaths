@@ -45,7 +45,7 @@ namespace chemaths
         public LevelWindow(RegisterWindow tmp, string tmp_s)//початок тесту, тасування масиву рівнянь, виведення першого рівняння
         {
             InitializeComponent();
-            tool_tip.Active = Program.active_tool_tips;
+            tool_tip.Active = Interface.active_tool_tips;
             register_w = tmp;
             result_choice = tmp_s;
 

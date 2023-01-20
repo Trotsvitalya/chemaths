@@ -15,7 +15,7 @@ namespace chemaths
         public CalculatorWindow()
         {
             InitializeComponent();
-            tool_tip.Active = Program.active_tool_tips;
+            tool_tip.Active = Interface.active_tool_tips;
         }
 
         private void back_btn_Click(object sender, EventArgs e)

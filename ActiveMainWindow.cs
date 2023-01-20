@@ -17,53 +17,33 @@ namespace chemaths
         public ActiveMainWindow()
         {
             InitializeComponent();
-            ACTIVE_BTN(subject_btn);//виділення обраного пункту меню
-            tool_tip.Active = Program.active_tool_tips; 
-        }
-
-        private void ACTIVE_BTN(object sender)//функція виділення обраного пункту меню
-        {
-            if (sender != null && current_btn != (Button)sender)
-            {
-                current_btn = (Button)sender;
-                current_btn.BackColor = Color.FromArgb(31, 34, 53);//зміна кольору фону
-                current_btn.ForeColor = Color.White;//зміна кольору тексту
-                side_panel.Height = current_btn.Height;//зміна розміру додаткової панелі виділення
-                side_panel.Top = current_btn.Top;//зміна розташування додаткової панелі на рівні обраного пункту
-            }
-        }
-
-        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
+            Interface.ACTIVE_BTN(subject_btn, current_btn, side_panel);//виділення обраного пункту меню
+            tool_tip.Active = Interface.active_tool_tips; 
         }
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
+            Interface.OPEN_MENU_POINT(new HelpWindow(), this);//перехід до іншого пункту меню
         }
 
         private void info_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new InfoWindow(), sender);//перехід до іншого пункту меню
+            Interface.OPEN_MENU_POINT(new InfoWindow(), this);//перехід до іншого пункту меню
         }
 
         private void main_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
+            Interface.OPEN_MENU_POINT(new MainWindow(), this);//перехід до головного вікна
         }
 
         private void coefficient_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new CalculatorWindow(), sender);//перехід до вікна активності
+            Interface.OPEN_MENU_POINT(new CalculatorWindow(), this);//перехід до вікна активності
         }
 
         private void game_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new GameWindow(), sender);//перехід до вікна активності
+            Interface.OPEN_MENU_POINT(new GameWindow(), this);//перехід до вікна активності
         }
 
         private void close_btn_Click(object sender, EventArgs e)//закриття програми
@@ -79,6 +59,4 @@ namespace chemaths
             WndProc(ref m);
         }
     }
-
-    
 }
