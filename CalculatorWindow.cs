@@ -111,6 +111,11 @@ namespace chemaths
                     MistakeWindow mistake_w = new MistakeWindow("Рівняння має містити тільки латиницю!");
                     mistake_w.ShowDialog();
                 }
+                if (exc.Message == "plus_mistake")
+                {
+                    MistakeWindow mistake_w = new MistakeWindow("Тут має бути хоча б один символ + з пробілами з обох боків");
+                    mistake_w.ShowDialog();
+                }
             }
         }
     }
