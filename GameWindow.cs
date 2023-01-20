@@ -35,8 +35,7 @@ namespace chemaths
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            InterGameWindow obj = new InterGameWindow();
-            obj.OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до попереднього вікна
+            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до попереднього вікна
         }
 
         private void clear_results_btn_Click(object sender, EventArgs e)
@@ -48,8 +47,7 @@ namespace chemaths
 
         private void register_btn_Click(object sender, EventArgs e)
         {
-            InterGameWindow obj = new InterGameWindow();
-            obj.OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до наступного вікна
+            OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до наступного вікна
         }
 
         public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
