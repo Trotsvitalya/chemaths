@@ -46,18 +46,19 @@ namespace chemaths
 
             return a;
         }
-            //Повертає масив значень, що відповідає стовпцю матриці
-            public double[] GetColumn(int j)
+
+        //Повертає масив значень, що відповідає стовпцю матриці
+        public double[] GetColumn(int j)
+        {
+            double[] a = new double[this.Entries.GetLength(0)];
+
+            for (int i = 0; i < this.Entries.GetLength(0); i++)
             {
-                double[] a = new double[this.Entries.GetLength(0)];
-
-                for (int i = 0; i < this.Entries.GetLength(0); i++)
-                {
-                    a[i] = this.GetEntry(i, j);
-                }
-
-                return a;
+                a[i] = this.GetEntry(i, j);
             }
+
+            return a;
+        }
 
         //створення матриці
         public Matrix(int i, int j)
@@ -176,6 +177,7 @@ namespace chemaths
 
             return cof;
         }
+        
         public Matrix GetMatrixOfMinors()
         {
             double[,] a = this.Entries;
@@ -268,7 +270,6 @@ namespace chemaths
             return sum;
         }
 
-
         public Matrix ConvertToSquare(double fill)
         {
             int numLinesToAdd = entries.GetLength(0) - entries.GetLength(1);
@@ -308,7 +309,6 @@ namespace chemaths
             entries = squareReplace;
             return this;
         }
-
 
         public Matrix Multiply(double n)
         {

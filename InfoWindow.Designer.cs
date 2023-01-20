@@ -268,6 +268,7 @@ namespace chemaths
             this.site_link.TabIndex = 15;
             this.site_link.TabStop = true;
             this.site_link.Text = "www.flaticon.com";
+            this.tool_tip.SetToolTip(this.site_link, "Перейти за посиланням");
             this.site_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.site_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site_link_LinkClicked);
             // 
@@ -284,6 +285,7 @@ namespace chemaths
             this.author1_link.TabIndex = 16;
             this.author1_link.TabStop = true;
             this.author1_link.Text = "Rizki Ahmad Fauzi";
+            this.tool_tip.SetToolTip(this.author1_link, "Перейти за посиланням");
             this.author1_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.author1_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author1_link_LinkClicked);
             // 
@@ -300,6 +302,7 @@ namespace chemaths
             this.site2_link.TabIndex = 17;
             this.site2_link.TabStop = true;
             this.site2_link.Text = "www.flaticon.com";
+            this.tool_tip.SetToolTip(this.site2_link, "Перейти за посиланням");
             this.site2_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.site2_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site2_link_LinkClicked);
             // 
@@ -316,6 +319,7 @@ namespace chemaths
             this.site4_link.TabIndex = 19;
             this.site4_link.TabStop = true;
             this.site4_link.Text = "www.flaticon.com";
+            this.tool_tip.SetToolTip(this.site4_link, "Перейти за посиланням");
             this.site4_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.site4_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site4_link_LinkClicked);
             // 
@@ -332,6 +336,7 @@ namespace chemaths
             this.site3_link.TabIndex = 18;
             this.site3_link.TabStop = true;
             this.site3_link.Text = "www.flaticon.com";
+            this.tool_tip.SetToolTip(this.site3_link, "Перейти за посиланням");
             this.site3_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.site3_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site3_link_LinkClicked);
             // 
@@ -348,6 +353,7 @@ namespace chemaths
             this.site5_link.TabIndex = 20;
             this.site5_link.TabStop = true;
             this.site5_link.Text = "www.flaticon.com";
+            this.tool_tip.SetToolTip(this.site5_link, "Перейти за посиланням");
             this.site5_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.site5_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.site5_link_LinkClicked);
             // 
@@ -364,6 +370,7 @@ namespace chemaths
             this.author2_link.TabIndex = 21;
             this.author2_link.TabStop = true;
             this.author2_link.Text = "Freepik";
+            this.tool_tip.SetToolTip(this.author2_link, "Перейти за посиланням");
             this.author2_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.author2_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author2_link_LinkClicked);
             // 
@@ -380,6 +387,7 @@ namespace chemaths
             this.author3_link.TabIndex = 22;
             this.author3_link.TabStop = true;
             this.author3_link.Text = "alfanz";
+            this.tool_tip.SetToolTip(this.author3_link, "Перейти за посиланням");
             this.author3_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.author3_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author3_link_LinkClicked);
             // 
@@ -396,6 +404,7 @@ namespace chemaths
             this.author4_link.TabIndex = 23;
             this.author4_link.TabStop = true;
             this.author4_link.Text = "Muhammad Atif";
+            this.tool_tip.SetToolTip(this.author4_link, "Перейти за посиланням");
             this.author4_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.author4_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author4_link_LinkClicked);
             // 
@@ -412,6 +421,7 @@ namespace chemaths
             this.author5_link.TabIndex = 24;
             this.author5_link.TabStop = true;
             this.author5_link.Text = "icon wind";
+            this.tool_tip.SetToolTip(this.author5_link, "Перейти за посиланням");
             this.author5_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.author5_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author5_link_LinkClicked);
             // 
