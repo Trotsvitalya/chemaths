@@ -17,35 +17,23 @@ namespace chemaths
         public InfoWindow()
         {
             InitializeComponent();
-            ACTIVE_BTN(info_btn);
+            Interface.ACTIVE_BTN(info_btn, current_btn, side_panel);
             tool_tip.Active = Interface.active_tool_tips; 
-        }
-
-        private void ACTIVE_BTN(object sender)//функція виділення обраного пункту меню
-        {
-            if (sender != null && current_btn != (Button)sender)
-            {
-                current_btn = (Button)sender;
-                current_btn.BackColor = Color.FromArgb(31, 34, 53);
-                current_btn.ForeColor = Color.White;
-                side_panel.Height = current_btn.Height;
-                side_panel.Top = current_btn.Top;
-            }
         }
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new HelpWindow(), sender);//перехід до іншого пункту меню
+            Interface.OPEN_MENU_POINT(new HelpWindow(), this);//перехід до іншого пункту меню
         }
 
         private void subject_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до іншого пункту меню
+            Interface.OPEN_MENU_POINT(new ActiveMainWindow(), this);//перехід до іншого пункту меню
         }
 
         private void main_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new MainWindow(), sender);//перехід до головного вікна
+            Interface.OPEN_MENU_POINT(new MainWindow(), this);//перехід до головного вікна
         }
 
         void site_click()//функція відкриття сайту
@@ -107,14 +95,6 @@ namespace chemaths
         private void site5_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             site_click();
-        }
-
-        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
         }
 
         private void close_btn_Click(object sender, EventArgs e)//закриття програми

@@ -31,5 +31,32 @@ namespace chemaths
                 side_panel.Top = current_btn.Top;
             }
         }
+
+        public static void INACTIVE_BTN(Panel menu_panel)//функція зняття виділення пунктів меню
+        {
+            //для кожної кнопки на панелі menu_panel зміна кольору тексту та заднього фону
+            foreach (Control previous_btn in menu_panel.Controls)
+            {
+                if (previous_btn.GetType() == typeof(Button))
+                {
+                    previous_btn.BackColor = Color.FromArgb(36, 41, 61);
+                    previous_btn.ForeColor = Color.FromArgb(11, 107, 210);
+                }
+            }
+        }
+
+        public static void HELP_CLOSE(Panel help_panel, TextBox input_box, TextBox output_box, PictureBox help_btn, PictureBox back_btn, PictureBox calculate_btn)
+        {
+            help_panel.Visible = false;//закриття допоміжних підказок
+            //увімкнення відповіді елементів на дії користувача
+            input_box.Enabled = help_btn.Enabled = output_box.Enabled = back_btn.Enabled = calculate_btn.Enabled = true;
+        }
+
+        public static void HELP_OPEN(Panel help_panel, TextBox input_box, TextBox output_box, PictureBox help_btn, PictureBox back_btn, PictureBox calculate_btn)
+        {
+            help_panel.Visible = true;//закриття допоміжних підказок
+            //увімкнення відповіді елементів на дії користувача
+            input_box.Enabled = help_btn.Enabled = output_box.Enabled = back_btn.Enabled = calculate_btn.Enabled = false;
+        }
     }
 }

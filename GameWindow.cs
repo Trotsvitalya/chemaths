@@ -35,7 +35,7 @@ namespace chemaths
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до попереднього вікна
+            Interface.OPEN_MENU_POINT(new ActiveMainWindow(), this);//перехід до попереднього вікна
         }
 
         private void clear_results_btn_Click(object sender, EventArgs e)
@@ -47,15 +47,7 @@ namespace chemaths
 
         private void register_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до наступного вікна
-        }
-
-        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
+            Interface.OPEN_MENU_POINT(new RegisterWindow(), this);//перехід до наступного вікна
         }
 
         private void close_btn_Click(object sender, EventArgs e)//закриття програми

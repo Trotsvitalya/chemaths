@@ -20,7 +20,7 @@ namespace chemaths
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new ActiveMainWindow(), sender);//перехід до попереднього вікна
+            Interface.OPEN_MENU_POINT(new ActiveMainWindow(), this);//перехід до попереднього вікна
         }
 
         private void input_box_Click(object sender, EventArgs e)
@@ -47,16 +47,12 @@ namespace chemaths
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            help_panel.Visible = true;//відображення допоміжних підказок
-            //вимкнення відповіді елементів на дії користувача
-            input_box.Enabled = help_btn.Enabled = output_box.Enabled = back_btn.Enabled = calculate_btn.Enabled = false;
+            Interface.HELP_OPEN(help_panel, input_box, output_box, help_btn, back_btn, calculate_btn);
         }
 
         private void help_close_btn_Click(object sender, EventArgs e)
         {
-            help_panel.Visible = false;//закриття допоміжних підказок
-            //увімкнення відповіді елементів на дії користувача
-            input_box.Enabled = help_btn.Enabled = output_box.Enabled = back_btn.Enabled = calculate_btn.Enabled = true;
+            Interface.HELP_CLOSE(help_panel, input_box, output_box, help_btn, back_btn, calculate_btn);
         }
 
         private void calculate_btn_Click_1(object sender, EventArgs e)
@@ -96,13 +92,6 @@ namespace chemaths
                     mistake_w.ShowDialog();
                 }
             }
-        }
-        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
         }
 
         private void close_btn_Click(object sender, EventArgs e)//закриття програми

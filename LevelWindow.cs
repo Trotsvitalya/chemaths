@@ -35,9 +35,7 @@ namespace chemaths
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            help_panel.Visible = true;//відображення допоміжних підказок
-            //вимкнення відповіді елементів на дії користувача
-            input_box.Enabled = output_box.Enabled = help_btn.Enabled = back_btn.Enabled = check_btn.Enabled = false;
+            Interface.HELP_OPEN(help_panel, input_box, output_box, help_btn, back_btn, calculate_btn);
         }
 
         RegisterWindow register_w;
@@ -58,14 +56,12 @@ namespace chemaths
 
         private void help_close_btn_Click(object sender, EventArgs e)
         {
-            help_panel.Visible = false;//закриття допоміжних підказок
-            //увімкнення відповіді елементів на дії користувача
-            input_box.Enabled = output_box.Enabled = help_btn.Enabled = back_btn.Enabled = check_btn.Enabled = true;
+            Interface.HELP_CLOSE(help_panel, input_box, output_box, help_btn, back_btn, calculate_btn);
         }
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new RegisterWindow(), sender);//перехід до попереднього вікна
+            Interface.OPEN_MENU_POINT(new RegisterWindow(), this);//перехід до попереднього вікна
         }
 
         private void LevelWindow_Load(object sender, EventArgs e)
@@ -131,10 +127,7 @@ namespace chemaths
                         MergeArrayHandling = MergeArrayHandling.Union
                     });
                     File.WriteAllText(@"Results.json", file1.ToString()); // перезапис файлу з новим результатом
-                    GameWindow tmp = new GameWindow(); // повернення до початковго меню
-                    tmp.Show();
-                    tmp.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-                    this.Hide();
+                    Interface.OPEN_MENU_POINT(new GameWindow(), this);
                 }
 
                 if (string.IsNullOrWhiteSpace(input_box.Text))
@@ -192,13 +185,6 @@ namespace chemaths
                 taskArray[j] = taskArray[i]; taskArrayR[j] = taskArrayR[i];
                 taskArray[i] = temp1; taskArrayR[i] = temp2;
             }
-        }
-        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
         }
 
         private void close_btn_Click(object sender, EventArgs e)//закриття програми

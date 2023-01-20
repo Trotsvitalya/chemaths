@@ -21,7 +21,7 @@ namespace chemaths
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            OPEN_MENU_POINT(new GameWindow(), sender);//перехід до попереднього вікна
+            Interface.OPEN_MENU_POINT(new GameWindow(), this);//перехід до попереднього вікна
         }
 
         private void start_btn_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace chemaths
                 }
 
                 LevelWindow tmp = new LevelWindow(this, result_choice);
-                OPEN_MENU_POINT(tmp, sender); //перехід до наступного вікна
+                Interface.OPEN_MENU_POINT(tmp, this);//перехід до наступного вікна
                 tmp.userName = nickname_box.Text; //передача ім'я користувача
             }
             catch (Exception)
@@ -48,7 +48,6 @@ namespace chemaths
                 MistakeWindow mistake_w = new MistakeWindow("Введіть ім'я!");
                 mistake_w.ShowDialog();
             }
-
         }
 
         private void level_choice_ValueChanged(object sender, EventArgs e)
@@ -69,14 +68,6 @@ namespace chemaths
             {
                 info_label.Text = "Невідомий\nпочинає практику на рівні " + level_choice.Value;
             }
-        }
-
-        public void OPEN_MENU_POINT(Form point_form, object sender)//функція відкриття форми
-        {
-            point_form.Show();
-            //задання границь попереднього вікна
-            point_form.SetBounds(this.Location.X, this.Location.Y, this.Width, this.Height);
-            this.Hide();
         }
 
         private void close_btn_Click(object sender, EventArgs e)//закриття програми

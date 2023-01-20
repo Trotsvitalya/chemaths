@@ -47,7 +47,7 @@ namespace chemaths
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.check_btn = new System.Windows.Forms.PictureBox();
+            this.calculate_btn = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.input_box = new System.Windows.Forms.TextBox();
             this.output_box = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@ namespace chemaths
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.help_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.check_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculate_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // active_panel
@@ -269,18 +269,18 @@ namespace chemaths
     " програму, натисніть кнопку закриття програми⁵.\r\nЩоб закрити підказку, натисніть" +
     " кнопку закриття підказки⁶.";
             // 
-            // check_btn
+            // calculate_btn
             // 
-            this.check_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.check_btn.Image = global::chemaths.Properties.Resources.clipboard;
-            this.check_btn.Location = new System.Drawing.Point(416, 354);
-            this.check_btn.Name = "check_btn";
-            this.check_btn.Size = new System.Drawing.Size(150, 99);
-            this.check_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.check_btn.TabIndex = 49;
-            this.check_btn.TabStop = false;
-            this.tool_tip.SetToolTip(this.check_btn, "Перевірити відповідь");
-            this.check_btn.Click += new System.EventHandler(this.check_btn_Click_1);
+            this.calculate_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calculate_btn.Image = global::chemaths.Properties.Resources.clipboard;
+            this.calculate_btn.Location = new System.Drawing.Point(416, 354);
+            this.calculate_btn.Name = "calculate_btn";
+            this.calculate_btn.Size = new System.Drawing.Size(150, 99);
+            this.calculate_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.calculate_btn.TabIndex = 49;
+            this.calculate_btn.TabStop = false;
+            this.tool_tip.SetToolTip(this.calculate_btn, "Перевірити відповідь");
+            this.calculate_btn.Click += new System.EventHandler(this.check_btn_Click_1);
             // 
             // label10
             // 
@@ -346,7 +346,7 @@ namespace chemaths
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.check_btn);
+            this.Controls.Add(this.calculate_btn);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.input_box);
             this.Controls.Add(this.output_box);
@@ -366,7 +366,7 @@ namespace chemaths
             this.help_panel.ResumeLayout(false);
             this.help_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.help_close_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.check_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculate_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,7 +389,7 @@ namespace chemaths
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox check_btn;
+        private System.Windows.Forms.PictureBox calculate_btn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox input_box;
         private System.Windows.Forms.TextBox output_box;
