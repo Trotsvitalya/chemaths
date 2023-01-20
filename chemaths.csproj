@@ -59,6 +59,7 @@
     <Compile Include="CalculatorWindow.Designer.cs">
       <DependentUpon>CalculatorWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
