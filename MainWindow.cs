@@ -48,5 +48,10 @@ namespace chemaths
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
+
+        private void mail_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clipboard.SetText("chemaths.project@gmail.com");//копіювання пошти в буфер обміну
+        }
     }
 }

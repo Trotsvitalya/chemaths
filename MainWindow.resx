@@ -120,6 +120,15 @@
   <metadata name="tool_tip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="tool_tip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="label4.Text" xml:space="preserve">
+    <value>   Даний застосунок був розроблений з навчальними цілями та являє собою практичний посібник, в якому користувач на даний момент може скористатись калькулятором коефіцієнтів та пройти практику коефіцієнтів.
+   Калькулятор коефіцієнтів допоможе Вам урівняти хімічне рівняння, а в практиці коефіцієнтів Ви можете перевірити свої знання з даної теми на одному з 5 рівнів складності.
+   Даний посібник надалі буде поповнюватись новими розділами, а надіслати відгук Ви можете на 
+   До зустрічі!</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

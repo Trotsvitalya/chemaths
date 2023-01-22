@@ -45,6 +45,8 @@ namespace chemaths
             this.close_btn = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tool_tip = new System.Windows.Forms.ToolTip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.mail_link = new System.Windows.Forms.LinkLabel();
             this.menu_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_btn)).BeginInit();
@@ -59,6 +61,7 @@ namespace chemaths
             this.menu_panel.Controls.Add(this.side_panel);
             this.menu_panel.Controls.Add(this.info_btn);
             this.menu_panel.Controls.Add(this.subject_btn);
+            this.menu_panel.Controls.Add(this.pictureBox2);
             this.menu_panel.Controls.Add(this.help_btn);
             this.menu_panel.Controls.Add(this.panel2);
             this.menu_panel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -183,11 +186,12 @@ namespace chemaths
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(486, 455);
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.label3.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(107)))), ((int)(((byte)(210)))));
+            this.label3.Location = new System.Drawing.Point(470, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 45);
+            this.label3.Size = new System.Drawing.Size(171, 43);
             this.label3.TabIndex = 6;
             this.label3.Text = "Вітаємо!";
             // 
@@ -219,9 +223,9 @@ namespace chemaths
             // pictureBox2
             // 
             this.pictureBox2.Image = global::chemaths.Properties.Resources.gif;
-            this.pictureBox2.Location = new System.Drawing.Point(394, 132);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 322);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(366, 289);
+            this.pictureBox2.Size = new System.Drawing.Size(186, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -232,15 +236,43 @@ namespace chemaths
             this.tool_tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.tool_tip.ToolTipTitle = "Підказка";
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(205, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(734, 450);
+            this.label4.TabIndex = 9;
+            this.label4.Text = resources.GetString("label4.Text");
+            // 
+            // mail_link
+            // 
+            this.mail_link.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.mail_link.AutoSize = true;
+            this.mail_link.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.mail_link.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mail_link.LinkColor = System.Drawing.Color.White;
+            this.mail_link.Location = new System.Drawing.Point(250, 492);
+            this.mail_link.Name = "mail_link";
+            this.mail_link.Size = new System.Drawing.Size(413, 34);
+            this.mail_link.TabIndex = 17;
+            this.mail_link.TabStop = true;
+            this.mail_link.Text = "chemaths.project@gmail.com";
+            this.tool_tip.SetToolTip(this.mail_link, "Перейти за посиланням");
+            this.mail_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
+            this.mail_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.mail_link_LinkClicked);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(34)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.mail_link);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.active_panel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.menu_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -276,5 +308,7 @@ namespace chemaths
         private System.Windows.Forms.PictureBox close_btn;
         private System.Windows.Forms.Panel active_panel;
         private System.Windows.Forms.ToolTip tool_tip;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel mail_link;
     }
 }
