@@ -11,6 +11,7 @@ namespace chemaths
     {
         public static void PARSE(string eq)
         {
+
             //обробка ситуації, коли рівняння містить символи не тільки латинської абетки
             if (Regex.IsMatch(eq, @"\p{IsCyrillic}"))
             {
@@ -18,8 +19,7 @@ namespace chemaths
             }
 
             //обробка ситуації, коли молекула містить пробіли
-            Regex regex = new Regex(@"[a-zA-Z]\s[A-Z]");
-            if (regex.IsMatch(eq))
+            if (Regex.IsMatch(eq, @"[a-zA-Z]\s[A-Z]"))
             {
                 throw new Exception("space_mistake");
             }
@@ -39,8 +39,7 @@ namespace chemaths
 
             //обробка ситуації, коли рівняння не містить пробілів або містить більше, ніж 1 пробіл
             //підряд
-            regex = new Regex(@"\s{2,}");
-            if (regex.IsMatch(eq) || !eq.Contains(' '))
+            if (Regex.IsMatch(eq, @"\s{2,}") || !eq.Contains(' ') || eq[0] == ' ' || eq[eq.Length - 1] == ' ')
             {
                 throw new Exception("space_mistake");
             }
