@@ -8,8 +8,10 @@ namespace chemaths
 {
     public class Matrix
     {
+        //Зберігання значень матриці лише в межах класу.
         private double[,] entries;
 
+        //Зовнішньній код може отримати доступ до значень матриці через Entries
         public double[,] Entries
         {
             get
@@ -21,7 +23,7 @@ namespace chemaths
                 entries = value;
             }
         }
-
+        
         //Заповнення матриці значеннями
         public void SetEntry(int i, int j, double entry)
         {
@@ -38,12 +40,10 @@ namespace chemaths
         public double[] GetRow(int i)
         {
             double[] a = new double[this.Entries.GetLength(1)];
-            //проходить по всіх стовпцях рядка і заповнює масив
             for (int j = 0; j < this.Entries.GetLength(1); j++)
             {
                 a[j] = this.GetEntry(i, j);
             }
-
             return a;
         }
 
@@ -60,19 +60,19 @@ namespace chemaths
             return a;
         }
 
-        //створення матриці
+        //Створення матриці
         public Matrix(int i, int j)
         {
             this.entries = new double[i, j];
         }
 
-        //перевірка чи є матриця квадратною
+        //Перевірка чи є матриця квадратною
         public Boolean isSquare()
         {
             return entries.GetLength(0) == entries.GetLength(1);
         }
 
-        //створення оберненої матриці
+        //Створення оберненої матриці
         public Matrix GetInverse()
         {
             double[,] a = entries;
@@ -101,6 +101,7 @@ namespace chemaths
             return inv;
         }
 
+        //Обчислення детермінанту матриці
         public double GetDeterminant()
         {
             double determinant = 0;
@@ -131,12 +132,14 @@ namespace chemaths
             return determinant;
         }
 
+        //Обчислюння детермінанту 2x2 матриці
         public static double DeterminantOf2X2(Matrix m)
         {
             double[,] a = m.Entries;
             return (a[0, 0] * a[1, 1]) - (a[0, 1] * a[1, 0]);
         }
 
+        //Обчислення транспонованої матриці
         public Matrix GetMatrixTranspose()
         {
             double[,] a = entries;
@@ -159,6 +162,7 @@ namespace chemaths
             return adj.GetMatrixTranspose();
         }
 
+        //Обчислення матриці коефіцієнтів
         public Matrix GetMatrixOfCofactors()
         {
             double[,] a = entries;
@@ -174,10 +178,10 @@ namespace chemaths
                     }
                 }
             }
-
             return cof;
         }
-        
+
+        //Отримання матриці мінорів
         public Matrix GetMatrixOfMinors()
         {
             double[,] a = this.Entries;
@@ -193,13 +197,16 @@ namespace chemaths
 
             return minorMatrix;
         }
-
+        
+        //обчислення мінору для поточного елементу матриці
         public double GetMinor(int jRemove, int kRemove)
         {
             Matrix m = this.GetMinorMatrix(jRemove, kRemove);
             return m.GetDeterminant();
         }
 
+        //отримання мінорної матриці матриці, яка є підматрицею,
+        //сформованою видаленням зазначеного рядка та стовпця вихідної матриці
         public Matrix GetMinorMatrix(int jRemove, int kRemove)
         {
             Matrix m = new Matrix(this.entries.GetLength(0) - 1, this.entries.GetLength(1) - 1);
@@ -233,7 +240,7 @@ namespace chemaths
 
             return m;
         }
-
+        //Множення матриць 
         public Matrix Multiply(Matrix m)
         {
             double[,] a = this.Entries;
@@ -258,6 +265,7 @@ namespace chemaths
             return multi;
         }
 
+        //Лінійна комбінація рядка і стовпця
         public static double LinComb(double[] a, double[] b)
         {
             double sum = 0.0;
@@ -269,7 +277,8 @@ namespace chemaths
 
             return sum;
         }
-
+        //створює нову матрицю, яка є квадратною.
+        //Якщо оригінальна матриця уже є квадратною, то метод просто повертає її. 
         public Matrix ConvertToSquare(double fill)
         {
             int numLinesToAdd = entries.GetLength(0) - entries.GetLength(1);
@@ -310,6 +319,7 @@ namespace chemaths
             return this;
         }
 
+        //Множення матриці на скаляр 
         public Matrix Multiply(double n)
         {
             double[,] a = this.Entries;
@@ -325,7 +335,7 @@ namespace chemaths
 
             return m;
         }
-
+        //Представлення матриці
         public override string ToString()
         {
             string s = "[";
