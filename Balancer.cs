@@ -46,7 +46,6 @@ namespace chemaths
                 c.Add(A.GetDeterminant());
                 coefficients = (double[])c.ToArray(typeof(double));
             }
-
             coefficients = RatioBalancer.MakeAllPositive(coefficients); //всі коефіцієнти мають бути позитивними
 
             coefficients = RatioBalancer.ReduceSet(coefficients); //зводить усі числа до найменших значень
@@ -309,7 +308,7 @@ namespace chemaths
             return dArr;
         }
 
-        public static double GCD(double a, double b)//найбільший спільний дільник
+        public static double GCD(double a, double b)
         {
             while (a != 0 && b != 0)
             {
@@ -337,7 +336,7 @@ namespace chemaths
                 for (int j = 0; j < dArr.Length; j++)
                 {
                     double checkD = dArr[j];
-                    double greatestCommon = CalculateBalancer.GCD(currentD, checkD);//
+                    double greatestCommon = CalculateBalancer.GCD(currentD, checkD);
                     if (CalculateBalancer.DividesAll(greatestCommon, dArr))
                     {
                         CalculateBalancer.DivideAll(greatestCommon, dArr);
@@ -431,42 +430,26 @@ namespace chemaths
                             if (CheckBalancer.IsUpperCase(num))
                             {
                                 //наступний символ є великою літерою, тому попередній елемент з'являється лише один раз
-
-
                                 A.SetEntry(i, 0, 1);
-
                             }
                             else
                             {
                                 //символ є числом і тому має бути перетворений
                                 int numInt = ToInt(num);
-
                                 endOfAtom++;
-                                //
                                 while (endOfAtom < chemical.Length && CheckBalancer.IsNumeric(chemical[endOfAtom]))
                                 {
                                     numInt = AppendNum(numInt, chemical[endOfAtom]);
                                     endOfAtom++;
                                 }
-
-
                                 A.SetEntry(i, 0, numInt);
                             }
                         }
-                        else
-                        {
-
-                            A.SetEntry(i, 0, 1);
-
-                        }
+                        else  A.SetEntry(i, 0, 1);
                     }
                 }
-                else
-                {
-                    A.SetEntry(i, 0, 0);
-                }
+                else A.SetEntry(i, 0, 0);
             }
-
             return A;
         }
 
@@ -487,10 +470,7 @@ namespace chemaths
                     {
                         //отримує символ після елемента, який вказує кількість атомів,
                         //якщо це початок наступного елемента, то цей елемент з'являється лише один раз у хімічному
-                        if (chemical == element)
-                        {
-                            A.SetEntry(i, j, 1);
-                        }
+                        if (chemical == element)  A.SetEntry(i, j, 1);
                         else
                         {
                             int endOfAtom = CheckBalancer.FindLastIndex(chemical, element) + 1;
@@ -499,62 +479,46 @@ namespace chemaths
                             if (endOfAtom != chemical.Length)
                             {
                                 num = chemical[endOfAtom];
-
                                 if (CheckBalancer.IsUpperCase(num))
                                 {
                                     //наступний символ є великою літерою, тому попередній елемент з'являється лише один раз
-                                    if (IsProduct(chemical, eq))
-                                    {
+                                    if (IsProduct(chemical, eq)) 
                                         A.SetEntry(i, j, -1);
-                                    }
-                                    else
-                                    {
-                                        A.SetEntry(i, j, 1);
-                                    }
+                                    
+                                    else A.SetEntry(i, j, 1);
                                 }
                                 else
                                 {
-
                                     int numInt = ToInt(num);
-
                                     endOfAtom++;
-
+                                    
                                     while (endOfAtom < chemical.Length && CheckBalancer.IsNumeric(chemical[endOfAtom]))
                                     {
                                         numInt = AppendNum(numInt, chemical[endOfAtom]);
                                         endOfAtom++;
                                     }
-
+                                    
                                     if (IsProduct(chemical, eq))
                                     {
                                         numInt *= -1;
                                     }
-
                                     A.SetEntry(i, j, numInt);
                                 }
                             }
                             else
                             {
                                 if (IsProduct(chemical, eq))
-                                {
                                     A.SetEntry(i, j, -1);
-                                }
+                                
                                 else
-                                {
                                     A.SetEntry(i, j, 1);
-                                }
                             }
                         }
                     }
-                    else
-                    {
-                        A.SetEntry(i, j, 0);
-                    }
+                    else  A.SetEntry(i, j, 0);
                 }
             }
-
             A.ConvertToSquare(1);
-
             return A;
         }
     }

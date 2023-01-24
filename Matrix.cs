@@ -24,7 +24,7 @@ namespace chemaths
             }
         }
         
-        //Заповнення матриці значеннями
+        //Заповнення матриці значенням
         public void SetEntry(int i, int j, double entry)
         {
             entries[i, j] = entry;
