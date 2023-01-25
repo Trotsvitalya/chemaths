@@ -132,7 +132,7 @@ namespace chemaths
             return determinant;
         }
 
-        //Обчислюння детермінанту 2x2 матриці
+        //Обчислення детермінанту 2x2 матриці
         public static double DeterminantOf2X2(Matrix m)
         {
             double[,] a = m.Entries;
@@ -240,6 +240,7 @@ namespace chemaths
 
             return m;
         }
+        
         //Множення матриць 
         public Matrix Multiply(Matrix m)
         {
@@ -277,8 +278,9 @@ namespace chemaths
 
             return sum;
         }
+        
         //створює нову матрицю, яка є квадратною.
-        //Якщо оригінальна матриця уже є квадратною, то метод просто повертає її. 
+        //Якщо оригінальна матриця уже є квадратною, то метод просто повертає її 
         public Matrix ConvertToSquare(double fill)
         {
             int numLinesToAdd = entries.GetLength(0) - entries.GetLength(1);
@@ -335,40 +337,6 @@ namespace chemaths
 
             return m;
         }
-        //Представлення матриці
-        public override string ToString()
-        {
-            string s = "[";
-
-            for (int i = 0; i < this.Entries.GetLength(0); i++)
-            {
-                if (i == 0)
-                {
-                    s += "[";
-                }
-                else
-                {
-                    s += " [";
-                }
-
-                for (int j = 0; j < this.Entries.GetLength(1); j++)
-                {
-                    s += this.GetEntry(i, j);
-                    if (j != this.Entries.GetLength(1) - 1)
-                    {
-                        s += ", ";
-                    }
-                }
-                s += "]";
-
-                if (i != this.Entries.GetLength(0) - 1)
-                {
-                    s += "\n";
-                }
-            }
-            s += "]";
-            
-            return s;
-        }
+        
     }
 }

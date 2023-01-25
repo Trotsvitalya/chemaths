@@ -60,6 +60,7 @@ namespace chemaths
 
             int indexYield = -1;
             int indexChem = -1;
+            
             for (int i = 0; i < eqSplit.Length; i++)
             {
                 if (eqSplit[i] == "->")
