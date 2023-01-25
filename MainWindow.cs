@@ -18,7 +18,6 @@ namespace chemaths
         {
             InitializeComponent();
             tool_tip.Active = Interface.active_tool_tips;
-            Interface.INACTIVE_BTN(menu_panel);
         }
 
         private void help_btn_Click(object sender, EventArgs e)

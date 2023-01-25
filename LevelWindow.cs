@@ -19,7 +19,6 @@ namespace chemaths
         XmlDocument doc = new XmlDocument();
         XmlNodeList tasks, tasksR;
         XmlNode[] taskArray, taskArrayR;
-        public int N_Results1;
         public int N_Results2;
         public string userName;
         string result_choice;

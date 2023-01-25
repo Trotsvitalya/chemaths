@@ -32,19 +32,6 @@ namespace chemaths
             }
         }
 
-        public static void INACTIVE_BTN(Panel menu_panel)//функція зняття виділення пунктів меню
-        {
-            //для кожної кнопки на панелі menu_panel зміна кольору тексту та заднього фону
-            foreach (Control previous_btn in menu_panel.Controls)
-            {
-                if (previous_btn.GetType() == typeof(Button))
-                {
-                    previous_btn.BackColor = Color.FromArgb(36, 41, 61);
-                    previous_btn.ForeColor = Color.FromArgb(11, 107, 210);
-                }
-            }
-        }
-
         public static void HELP_CLOSE(Panel help_panel, TextBox input_box, TextBox output_box, PictureBox help_btn, PictureBox back_btn, PictureBox calculate_btn)
         {
             help_panel.Visible = false;//закриття допоміжних підказок
